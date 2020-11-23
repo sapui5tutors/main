@@ -1,0 +1,42 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.splitapp.controller.Detail"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Detail">
+				<content>
+					<f:SimpleForm id="idSimpleForm"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Form Title">
+			<f:content>
+				<Label text="First Name" />
+				<Input value="{Model>ProductID}" />
+			</f:content>
+		</f:SimpleForm>
+		
+		<List id="productsList" items="{
+			path : 'Model>/ProductSet'
+			}">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="Product List"/>
+								<ToolbarSpacer/>
+								<SearchField width="50%" search="onFilterProducts"/>
+							</Toolbar>
+						</headerToolbar>
+						<items>
+							<ObjectListItem 
+							title="{Model>Name}" 
+							number="{Model>Price}" 
+							numberUnit="{Model>CurrencyCode}"
+							intro="{Model>ProductID}"
+							numberState="{= ${Model>Price} > 250 ? 'Error' : 'Success'}"
+							>
+								</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

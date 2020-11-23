@@ -1,0 +1,74 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.RFQ.controller.S3"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>S3Title}" showNavButton="true"
+		navButtonPress="onBackPress">
+				<content>
+						<Table id="idOpenRFQTable"
+			    growing="true" 
+				growingThreshold="5" 
+				inset="true"
+				items="{RFQDetails>/}">
+				<headerToolbar>
+				<OverflowToolbar>
+				<Text text="{i18n>S3PageHeaderTitle}" >
+				
+				</Text>
+				
+				</OverflowToolbar>
+				</headerToolbar>              
+				<columns>				
+					<Column width="8em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Center">
+						<Text text="{i18n>TableitemsColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Center">
+						<Text text="{i18n>MaterialColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XXLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Center">
+						<Text text="{i18n>ShortTextColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XXLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Center">
+						<Text text="{i18n>STDDelDateColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Center">
+						<Text text="{i18n>MaterialGroupColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XXLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Right">
+						<Text text="{i18n>TargetQuantityColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Right">
+						<Text text="{i18n>OrderUintColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Center">
+						<Text text="{i18n>NetPriceColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Center">
+						<Text text="{i18n>ActionColumn}" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{RFQDetails>items}" />
+							<Text text="{RFQDetails>Material}" />
+							<Text text="{RFQDetails>Shorttext}" />
+							<Text text="{RFQDetails>stddeldate}" />
+							<Text text="{RFQDetails>Materialgroup}" />
+							<Text text="{RFQDetails>targetquantity}" />
+							<Text text="{RFQDetails>orderunit}" />
+							<Text text="{RFQDetails>netprice}" />
+							<core:Icon src="{RFQDetails>amount}" press="onPress" />																
+							
+						</cells>
+					</ColumnListItem>
+				</items>				
+			</Table>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

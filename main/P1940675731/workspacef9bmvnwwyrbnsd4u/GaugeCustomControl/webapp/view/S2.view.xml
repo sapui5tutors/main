@@ -1,0 +1,73 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:custom="sap.st.Gauge.control" xmlns:l="sap.ui.layout"
+		controllerName="sap.st.Gauge.controller.S2" xmlns:html="http://www.w3.org/1999/xhtml">
+<!-- <App> -->
+<!--     <pages> -->
+		    <Page title="Gauge" id="thisPage">
+		<content>
+		    <l:HorizontalLayout id="layout">
+		    <Button text="Press Me" id="__button0"
+				press="onButtonPress" />
+		    </l:HorizontalLayout>
+		    
+		    
+		    <custom:MiniGauge id="new">
+		        <custom:MiniGaugeItem
+		        region="Chennai"
+		        budget="20000"
+		        best="18000"
+		        forecast="15000"
+		        worst="6000"
+		        MaxOutRad="120"
+		        MaxInnRad="60"
+		        BudOutRad="75"
+		        BudInnRad="65"
+		        ForOutRad="90"
+		        ForInnRad="80"
+		        BesOutRad="105"
+		        BesInnRad="95"
+		        WorOutRad="120"
+		        WorInnRad="110">
+		         </custom:MiniGaugeItem>
+		    </custom:MiniGauge>
+		    
+<!-- 		    		    <custom:MiniGauge id="latest"> -->
+<!-- 					<custom:MiniGaugeItem  -->
+<!-- 		        region="Mumbai" -->
+<!-- 		        budget="50000" -->
+<!-- 		        best="35000" -->
+<!-- 		        forecast="25000" -->
+<!-- 		        worst="20000" -->
+<!-- 		        MaxOutRad="120" -->
+<!-- 		        MaxInnRad="60" -->
+<!-- 		        BudOutRad="75" -->
+<!-- 		        BudInnRad="65" -->
+<!-- 		        ForOutRad="90" -->
+<!-- 		        ForInnRad="80" -->
+<!-- 		        BesOutRad="105" -->
+<!-- 		        BesInnRad="95" -->
+<!-- 		        WorOutRad="120" -->
+<!-- 		        WorInnRad="110"> -->
+<!-- 					</custom:MiniGaugeItem> -->
+<!-- 		    </custom:MiniGauge> -->
+
+
+<!-- 	<custom:gauge id="spoken1" -->
+<!-- 	    size = "500" -->
+<!-- 	    radius = "100" -->
+<!-- 	    cx = "100" -->
+<!-- 	    cy = "100" -->
+<!-- 	    min = "0" -->
+<!-- 	    max = "100" -->
+<!-- 	    range = "100" -->
+<!-- 	    majorTicks = "5" -->
+<!-- 	    minorTicks = "5" -->
+<!-- 	    greenColor = "#109618" -->
+<!-- 	    yellowColor = "#FF9900" -->
+<!-- 	    redColor = "#DC3912" -->
+<!-- 	    transitionDuration = "500"> -->
+<!-- 	    </custom:gauge> -->
+		</content>
+	</Page>
+<!-- </pages> -->
+<!-- </App> -->
+</core:View>

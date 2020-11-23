@@ -1,0 +1,17 @@
+{
+  "webapp/view/View1.view.xml": "1468567632000",
+  "webapp/controller/View1.controller.js": "1467735985000",
+  "webapp/i18n/i18n.properties": "1466163344000",
+  "webapp/model/models.js": "1466101066000",
+  "webapp/model/formatter.js": "1467735796000",
+  "webapp/Component.js": "1466101899000",
+  "webapp/css/style.css": "1466101066000",
+  "webapp/manifest.json": "1466781639000",
+  "webapp/index.html": "1466780279000",
+  "webapp/preview_hidden.html": "1469081822000",
+  "webapp/localService/metadata.xml": "1467215494000",
+  "webapp/localService/mockserver.js": "1467215552000",
+  "webapp/localService/mockdata/ProductSet.json": "1467215793000",
+  "webapp/test/mockServer.html": "1467215393000",
+  "webapp/test/mock_preview_sapui5.html": "1467215828000"
+}

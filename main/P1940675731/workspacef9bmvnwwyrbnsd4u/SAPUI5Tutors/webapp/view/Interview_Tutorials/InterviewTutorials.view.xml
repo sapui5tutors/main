@@ -1,0 +1,646 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Interview_Tutorials.InterviewTutorials"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Interview Questions on SAPUI5"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuInterButton1" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<IconTabBar id="idIconTabBar" upperCase="true"
+				backgroundDesign="Transparent" select="handleIconTabBarSelect">
+				<items>
+					<IconTabFilter id="InterviewA" text="Part A"
+						key="InterviewA">
+						<content>
+				<Label class="sapUiSmallMargin" design="Bold" text="1) What is required to start UI5 development in eclipse?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) In the help menu in Eclipse, click “Install New Software”, paste one the URL according to the version of the Eclipse."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="https://tools.hana.ondemand.com/luna "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="for Eclipse Luna (4.4)
+https://tools.hana.ondemand.com/kepler for Eclipse Kepler (4.3)"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="just import SAP UI5 toolkit from hana service marketplace. Also we need SAP UI5 ABAP Repository connector to deploy project in ABAP System."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="2) Which control libraries are used for UI5 application development?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) sap.ui.commons, sap.ui.table and sap.suite.ui libraries for desktop application development and sap.m library along with sap.ui.layout for Fiori application development."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="3)How Navigation works in SAPUI5." width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) Sap uses two mechanisms, routing and EventBus. Routing Is specifically used for bookmarking the URL. We define routing in component.js within the metadata. It also defines the navigation path and hash changer which is used at the runtime to change the url of the particular screen."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="4) What is Component?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) It is the first point of the application, it serves as an index, which encapsulates all the application details, like  view names, routing details, main view, applications type(Full Screen or SplitApp), application service configuration etc."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="There are 2 types of components,"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="a) Faceless components: Mainly without UIs, Used for business logic and helper methods e.g. Formatters."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="b) UI Component: typically component.js file which is made by extending sap.ui.core.UI Component class."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="5) What is Responsive Web Design?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) A web application which gives same look and feel to the user in desktops and mobile devices."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="6) What is the syntax to define a control in UI5?" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Interview/pic1.PNG"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="7) What is formatter in SAPUI5 and how to use it?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) We need to use formatter when we need to perform some changes on the back end property data on the front end.
+we can use formatter while data  binding to a property like as follows:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Interview/pic2.png" width="70%" />
+				<Label class="sapUiSmallMargin" design="Bold" text="8) How many types of views are available in SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) There are 4 types of views available:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) JS view"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) JSON view"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) XML view"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) HTML view"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="9) How many types of data model are available in SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) SAPUI5 has following predefined four data models available:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1. JSON Model – Client-side model, supports two way binding."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2. XML Model – Client-side model and intended for small data sets this is very rarely used model."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3. Resource Model – This is also client side model used to maintain resource bundles, specially texts."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4. ODATA Model – This is most important model of the four provided."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="10) What all events/life cycle are available in SAPUI5’s views controller?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="There are 4 lifecycle available in SAPUI5’s views controller, they are:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1. onInit() – it is called when a view is instantiated and its controls have already been created."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2. onExit() – it is called when the view is destroyed, used to free resources and finalize activities"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3. onAfterRendering() - when the view has been rendered and, therefore, its HTML is part of the document."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4. onBeforeRendering() -It is called before the controller view is re-rendered and not before the first rendering. "/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="11) What is the main difference between OData Model and JSON Model?" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) The JSON model is a client-side model and, therefore, intended for small datasets, which are completely available on the client.The OData model is a server-side model: the dataset is only available on the server and the client only knows the currently visible rows and fields."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="12) What is SAPUI5 Bootstrapping?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) SAPUI5 Bootstrapping means loading and initializing SAPUI5 in any HTML page. Themes and Libraries are defined in this."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="13) In how many ways you can bind data to your controls?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) We can bind data to any controls using three methods, Property, Element and Aggregation binding."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="14) What are SAPUI5 Fragments?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) Fragments are very light weight UI controls. Fragments are not completely like views but they act like a view. Fragments are defined similar like views and are names like “Fragment.fragment.xml“."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="15) Does Fragment have its own controller?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) Fragments are created without controllers, they don’t have their own controllers they share controller of the view which is invoking it."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="16) What is Metadata Annotations?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The service metadata document describes the structure of all resources in the service. This structural metadata makes it easy to understand a service. We can explore service metadata at the address “$metadata” relative to the service root."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="17) What is SAP Fiori?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) SAPUI5 is client side HTML5 rendering framework or library and SAP FIORI is collection of and released as waves of applications which are completely based on SAPUI5 framework. It means we can create applications using SAPUI5 framework and SAP FIORI is final product i.e. application. In SAPUI5 we have to code from scratch, but in Fiori Application the custom application is already built and enhancements can be done on those custom apps."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="18) How many types of fiori applications are there?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Ans) There are 3 types of fiori applications:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="a) Transactional"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="b) Analytical"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="c) Fact Sheets"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="19) What is the difference between SAP Fiori and SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP FIORI is collection of standard applications based on SAPUI5 library provided by SAP. SAP FIORI applications share some standard design guidelines and way in which these application are developed."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="20)  What is FIORI Launchpad and Explain it?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="It is  a home page for all the FIORI applications provided to. There are more than five hundred custom app provided by SAP. This shows tile based UI where every UI redirects to assigned FIORI application. This Launchpad is fully customizable according to your needs like theming and all."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="21) How can you get the web browser of the client on which SAP Fiori application is running?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAPUI5 library provides a special API “sap.ui.Device“which can be used to for device and its feature detection. This API provides flags like “chrome”, “firefox”, “mozilla”, “edge” etc. in “sap.ui.Device.browser” API which returns boolean values. "/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="22) What are Fiori Design Principles?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="There are 5 design principles we need to keep in mind while designing SAP Fiori applications. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="a) Role Based"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="b) Delightful"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="c) Simple"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="d) Responsive"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="e) Coherent"/>
+				
+						</content>
+					</IconTabFilter>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<IconTabFilter id="InterviewB" text="Part B"
+						key="InterviewB">
+						<content>
+				<Label class="sapUiSmallMargin" design="Bold" text="1) Which open standards and tools are the foundation of SAPUI5 technology? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> D3.js for visualization"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> ARIA for accessibility standards and keyboard handling"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="> jQuery for managing DOM elements and abstracting browser differences"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 2) What SAPUI5 control metadata is used to configure the UI elements at runtime? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Associations"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Properties"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Aggregations"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  3) What are view types offered by SAPUI5? " width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> JavaScript views"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> JSON views"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> XML views"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  4) What is the purpose of a controller? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To separate the UI and the processing logic"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To control the application flow by handling user events or updating the view"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   5) Name some standard controller hooks in SAPUI5? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> onInit – an event that is called when the view and the controller are instantiated"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> onExit – an event that is called when the view and the controller are destroyed"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="    6) What does MVC stand for? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->Model - View – Controller"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 7) What information can be stored in the manifest.json file of your app? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="- > Root view"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Supported device types"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Supported themes"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="8) Which of the following namespaces can be used in the manifest.json file?" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> sap.ui5"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> sap.app"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> sap.ui"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 9) What is the name of the file where the descriptor for applications, components, and libraries is stored?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Manifest.json"/>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 10) For what stands the abbreviation JSON?" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Java Script Object Notation"/>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 11) Which data binding mode means a binding from the model to the view and from the view to the model (value changes in the model and in the view update all corresponding bindings and the view and model, respectively)?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Two-way"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  12) How would you add an icon from the SAPUI5 icon font to a button in an XML view?" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Interview/pic3.png"  />
+				<Label class="sapUiSmallMargin" design="Bold" text=" Which predefined sizes for margins that stand for 8px (0.5rem), 16px (1rem), 32px (2rem), or 48px (3rem) are available in SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> 'Tiny', 'Small', 'Medium' or 'Large'"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="14) What is aggregation binding used for?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To bind a set of data entities to a list-like structure"/>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 15) Your JSONModel contains the following content:" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Interview/pic4.png"  />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="What is the binding path to Karl Karlson's first name?"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> /Employees/0/Firstname"/>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 16) What do you need if you want to bind a list to data in your JSONModel?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> An array with the data in the JSONModel that you want to bind to the list"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> A template list item to be cloned"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> A bound list control"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 17) How can you access validation errors in SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Set handleValidation to true in the manifest.json file."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Register to the validationError event on sap.ui.getCore()."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 18) Name some types in SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> sap.ui.model.type.Float"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> sap.ui.model.type.DateTime"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> sap.ui.model.type.Currency"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  19) What coding do you need to add to your XML view to enable grouping in your list binding?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> group: true"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  20) Which of the following sequences of steps do you use to assemble the URL to access your OData service's metadata?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->  Run your app from SAP Web IDE and copy its URL into a new browser tab."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> In your app's manifest.json file, go to “services”, copy the URI, and use it to replace the file path in the URL from Step 1."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Append “/$metadata” and press enter."/>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 21) How many filters can you apply on a list binding?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> As many as needed"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  22) What is the best practice for showing or hiding an SAPUI5 control at runtime?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Set the “visible” property of the control to “true” or “false”."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  23) When do you use element binding?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> When you want bindings of child controls to resolve their paths relative to the binding of the parent"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  24) What is the difference between aggregation binding and element binding?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Aggregation binding is used for list-like structures, whereas element binding can be used to set the binding context of any parent control."/>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 25) How is paging accomplished in oData query?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->Paging can be accomplished by using $skip in combination with $top. The parameters’ values describe the interval of the data that is requested."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  26)  Name some OData query parameters?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->$skip"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->$count"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->$expand"/>
+				
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="InterviewC" text="Part C"
+						key="InterviewC">
+						<content>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 27) How do you enable the debugging option for SAP NetWeaver OData services? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Use the URL parameter sap-ds-debug=true."/>
+			
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  28) What do you have to consider when choosing the SAPUI5 version for the application template? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> The SAPUI5 version must be available in your target deployment system."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   29) What happens when you set the “minScreenWidth” property of a “sap.m.Column” to “Tablet”? " width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> The column is shown only on screens that are larger or equal than the size of a tablet."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  30) What are semantic colors in sapui5? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> They are representations of states such as success, warning, and error."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   31) Name some semantic states in SAPUI5? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Positive"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Negative"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Critical"/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="    32) How can you compose filters in SAPUI5? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> By creating multiple filters and concatenating them either with AND or OR"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> By creating a single sap.ui.model.Filter object and specifying a path, an operator, and up to two values"/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 33) Where are filters applied in SAPUI5? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To an aggregation binding"/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="34) Which filter operation can you use to filter items with a numeric value lower than X?" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> sap.ui.model.FilterOperator.LT"/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 35) What can you do to enable your SAPUI5 application to adapt to the user’s device?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> As many controls are responsive out of the box, check whether you have to do anything at all."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Set the compact density on devices without touch support."/>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 36) What can a “device model” be used for?" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To check whether a device supports touch interaction"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To influence the user interface without coding, based on the characteristics of the device"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 37) What information is provided by the sap.ui.Device API?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> The device type (phone/tablet)"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Whether the device has touch support"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> The browser name and version"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  38) Which control adapts its appearance on touch devices?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->The PullToRefresh control: It is represented as a simple button on non-touch devices, but the user needs to pull the page content down on touch devices to refresh it."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 39) Why is it useful to have fragments in your app?" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To create reusable UI parts without a designated controller or other behavior code"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="40) What happens in the DOM tree when nesting XML views?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Each XML view creates its own DOM element regardless of the nesting level."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 41)  What can you do to structure your application code better?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Use subdirectories for related views and controllers."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Use fragments to define reused UI parts only once."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Put the functionality used in multiple controllers into a base controller and extend this controller in the other controllers in your app."
+				/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 42) What are fragments primarily used for?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To make parts of your view reusable"/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 43) What are Dialogs in SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> They are rendered into a specific area (the static area) in the DOM."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> They need to be added to the “dependent” aggregation of the view to get access to the models.
+"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 44) What happens when you instantiate a dialog from a single-rooted fragment?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> The dialog instance is returned when you invoke the fragment factory."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> The dialog is instantiated but not displayed."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  45) Which property of the routing configuration in the manifest.json file should you use to automatically display a target that is not found?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Bypassed"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  46) How many targets can you configure within a route in the manifest.json file?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->  As many as you like."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 47) What is the correct sequence of called functions / handled callbacks of the OData model in the Add controller?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> on metadataLoaded - createEntry - submit - on success"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  48)What is the recommended place to configure a 'TwoWay' binding for the OData model so that data changes in the view are written back to the model?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> In the 'models' section of the manifest.json file"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  49) How are unit tests for your app started in SAP Web IDE?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> By selecting the run configuration Run Unit Tests"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> By right-clicking the unitTests.qunit.html file and selecting an option from the Run menu"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  50) How do you register a unit test in QUnit?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Call QUnit.test() in your test code with a speaking test description and a callback that contains at least one assertion."/>
+				<Label class="sapUiSmallMargin" design="Bold" text=" 51)  Which testing features are provided by the SAP Fiori Worklist application template?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> A test suite that calls all your unit and integration tests"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Clear separation of test and production code"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Unit test setup (QUnit) and basic test coverage"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  52)  Which options are available in SAPUI5 if you want to create a custom control?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Extend an existing control with your own features."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Create a composite control that reuses existing controls internally."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Extend the sap.ui.core.Control base class and build a new control."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  53)  Which of the following are part of the control metadata?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Aggregations"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Properties"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Events"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="  54)  What do you have to consider when defining control metadata?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> You can give an aggregation either one or many values by defining the multiplicity as “one” or “many”."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> You can make an aggregation invisible in the control API by setting the visibility to hidden."/>
+			
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="InterviewD" text="Part D"
+						key="InterviewD">
+						<content>
+				<Label class="sapUiSmallMargin" design="Bold" text="  1) What is OpenUI5? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> A subset of SAPUI5 containing the complete core and more than 200 UI controls"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> A free-to-use and open source UI library ready for your contributions"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   2) How can you load SAPUI5 to your application? " width="100%"/>
+					<FormattedText class="labelsize" width="90%"
+					htmlText="-> Load it from the content delivery network (CDN) athttps://sapui5.hana.ondemand.com (orhttps://openui5.hana.ondemand.com) without installing it on your own server."/>
+					<FormattedText class="labelsize" width="90%"
+					htmlText="-> If only features contained in OpenUI5 are needed, download it fromhttp://openui5.org, put it on your Web server, and load it from there."/>
+					<FormattedText class="labelsize" width="90%"
+					htmlText="-> SAPUI5 comes with current versions of the SAP NetWeaver ABAP and Java server and SAP HANA Cloud Platform. If you are a customer, you can load it from there."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="    3) What is the correct syntax for defining namespaces in XML views? " width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> xmlns:m='sap.m'"/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   4) Why is not all JavaScript code put in a 'script' tag directly on the index.html page? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To clearly separate concerns according to the MVC concept"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To make your code much easier to read and maintain"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To enable your code to dynamically load resources as they are needed"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  5) What is a component within SAPUI5? " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> An independent and reusable part that can be used to structure SAPUI5 applications"/>
+				
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  6) What information can be stored inside the manifest.json file of your app?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Content densities"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Root view"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Models of your app"/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  7) What is the benefit of data binding within SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> SAPUI5 uses data binding to bind two data sources or information sources together to keep them in sync. This means: All changes in one source are also reflected in the other one."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 8) How can you add a margin all around a control" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> class='sapUiSmallMargin'"/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 
+9) Which base class are you recommended to extend when implementing a custom type?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> sap.ui.model.SimpleType"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  10) How can you distinguish absolute and relative binding paths?" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" -> Absolute binding paths always start with a '/'."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  11)How to sort and group your sap.m.List when added to the view.xml?" width="100%"/>
+				
+				<con:Image class="sapUiSmallMargin" src="css/Image/Interview/pic5.png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   12) How can you access the list item control in an event handler for the press event?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Call the getSource() method at the event object parameter."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  13) What is the role of the application template in the development process?" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> To generate an initial set of files that serve as the starting point for the development of a productive application"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 14) How can sap.m.Table behave on smaller devices such as phones and tablets?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> It hides less important columns."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> It displays less important columns as a 'pop-in'; it stacks them vertically inside the row making the table larger in height."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  15) Which filter operation is appropriate for a textual search in SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="sap.ui.model.FilterOperator.Contains"/>
+				
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  16) Which responsiveness features can you realize by setting standard CSS classes provided by SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Adding different margins to controls depending on the screen size"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Hiding controls depending on the screen size"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  17) Which options for code reuse are available in SAPUI5?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Controller inheritance"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Nested views"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Fragments"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text=" 18) When should you put code from your view into a separate view or fragment and nest it into the original view?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> When you realize that you need to reuse this code in several other places and views in your app."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   19) What do you have to do to grant a dialog access to the surrounding view’s models?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Add the dialog to an aggregation of the view, for example the 'dependent' aggregation."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="   20) What is the purpose of the 'Static Area' in the DOM?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->  To display dialogs and popup controls over the application UI"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  21) Which benefits does the hash-based navigation in SAPUI5 offer?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Hash-based navigation adjusts the current hash to your interactions with the app, so that the URL can always be bookmarked."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> It allows you to build one-page apps where the contextual navigation is done by changing the hash, so the browser does not have to reload the page."/>
+				
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   22) What do you have to do to be notified when the hash has changed to a certain pattern?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> Register to the patternMatched event of the route."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  23) What is Sinon.JS?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> A standalone unit testing library for JavaScript that provides spies, stubs, and mocks"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="   24) Where does OPA fit in the testing pyramid?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> In component/integration tests"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="  25) Why is automated testing beneficial for app development?" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="-> It significantly reduces the manual testing effort."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->It is easier to hand over the app to other developers."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="->You can avoid regressions and bugs in your code"/>
+				</content>
+					</IconTabFilter>
+					</items>
+					</IconTabBar>
+				</content>
+				<footer>
+		<Toolbar>
+			<Button text="Have a Query?" press="click" icon="sap-icon://question-mark"></Button>
+		</Toolbar>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

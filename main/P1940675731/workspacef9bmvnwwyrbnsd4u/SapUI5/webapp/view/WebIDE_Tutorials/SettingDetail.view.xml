@@ -1,0 +1,71 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.WebIDE_Tutorials.SettingDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Setting Up SAP WebIDE">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Setting Up WebIDE"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hi, in this tutorial we will look forward to setting up SAP Web IDE. In my previous tutorial I have discussed about SAP Web IDE, have a look at the Introduction of SAP Web IDE . Now that you are familiar with this IDE, now I will discuss the steps to set up SAP Web IDE in the hana cloud cockpit. "/>
+					<FormattedText class="labelsize" width="90%"
+				htmlText=" Firstly, you would be required to register yourself at SAP HANA Cloud Cockpit(https://account.hanatrial.ondemand.com/). If you have a SCN account, you could also log in with the same credentials as you use for accessing SCN."/>
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Now, when you are in the cockpit, you will see a screen similar to this  "/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic6.png" />
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Next, we will access the Web IDE, and for that, we have two methods. "/>
+					<FormattedText class="labelsize" width="90%"
+				htmlText=" First method is to click on Subscriptions at the left site. In the Subscription section you will find one subscription: 'sapwebide'. Click on the Application name ('webide') of this subscription. "/>
+					<FormattedText class="labelsize" width="90%"
+				htmlText=" Second Method is to click on Services"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic7.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now Search SAP Web IDE in the Search bar and enable the SAP Web IDE by clicking on the tile and enabling it."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic8.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Now, click on Open SAP Web IDE and do bookmark the URL, so that it will be easy to access web IDE next time."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic9.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" So, this was all about setting sap web IDE. Now additionally, we can set up many other settings in web IDE, like:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Entering the Git User Settings"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, let’s discuss steps to set up Git User Settings."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In SAP Web IDE, Click on tools and choose Preference."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Then Click on Git Settings and then enter your name and Email address and save.
+"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic10.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Connecting to remote systems" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Do consider tutorial on configuring destination in Sap WebIDE tutorial"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So this was all about setting up SAP Web IDE in SAP HANA cloud Cockpit.  Hope you, liked this tutorial. For any queries, mail me at sapui5tutors@gmail.com"/>
+				
+
+				
+				
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

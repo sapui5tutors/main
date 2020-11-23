@@ -1,0 +1,20 @@
+{
+    "value": [
+        {
+            "country": "India",
+            "population": "13000"
+        },
+        {
+            "country": "pakistan",
+            "population": "5600"
+        },
+        {
+            "country": "America",
+            "population": "10000"
+        },
+        {
+         "country": "New Zealand",
+            "population": "1000"
+    }
+    ]
+}

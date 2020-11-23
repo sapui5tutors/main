@@ -1,0 +1,22 @@
+<mvc:View controllerName="ShopCart.controller.Item" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Items">
+				<content>
+					<List id="itemsList" >
+						<!--items="{ path : 'SUB>/SubCategories'}"-->
+						<headerToolbar>
+							<Toolbar>
+								<SearchField search="onFilter"/>
+							</Toolbar>
+						</headerToolbar>
+						<!--<items>-->
+						<!--	<ObjectListItem title="{SUB>CategoryName}" number="{SUB>NumberOfProducts}" type="Active" press="onClick">-->
+						<!--	</ObjectListItem>-->
+						<!--</items>-->
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,43 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.RFQ.controller.S4" xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>S4PageHearTitle}"  showNavButton="true"
+		navButtonPress="onBackPress">
+				<content>
+					<f:SimpleForm id="idsimpleFormChange" title="{i18n>RFQChange}" minWidth="1024"
+										maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+										labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+										columnsL="1" columnsM="1">
+									<f:content>
+										<Label text="{i18n>TableitemsColumn}" />
+										<Input value="{RFQDetails>/0/items}" enabled="false"/>
+										<Label text="{i18n>MaterialColumn}" />
+										<Input value="{RFQDetails>/0/Material}"  enabled="false"/>
+										<Label text="{i18n>ShortTextColumn}" />
+										<Input value="{RFQDetails>/0/Shorttext}"  enabled="false"/>
+										<Label text="{i18n>STDDelDateColumn}" />
+										<Input value="{RFQDetails>/0/stddeldate}" />
+										<Label text="{i18n>MaterialGroupColumn}" />
+										<Input value="{RFQDetails>/0/Materialgroup}"  enabled="false" />
+										<Label text="{i18n>TargetQuantityColumn}" />
+										<Input value="{RFQDetails>/0/targetquantity}" />
+										<Label text="{i18n>OrderUintColumn}" />
+										<Input value="{RFQDetails>/0/orderunit}"  enabled="false"/>
+										<Label text="{i18n>NetPriceColumn}" />
+										<Input value="{RFQDetails>/0/netprice}" />		
+									</f:content>
+								</f:SimpleForm>
+								
+							
+				</content>
+				<footer>
+					<Toolbar><ToolbarSpacer></ToolbarSpacer>
+								<Button text="{i18n>Cancel}" press="onCancel" icon="sap-icon://sys-cancel" />
+								<Button text="{i18n>Save}" press="onSave" icon="sap-icon://save" />
+									</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

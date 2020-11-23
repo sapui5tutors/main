@@ -1,0 +1,12 @@
+<mvc:View controllerName="com.vizchart.controller.S1" xmlns:viz="sap.viz.ui5" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Viz Charts">
+				<content>
+					<viz:Pie id="vizBar" visible="true" width="100%"/>
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

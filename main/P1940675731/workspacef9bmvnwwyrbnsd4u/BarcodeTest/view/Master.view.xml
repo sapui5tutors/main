@@ -1,0 +1,26 @@
+<mvc:View controllerName="BarcodeTest.view.Master" displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page id="page" title="{i18n>masterTitle}">
+		<subHeader>
+			<Bar id="searchBar">
+				<contentMiddle>
+					<SearchField id="searchField" showRefreshButton="{device>/isNoTouch}" placeholder="{i18n>masterSearchPlaceholder}" search="onSearch"
+						tooltip="{i18n>masterSearchTooltip}" width="80%"></SearchField>
+					<Button visible="{device>/isTouch}" icon="sap-icon://bar-code" press="onBarCodePress">
+						
+					</Button>
+				</contentMiddle>
+			</Bar>
+		</subHeader>
+		<content>
+			<List id="list" items="{/Orders}" mode="{device>/listMode}" noDataText="{i18n>masterListNoDataText}" select="onSelect" growing="true"
+				growingScrollToLoad="true">
+				<items>
+					<ObjectListItem type="{device>/listItemType}" press="onSelect" title="{CustomerID}" number="{OrderID}" numberUnit=""></ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar></Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,58 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Basic_Tutorials.HelloDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Hello World" >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Hello World"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This tutorial will tell you how to implement a very simple SAPUI5 based Hello World example. But instead of simply writing 'Hello World' to the console we will display 'Hello World' in an alert dialog which is displayed each time the user presses a button."/>	
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here I am writing the code in the HTML, and not following the MVC concepts. MVC  concepts are followed for a bigger project, since this is a simple hello world program, the coding is done only in html file itself."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Example" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic24.png" width="70%" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="First line describes HTML5 DOCTYPE. SAPUI5 considers  itself an HTML5 framework.Lline 5 and 6 tells the browser that mimetype is text/html and the content is UTF-8 encoded. With the X-UA-Compatible meta tag we tell IE browsers what version of Internet Explorer the page should be rendered as i.e. IE7 compatibility. IE=edge tells IE 8 should render with the highest IE 8 mode."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" In line 8 we define our SAPUI5 framework , here we get it from the SAP HANA Cloud. When bootstrapping SAPUI5 you can specify the theme and SAPUI5 library.
+These are 3 most widely used themes:
+·   sap_goldreflection
+·   sap_bluecrystal
+·    sap_hcb"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" The data-sap-ui-libs attribute can be used to load different libraries of SAPUI5
+Two most common used libraries are:
+·   sap.ui.commons – for desktop platform
+·    Sap.m – for mobile platform"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="If you want you could define your own css classes or you could overwrite SAPUI5 styles."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" At First we have defined variable oBtn then we instatiate a new button and assign it to oBtn. Here we are using “new” for instantiating the variable, new is a standard Javascript keyword and creates a new object.
+Here we are using sap.ui.commons.Button which has a property text. Here sap.ui.commons.Button inherits from sap.ui.core.Control."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, we want the text on the button to be 'Hello World' and the press event listener simply gets the text of the button by calling the getText() method on this to alert the text. Then we  calling oBtn.placeAt('content'); in order to add our button to the right location in our DOM.
+In line 31, we are defining the HTML body, It comes with the class sapUiBody which will offer some css styling, the role attribute of the body tag is relevant for Accessibility."/>
+			    <con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic25.png" width="70%" />
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

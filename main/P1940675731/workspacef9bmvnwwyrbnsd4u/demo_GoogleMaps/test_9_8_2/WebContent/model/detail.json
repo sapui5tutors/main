@@ -1,0 +1,59 @@
+{
+    "Product": [
+        {   "image": "model/bag.jpg",
+            
+            "Product ID": "123",
+            "Price": "321",
+            "Product Name": "Bag",
+            "value":"10",
+            "Plant":"bags limited",
+            "Status":"available"
+        },
+        {"image": "model/watch.png",
+            "Product ID": "124",
+            "Price": "322",
+            "Product Name":"watch",
+            "value":"7",
+            "Plant":"watch limited",
+            "Status":"unavailable"
+        },
+        {"image": "model/pen.png",
+            "Product ID": "125",
+            "Price": "323",
+            "Product Name": "Pen",
+            "value":"50",
+            "Plant":"pen limited",
+            "Status":"available"
+        },
+        {"image": "model/laptop.png",  
+        "Product ID": "126",
+            "Price": "324",
+            "Product Name": "Laptop",
+            "value":"15",
+            "Plant":"laptop limited",
+            "Status":"available"
+        },
+    { "image": "model/pencil.png", 
+    "Product ID": "127",
+            "Price": "325",
+            "Product Name": "pencil",
+            "value":"10",
+            "Plant":"pencil limited",
+            "Status":"unavailable"
+        },
+    
+    { "image": "model/bulb1.png",
+     "Product ID": "128",
+            "Price": "326",
+            "Product Name": "bulb",
+            "value":"10",
+            "Plant":"bulb limited",
+            "Status":"available"
+        }
+    
+    
+    
+    ]
+    
+    
+}

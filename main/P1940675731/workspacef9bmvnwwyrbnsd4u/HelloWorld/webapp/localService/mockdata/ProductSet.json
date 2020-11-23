@@ -1,0 +1,361 @@
+[{
+	"ProductID": "ProductID 1",
+	"TypeCode": "TypeCode 1",
+	"Category": "Category 1",
+	"Name": "Name 1",
+	"NameLanguage": "NameLanguage 1",
+	"Description": "Description 1",
+	"DescriptionLanguage": "DescriptionLanguage 1",
+	"SupplierID": "BusinessPartnerID 1",
+	"SupplierName": "SupplierName 1",
+	"TaxTarifCode": 1,
+	"MeasureUnit": "MeasureUnit 1",
+	"WeightMeasure": 4116.6,
+	"WeightUnit": "WeightUnit 1",
+	"CurrencyCode": "CurrencyCode 1",
+	"Price": 1996.46,
+	"Width": 1558.88,
+	"Depth": 2508.74,
+	"Height": 4469.57,
+	"DimUnit": "DimUnit 1",
+	"CreatedAt": "/Date(974908584000)/",
+	"ChangedAt": "/Date(1268236584000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 1')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 1')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 1')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 2",
+	"TypeCode": "TypeCode 2",
+	"Category": "Category 2",
+	"Name": "Name 2",
+	"NameLanguage": "NameLanguage 2",
+	"Description": "Description 2",
+	"DescriptionLanguage": "DescriptionLanguage 2",
+	"SupplierID": "BusinessPartnerID 2",
+	"SupplierName": "SupplierName 2",
+	"TaxTarifCode": 0,
+	"MeasureUnit": "MeasureUnit 2",
+	"WeightMeasure": 1828.47,
+	"WeightUnit": "WeightUnit 2",
+	"CurrencyCode": "CurrencyCode 2",
+	"Price": 4415.98,
+	"Width": 8268.69,
+	"Depth": 3206.56,
+	"Height": 2630.47,
+	"DimUnit": "DimUnit 2",
+	"CreatedAt": "/Date(1223740584000)/",
+	"ChangedAt": "/Date(1031414184000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 2')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 2')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 2')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 3",
+	"TypeCode": "TypeCode 3",
+	"Category": "Category 3",
+	"Name": "Name 3",
+	"NameLanguage": "NameLanguage 3",
+	"Description": "Description 3",
+	"DescriptionLanguage": "DescriptionLanguage 3",
+	"SupplierID": "BusinessPartnerID 3",
+	"SupplierName": "SupplierName 3",
+	"TaxTarifCode": 1,
+	"MeasureUnit": "MeasureUnit 3",
+	"WeightMeasure": 8890.35,
+	"WeightUnit": "WeightUnit 3",
+	"CurrencyCode": "CurrencyCode 3",
+	"Price": 1369.52,
+	"Width": 4000.31,
+	"Depth": 2585.7,
+	"Height": 3072.5,
+	"DimUnit": "DimUnit 3",
+	"CreatedAt": "/Date(1450886184000)/",
+	"ChangedAt": "/Date(1461081384000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 3')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 3')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 3')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 4",
+	"TypeCode": "TypeCode 4",
+	"Category": "Category 4",
+	"Name": "Name 4",
+	"NameLanguage": "NameLanguage 4",
+	"Description": "Description 4",
+	"DescriptionLanguage": "DescriptionLanguage 4",
+	"SupplierID": "BusinessPartnerID 4",
+	"SupplierName": "SupplierName 4",
+	"TaxTarifCode": 0,
+	"MeasureUnit": "MeasureUnit 4",
+	"WeightMeasure": 1032.85,
+	"WeightUnit": "WeightUnit 4",
+	"CurrencyCode": "CurrencyCode 4",
+	"Price": 2861.65,
+	"Width": 8062.92,
+	"Depth": 675.67,
+	"Height": 6332.31,
+	"DimUnit": "DimUnit 4",
+	"CreatedAt": "/Date(1246982184000)/",
+	"ChangedAt": "/Date(1471017384000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 4')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 4')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 4')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 5",
+	"TypeCode": "TypeCode 5",
+	"Category": "Category 5",
+	"Name": "Name 5",
+	"NameLanguage": "NameLanguage 5",
+	"Description": "Description 5",
+	"DescriptionLanguage": "DescriptionLanguage 5",
+	"SupplierID": "BusinessPartnerID 5",
+	"SupplierName": "SupplierName 5",
+	"TaxTarifCode": 8,
+	"MeasureUnit": "MeasureUnit 5",
+	"WeightMeasure": 4146.08,
+	"WeightUnit": "WeightUnit 5",
+	"CurrencyCode": "CurrencyCode 5",
+	"Price": 1572.46,
+	"Width": 9330.07,
+	"Depth": 86.7,
+	"Height": 1380.25,
+	"DimUnit": "DimUnit 5",
+	"CreatedAt": "/Date(1276098984000)/",
+	"ChangedAt": "/Date(1374249384000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 5')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 5')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 5')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 6",
+	"TypeCode": "TypeCode 6",
+	"Category": "Category 6",
+	"Name": "Name 6",
+	"NameLanguage": "NameLanguage 6",
+	"Description": "Description 6",
+	"DescriptionLanguage": "DescriptionLanguage 6",
+	"SupplierID": "BusinessPartnerID 6",
+	"SupplierName": "SupplierName 6",
+	"TaxTarifCode": 8,
+	"MeasureUnit": "MeasureUnit 6",
+	"WeightMeasure": 4001.87,
+	"WeightUnit": "WeightUnit 6",
+	"CurrencyCode": "CurrencyCode 6",
+	"Price": 2408.73,
+	"Width": 9487.12,
+	"Depth": 7193.24,
+	"Height": 3964.01,
+	"DimUnit": "DimUnit 6",
+	"CreatedAt": "/Date(1447775784000)/",
+	"ChangedAt": "/Date(1258386984000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 6')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 6')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 6')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 7",
+	"TypeCode": "TypeCode 7",
+	"Category": "Category 7",
+	"Name": "Name 7",
+	"NameLanguage": "NameLanguage 7",
+	"Description": "Description 7",
+	"DescriptionLanguage": "DescriptionLanguage 7",
+	"SupplierID": "BusinessPartnerID 7",
+	"SupplierName": "SupplierName 7",
+	"TaxTarifCode": 9,
+	"MeasureUnit": "MeasureUnit 7",
+	"WeightMeasure": 4779.77,
+	"WeightUnit": "WeightUnit 7",
+	"CurrencyCode": "CurrencyCode 7",
+	"Price": 9860.35,
+	"Width": 1776.59,
+	"Depth": 706.6,
+	"Height": 8605.04,
+	"DimUnit": "DimUnit 7",
+	"CreatedAt": "/Date(1052754984000)/",
+	"ChangedAt": "/Date(1302537384000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 7')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 7')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 7')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 8",
+	"TypeCode": "TypeCode 8",
+	"Category": "Category 8",
+	"Name": "Name 8",
+	"NameLanguage": "NameLanguage 8",
+	"Description": "Description 8",
+	"DescriptionLanguage": "DescriptionLanguage 8",
+	"SupplierID": "BusinessPartnerID 8",
+	"SupplierName": "SupplierName 8",
+	"TaxTarifCode": 1,
+	"MeasureUnit": "MeasureUnit 8",
+	"WeightMeasure": 3689.14,
+	"WeightUnit": "WeightUnit 8",
+	"CurrencyCode": "CurrencyCode 8",
+	"Price": 6443.9,
+	"Width": 3369.09,
+	"Depth": 6271.36,
+	"Height": 6049.51,
+	"DimUnit": "DimUnit 8",
+	"CreatedAt": "/Date(1568217384000)/",
+	"ChangedAt": "/Date(1288799784000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 8')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 8')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 8')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 9",
+	"TypeCode": "TypeCode 9",
+	"Category": "Category 9",
+	"Name": "Name 9",
+	"NameLanguage": "NameLanguage 9",
+	"Description": "Description 9",
+	"DescriptionLanguage": "DescriptionLanguage 9",
+	"SupplierID": "BusinessPartnerID 9",
+	"SupplierName": "SupplierName 9",
+	"TaxTarifCode": 3,
+	"MeasureUnit": "MeasureUnit 9",
+	"WeightMeasure": 7335.25,
+	"WeightUnit": "WeightUnit 9",
+	"CurrencyCode": "CurrencyCode 9",
+	"Price": 8332.45,
+	"Width": 3570.48,
+	"Depth": 1295.32,
+	"Height": 8019.33,
+	"DimUnit": "DimUnit 9",
+	"CreatedAt": "/Date(1480262184000)/",
+	"ChangedAt": "/Date(1335369384000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 9')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 9')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 9')/ToSupplier"
+		}
+	}
+}, {
+	"ProductID": "ProductID 10",
+	"TypeCode": "TypeCode 10",
+	"Category": "Category 10",
+	"Name": "Name 10",
+	"NameLanguage": "NameLanguage 10",
+	"Description": "Description 10",
+	"DescriptionLanguage": "DescriptionLanguage 10",
+	"SupplierID": "BusinessPartnerID 10",
+	"SupplierName": "SupplierName 10",
+	"TaxTarifCode": 9,
+	"MeasureUnit": "MeasureUnit 10",
+	"WeightMeasure": 7910.63,
+	"WeightUnit": "WeightUnit 10",
+	"CurrencyCode": "CurrencyCode 10",
+	"Price": 382.62,
+	"Width": 8453.94,
+	"Depth": 9126.4,
+	"Height": 2597.12,
+	"DimUnit": "DimUnit 10",
+	"CreatedAt": "/Date(1399391784000)/",
+	"ChangedAt": "/Date(1321286184000)/",
+	"__metadata": {
+		"uri": "ProductSet('ProductID 10')",
+		"type": "/IWBEP/GWSAMPLE_BASIC.Product"
+	},
+	"ToSalesOrderLineItems": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 10')/ToSalesOrderLineItems"
+		}
+	},
+	"ToSupplier": {
+		"__deferred": {
+			"uri": "ProductSet('ProductID 10')/ToSupplier"
+		}
+	}
+}]

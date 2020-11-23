@@ -1,0 +1,22 @@
+{
+  "webapp/view/Upload.view.xml": "1463136766000",
+  "webapp/controller/Upload.controller.js": "1463136682000",
+  "webapp/i18n/i18n.properties": "1463136037000",
+  "webapp/model/models.js": "1463136037000",
+  "webapp/Component.js": "1463136037000",
+  "webapp/css/style.css": "1463136037000",
+  "webapp/manifest.json": "1463136037000",
+  "webapp/index.html": "1463136037000",
+  "webapp/preview_hidden.html": "1463136089000",
+  "dist/view/Upload.view.xml": "1463136766000",
+  "dist/controller/Upload.controller.js": "1463136682000",
+  "dist/i18n/i18n.properties": "1463136037000",
+  "dist/model/models.js": "1463136037000",
+  "dist/Component.js": "1463136037000",
+  "dist/css/style.css": "1463136037000",
+  "dist/manifest.json": "1463137943000",
+  "dist/index.html": "1463136037000",
+  "dist/preview_hidden.html": "1463136089000",
+  "dist/Component-preload.js": "1463137941000",
+  "dist/resources.json": "1463137943000"
+}

@@ -1,0 +1,9 @@
+<mvc:View
+	controllerName="vikalp.cus.sd.dealer.plus.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<App class="VikalpDP" id="app">
+		
+	</App>
+</mvc:View>

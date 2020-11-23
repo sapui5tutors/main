@@ -1,0 +1,19 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.WebIDE_Tutorials.WebIDEMaster"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Topics" showNavButton="true"
+		navButtonPress="onNavBack">
+				
+				<content>
+				<List id="WebIDEList" />
+				</content>
+				<footer>
+		<Toolbar>
+			<Button text="Have a Query?" press="click" icon="sap-icon://question-mark"></Button>
+		</Toolbar>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

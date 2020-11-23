@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>ReuseView</title>
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"ReuseView": ""}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				// new sap.m.Shell({
+				// 	app: new sap.ui.core.ComponentContainer({
+				// 		height : "100%",
+				// 		name : "ReuseView"
+				// 	})
+				// }).placeAt("content");
+				
+				
+				// jQuery.sap.registerModulePath("NavViaURL","/NavViaURL");
+				// var myController = sap.ui.controller("NavViaURL.controller.View1");
+				//   var view =  sap.ui.view({ type: sap.ui.core.mvc.ViewType.XML,
+    //                           viewName: "NavViaURL.view.View1",
+    //                           controller: myController 
+    //                         });
+
+				// 	view.placeAt("viewOneContainer");
+
+				jQuery.sap.registerModulePath("NavViaURL","/NavViaURL");
+				var myController = sap.ui.controller("NavViaURL.controller.View1");
+				  var view =  sap.ui.view({ type: sap.ui.core.mvc.ViewType.XML,
+                              viewName: "NavViaURL.view.View1",
+                              controller: myController 
+                            });
+
+					view.placeAt("viewOneContainer");				
+				
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+		<div id="viewOneContainer"></div>
+	</body>
+
+</html>

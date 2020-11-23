@@ -1,0 +1,86 @@
+[{
+	"SalesOrderNumber": "60000008",
+	"ShipToPostalcode": "",
+	"ShipToRegion": "",
+	"ShipToCountry": "",
+	"PO": "",
+	"TotalAmount": "36378.00",
+	"Currency": "INR",
+	"Status": "B",
+	"ShipToPartyName": "",
+	"OrderDate": "20160223",
+	"RequestedDate": "20160223",
+	"ShipToContact": "",
+	"ShipToAddresslLne1": "",
+	"ShipToAddressLine2": "",
+	"ShiptoAddressLine3": "",
+	"TotalSchedulesCount": "",
+	"OpenSchedulesCount": "",
+	"InProcessSchedulesCount": "",
+	"ShippedSchedulesCount": "",
+	"OrderItemsCount": "",
+	"PaymentTerms": "",
+	"NetPriceAmount": "36378.00",
+	"TaxAmount": "0.00",
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"CustomerName": "Standard Trading Co.",
+	"DistChannel": "V4",
+	"Division": "21",
+	"ShipToCity": "",
+	"ShippingStatusCode": "NR",
+	"OverallStatusCode": "RJ",
+	"ReasonOfRejection": "Damaged in transit",
+	"DocumentType": "RE",
+	"ShipToCarrier": "",
+	"ShipToIncoterms": "",
+	"ReturnOrdersItems": {
+		"__deferred": {
+			"uri": "http://vecc.vikalpsolutions.com:8000/sap/opu/odata/VK01DPBE/DLR_PLUS_SRV/ReturnOrderSet(SalesOrderNumber='60000008',CustomerId='18',SalesOrganization='VKS1',DistChannel='V4',Division='21')/ReturnOrdersItems"
+		}
+	}
+
+}, {
+	"SalesOrderNumber": "60000007",
+	"ShipToPostalcode": "",
+	"ShipToRegion": "",
+	"ShipToCountry": "",
+	"PO": "",
+	"TotalAmount": "181260.00",
+	"Currency": "INR",
+	"Status": "B",
+	"ShipToPartyName": "",
+	"OrderDate": "20160220",
+	"RequestedDate": "20160220",
+	"ShipToContact": "",
+	"ShipToAddresslLne1": "",
+	"ShipToAddressLine2": "",
+	"ShiptoAddressLine3": "",
+	"TotalSchedulesCount": "",
+	"OpenSchedulesCount": "",
+	"InProcessSchedulesCount": "",
+	"ShippedSchedulesCount": "",
+	"OrderItemsCount": "",
+	"PaymentTerms": "",
+	"NetPriceAmount": "181260.00",
+	"TaxAmount": "0.00",
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"CustomerName": "Standard Trading Co.",
+	"DistChannel": "V4",
+	"Division": "21",
+	"ShipToCity": "",
+	"ShippingStatusCode": "NR",
+	"OverallStatusCode": "PR",
+	"ReasonOfRejection": "Free of charge sample",
+	"DocumentType": "RE",
+	"ShipToCarrier": "",
+	"ShipToIncoterms": "",
+	"ReturnOrdersItems": {
+		"__deferred": {
+			"uri": "http://vecc.vikalpsolutions.com:8000/sap/opu/odata/VK01DPBE/DLR_PLUS_SRV/ReturnOrderSet(SalesOrderNumber='60000007',CustomerId='61',SalesOrganization='VKS1',DistChannel='V4',Division='21')/ReturnOrdersItems"
+		}
+	}
+
+}
+]

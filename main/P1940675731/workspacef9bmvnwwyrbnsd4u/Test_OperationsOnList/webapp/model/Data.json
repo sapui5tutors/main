@@ -1,0 +1,27 @@
+{
+	"items":[
+		{
+			"Title":"Lenevo",
+			"Price":"25000"
+		},
+		{
+			"Title":"MI",
+			"Price":"8000"
+		},
+		{
+			"Title":"Sony",
+			"Price":"30000"
+		},
+		{
+			"Title":"Samsung",
+			"Price":"10000"
+		},
+		{
+			"Title":"Karbon",
+			"Price":"5000"
+		},
+		{
+			"Title":"Apple",
+			"Price":"50000"
+		}]
+}

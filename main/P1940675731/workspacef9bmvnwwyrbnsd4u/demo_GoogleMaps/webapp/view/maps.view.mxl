@@ -1,0 +1,40 @@
+    <core:View height="100%" controllerName="com.googlemaps.controller.maps"   
+         xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" 
+         xmlns:vbm="sap.ui.vbm" xmlns:l="sap.ui.layout"  
+         xmlns:html="http://www.w3.org/1999/xhtml">      
+        <Page id="mainPage" enableScrolling="false" title="GMaps">  
+<!--                 <IconTabBar id="idIconTabBar" select="handleIconTabBarSelect" -->
+<!-- 	backgroundDesign="Transparent"> -->
+<!-- 	<items> -->
+		<!-- <ToolbarSpacer/> -->
+<!-- 		<IconTabFilter icon="sap-icon://globe" text="International"  -->
+<!-- 			key="International"> -->
+<!-- 			<content> -->
+				<VBox fitContainer="true" justifyContent="Center" alignItems="Center">
+					<HBox fitContainer="true" justifyContent="Center" alignItems="Center">
+ 				<Input id="bntSearch" class="controls" type="text" placeholder="Search Box"/>
+ 				<Button id ="button" text="search" press="onAfterRendering"/>
+				<Button id ="Distance" text="Distance" press="onDistancePress"/>
+				</HBox>
+				<HBox fitContainer="true" justifyContent="Center" alignItems="Center">
+				<Input id="FromDis" placeholder="From" visible="false"/>
+				<Input id="ToDis" placeholder="To" visible="false"/>
+				<Button id ="Okay" text="Ok" visible="false" press="onOkayPress"/>
+				</HBox>	
+					<HBox id="map_canvas" fitContainer="true" justifyContent="Center"
+						alignItems="Center" >
+
+				</HBox>
+				</VBox>
+<!-- 			</content> -->
+<!-- 		</IconTabFilter> -->
+<!-- 		<IconTabFilter icon="sap-icon://globe" text="sInternational" -->
+<!-- 			key="sInternational"> -->
+<!-- 			<content> -->
+<!-- 				<vbm:GeoMap id="vbi" width="100%" xmlns:l="sap.ui.layout" height="100%"/> -->
+<!-- 			</content> -->
+<!-- 		</IconTabFilter> -->
+<!-- 	</items> -->
+<!-- </IconTabBar> -->
+        </Page>  
+    </core:View>  

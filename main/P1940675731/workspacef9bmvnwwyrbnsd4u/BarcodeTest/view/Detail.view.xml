@@ -1,0 +1,20 @@
+<mvc:View controllerName="BarcodeTest.view.Detail" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Page showNavButton="{device>/isPhone}" navButtonPress="onNavBack" class="sapUiFioriObjectPage" title="{i18n>detailTitle}">
+		<content>
+			<ObjectHeader title="{CustomerID}" number="{OrderID}" numberUnit=""></ObjectHeader>
+			<IconTabBar select="onDetailSelect" id="idIconTabBar">
+				<items>
+					<IconTabFilter key="" text="" icon="sap-icon://hint">
+						<!--key="Detail" -->
+						<content>
+							<core:Fragment fragmentName="BarcodeTest.view.DetailInfoForm" type="XML"/>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar></Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,104 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Intermediate_tutorials.BindDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="Data Binding">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Data Binding"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuIntButton1" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					<FormattedText class="labelsize" width="90%"
+				htmlText="The business data within a model can be defined using various formats:"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="1) JavaScript Object Notation (JSON)" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="2) Extensible Markup Language (XML)" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="3) OData" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The process for using data binding for SAPUI5 controls in a simple application comprises five steps: Deciding on the model, creating a model and a control instance, binding the properties or lists to the model and, if required, unbinding the properties again."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="JSON Model" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The JSON model supports two-way data binding by default, which means that the model will automatically reflect changes to the view and vice versa."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="For JSON Model Binding, take a look at my video from youtube:"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/eECncPhsPJI" frameborder="0" allowfullscreen="true"></html:iframe>
+    
+    			<Label class="sapUiSmallMargin" design="Bold" text="Defining the Data" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="To define the data, proceed as follows:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Create the data that you want to bind to a control property. Here we are using JSON Model"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Place the code into your sample json file"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic5.png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Create Controls and Property Binding" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic9.PNG" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Create Data Binding Model Instance" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now, here I am using a list to show the data, in a list format."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic6.PNG" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Here sap.m.ObjectListItem is a template for the list in which we are binding the data.
+We also define the path, which is a key value defined in the JSON model."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Binding Modes" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Binding mode is usually contains of 2 main categories: Two Way, One Way and One Time modes. Let’s get some explanations on that:"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="One Way - means that all data changes will be reflected on the controls. If you have input field mapped on name field in model all model’s name property value changes will be displayed in that input. Changing the input will not be reflected on the model." width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Two Way - means that all input changes will be reflected in the model. Unfortunately this will not work for data binding made with formatter functions." width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="One Time - means data will be bound from model to view just once" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="By default JSON and XML models have Two Way bind mode, resource and OData models have One Way mode. Right now OData and resource models don’t support Two Way mode."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Binding Types" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="There are 3 types of data binding:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Bind Aggregation"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Property Binding"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Bind Element"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="ODATA Model" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The OData model is a server-side model: the dataset is only available on the server and the client only knows the currently visible rows and fields. Sorting and filtering is done on the server. The client has to send a request to the server to accomplish these tasks."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="And the steps are:"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="1) Instantiate the OData model as follows:" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic7.PNG" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Example" width="100%"/>	
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic8.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Here, I have used sap.m.SelectDialog whuch is used as a dialog box, in which
+Customer Names and their informations is displayed in a list."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" At first data is read from the ECC server using ODataModel.read, where
+/AccountListInfoSet is an entity set, and ImUsername is a filter. This data
+is set into a JSON model which is binded into the DealerList,ie. Select Dialog "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hope it helped! Thanks!"/>
+					
+					
+					
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

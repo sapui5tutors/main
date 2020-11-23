@@ -1,0 +1,15 @@
+[{
+	"CtrlAreatext": "Credit Control Area Vikalp",
+	"CustomerId": "18",
+	"ControlArea": "ZV01",
+	"CreditLimit": "200000.000",
+	"SalesValue": "267584.000",
+	"Receivables": "178000.000",
+	"CreditLimitUsed": "            222.792",
+	"CreditAvailable": "-245584.000",
+	"CreditExposure": "445584.000",
+	"Currency": "INR",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21"
+}]

@@ -1,0 +1,55 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.myApp.controller.View1">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+				<ProgressIndicator id="abc" class="sapUiSmallMarginBegin  sapUiSmallMarginEnd sapUiSmallMarginBottom" percentValue="{/Collection/id}" displayValue="0%" showValue="true" height="20px" width="70%" state="None" />
+					            
+					<List id="productsList" items="{
+			path : 'Model>/ProductSet',
+			sorter : {
+				path : 'Category',
+				group: true
+			}
+			}">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="Product List"/>
+								<ToolbarSpacer/>
+								<SearchField width="50%" search="onFilterProducts"/>
+							</Toolbar>
+						</headerToolbar>
+						<items>
+							<ObjectListItem 
+							title="{Model>Name}" 
+							number="{Model>Price}" 
+							numberUnit="{Model>CurrencyCode}"
+							intro="{Model>ProductID}"
+							numberState="{= ${Model>Price} > 250 ? 'Error' : 'Success'}"
+							>
+								<firstStatus>
+									<ObjectStatus
+									text="{Model>WeightMeasure}{Model>WeightUnit}"
+									></ObjectStatus>
+								</firstStatus>
+								
+								<secondStatus>
+									<ObjectStatus
+									text="{
+									parts: [ 
+									{path: 'Model>WeightUnit'},
+									{path: 'Model>WeightMeasure'} ],
+									formatter : '.formatter.delivery'
+									}"
+									>
+										
+									</ObjectStatus>
+								</secondStatus>
+								</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

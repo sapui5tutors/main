@@ -1,0 +1,84 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Intermediate_tutorials.FragmentDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Fragments">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Fragments"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Fragments are reusable UI parts like views and can be used in any other app if they fit in. Fragments should only contain UI elements. It does not have controllers like views. Event handling methods for UI elements which are defined in Fragment can be implemented in the respective view controllers in which they are used."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Let’s take an example to understand them better, If an application having dialog box and this dialog box is used in many views by declaring it separately in every view. By following this approach we are declaring same UI control in many places which leads to development overhead. To avoid this we use fragments. Declare the dialog control in fragments and use the fragment where ever you need to use the dialog control."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Watch video on Fragment here:"/>
+				<html:iframe class="labelsize" id="fragmentvideo"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/7qQjmaqKVqA" frameborder="0" allowfullscreen="true"></html:iframe>
+    			
+				<FormattedText class="labelsize" width="90%"
+				htmlText="They are 3 types of fragments in SAPUI5."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="1) JS Fragments" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="2) XML Fragments" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="3) HTML Fragments" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Let us create a sample application and understand it better."/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1). Create a SAPUI5 application project in Eclipse."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic10.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2). Enter the view name and click on Next or Finish."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic11.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3). Create a new folder 'fragments' under WebContent folder to store all fragments files. Right click on WebContent folder  and choose New → Folder."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4). Now create a new fragment file which contains reusable dialog control. To create fragment file Right click on newly created fragments folder → New → File. In this example we are going to create a new XML fragment."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="5). Double click on the file to write the code. We start writing the code by declaring the Fragment definition and include the UI libraries which are needed to declare the UI elements in the fragments. In the code below i have declared Dialog in the fragment."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Dialog.fragment.xml" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic12.PNG" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="6). This completes our reusable fragment declaration. Next step will be call to this fragment and open the dialog in a view. To do this go to the view in the SAPUI5 application project and write the below code inside it."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="MainView.view.xml" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic13.PNG" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In the view we added a button and declared a press event. The press event handler will be implemented in view controller. When you click on the button we need to open the dialog."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="7). Go to view controller and implement the 'onPress' event of the button. Inside this event handler method we will get the instance of the fragment by providing the full path and by using the same instance we can call the dialog."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="MainView.controller.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic14.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="8). Now we ready to test the application. What we should expect is, by clicking on the button a dialog should be opened."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic15.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="9). Now we need to implement the event handler of the button Close on the popup dialog which we declared in the fragments. As mentioned earlier all the event handler implementations of the fragments are performed in respective view controllers where they are used. So  go to the view controller and write the below code to close the popup dialog."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="MainView.controller.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic16.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="10. Now save the code changes and test the application again, we should be able to close the popup dialog."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="That's it!!! Hope it helped!"/>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+		</App>
+</mvc:View>

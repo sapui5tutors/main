@@ -1,0 +1,114 @@
+<core:View xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		xmlns:l="sap.ui.layout" controllerName="vikalp.cus.sd.dealer.plus.controller.ShiptoPartyEdit" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>shipHeaderTitle}" showNavButton="true"
+		navButtonPress="onBackPress">
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button id="idshipsave" text="{i18n>shipSave}" type="Emphasized"  press="handleSavePress" />
+					<Button id="idshipcancel" text="{i18n>shipCancel}"  press="handleCancelPress" />
+				</contentRight>
+			</Bar>			
+		</footer>
+		<content>
+			<f:Form id="idShipEditForm"
+			minWidth="1024"
+			maxContainerCols="2"
+			editable="true">
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanL="3"
+					labelSpanM="3"
+					emptySpanL="4"
+					emptySpanM="4"
+					columnsL="1"
+					columnsM="1" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="{i18n>shipName}">
+							<f:fields>
+								<Input value="{dealer>CustomerName} ({dealer>CustomerId})" editable="false"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>shipSalesArea}">
+							<f:fields>
+								<Input value="{dealer>SalesOrganization},{dealer>DistributionChannel},{dealer>Division}" editable="false">
+								<layoutData>
+										<l:GridData span="L2 M2 S4" />
+									</layoutData>
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>shipStreet}">
+							<f:fields>
+								<Input value="{dealer>Street}">
+								</Input>
+							</f:fields>
+						</f:FormElement>
+<!-- 						<f:FormElement label="{i18n>shipRegion}"> -->
+<!-- 							<f:fields> -->
+<!-- 								<Input value="{dealer>City}"> -->
+<!-- 									<layoutData> -->
+<!-- 										<l:GridData span="L2 M2 S4" /> -->
+<!-- 									</layoutData> -->
+<!-- 								</Input> -->
+<!-- 								<Input value="{dealer>Region}"> -->
+<!-- 									<layoutData> -->
+<!-- 										<l:GridData span="L2 M2 S4" /> -->
+<!-- 									</layoutData> -->
+<!-- 								</Input> -->
+<!-- 								<Input value="{dealer>RegionName}"> -->
+<!-- 									<layoutData> -->
+<!-- 										<l:GridData span="L2 M2 S4" /> -->
+<!-- 									</layoutData> -->
+<!-- 								</Input> -->
+<!-- 								<Input value="{dealer>CountryName}"> -->
+<!-- 									<layoutData> -->
+<!-- 										<l:GridData span="L2 M2 S4" /> -->
+<!-- 									</layoutData> -->
+<!-- 								</Input> -->
+<!-- 							</f:fields> -->
+<!-- 						</f:FormElement> -->
+						<f:FormElement label="{i18n>shipCountry}">
+							<f:fields>
+								<Select  id="idshipcountry" change="onCountryChange"></Select>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>shipState}">
+							<f:fields>
+								<Select  id="idshipstate" change="onStateChange"></Select>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>shipCity}">
+							<f:fields>
+								<Input value="{dealer>City}">
+								</Input>
+							</f:fields>
+						</f:FormElement>						
+						<f:FormElement label="{i18n>shipPinCode}">
+							<f:fields>
+								<Input value="{dealer>PostalCode}">
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>shipTelephone}">
+							<f:fields>
+								<Input value="{dealer>ContactNumber}">
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>shipEmail}">
+							<f:fields>
+								<Input value="{dealer>MailId}">
+								</Input>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+		</content>
+	</Page>
+</core:View>

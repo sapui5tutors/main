@@ -1,0 +1,17 @@
+.myBackgroundStyle {  
+   height : '300px';  
+  background-image: url('Image/lightsa.jpg');  
+}
+
+.labelsize {
+	font-size : 16px !important;
+	margin: 1rem !important;
+}
+
+.BarColor {
+	
+    background-color: #ffffff !important;
+}
+.genericTileImage{
+	background-image: url('Image/white1.jpg'); 
+}

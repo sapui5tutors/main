@@ -1,0 +1,23 @@
+{
+	"Categories": [{
+		"CategoryName": "Electronics",
+		"Category": "EC",
+		"NumberOfProducts": 6
+	}, {
+		"CategoryName": "LifeStyle",
+		"Category": "LF",
+		"NumberOfProducts": 2
+	}, {
+		"CategoryName": "Home & Furnishing",
+		"Category": "HF",
+		"NumberOfProducts": 3
+	}, {
+		"CategoryName": "TV & Appliance",
+		"Category": "TA",
+		"NumberOfProducts": 3
+	}, {
+		"CategoryName": "Books & More",
+		"Category": "BM",
+		"NumberOfProducts": 2
+	}]
+}

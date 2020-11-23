@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+	<Dialog title="{i18n>filterTitle}">
+		<content>
+			<l:VerticalLayout class="sapUiContentPadding" width="100%">
+				<l:content>
+					<Label text="{i18n>s3FromDate}" />
+					<DatePicker id="FromPSDate" placeholder="{i18n>s3DatePlaceHolder}"
+						change="handleChange" value="{dealer>DateFrom}">
+					</DatePicker>
+					<Label text="{i18n>s3ToDate}" />
+					<DatePicker id="ToPSDate" placeholder="{i18n>s3DatePlaceHolder}"
+						change="handleChangeTo" value="{dealer>DateTo}">
+					</DatePicker>
+				</l:content>
+			</l:VerticalLayout>
+		</content>
+		<beginButton>
+			<Button text="{i18n>DialogOkTxt}" press="onPSDateFilter" />
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>DialogCloseTxt}" press="onPSCloseDialog" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

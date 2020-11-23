@@ -1,0 +1,92 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Advanced_Tutorials.CustomDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page  >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Custom Controls"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I will be taking about what is a Custom control in sapui5, how to develop it and how to use it once its implemented.  The idea is simple, we will create a simple custom control apart from what already exists in sapui5 framework."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SapUi5 offers us many built in controls like table, list, and different kinds of forms and so on, which helps to develop almost any type of required application. What if we have a requirement, apart from what already exist in sapui5? The best probable solution might be to create a custom control."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="How a Custom Control works" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Basically, the parent class of all the sap ui5 control is sap.ui.core which extends from sap.ui.core.Element. A control defines appearance and behavior."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Take a look at the structure of a control:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Properties - Allows define its appearance and behavior on initialization."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Aggregations - It lets group controls, variables, etc. It lets define some kind of containers inside a control. For example sap.m.ListBase has different aggregations items, swipeContent, headerToolBar etc."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Associations - Controls can be associated with others that are not part of them. For example if we want to render a collection with next/prev functionality we could develop a previousItem / nextItem associations."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) Events - Control events should be related to higher level events more than standard DOM events (click, mouseover, etc). For example sap.m.ListBase has some events like select, delete, swipe etc."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="5) Appearance - Definition of our control in screen area. Every control has a render method in order to be rendered in HTML code."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" This might give a better understanding if you have come across with sap.m.ListBase control.
+So this was the basic understanding of what a custom control is. Now, with an example let’s just try to implement a custom control. "/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic1.png" width="70%" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Requirement – Speech Recognition Custom Control" width="100%"/>
+
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Sapui5 doesn’t offer us any control, which can be used for speech recognition. Here, I will create an inputControl and a button. The inputControl will be our custom control. So just lets start:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="First, create a project in eclipse:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic2.png" width="70%" />
+
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Here, I have made the project structure. Have a look at the project structure tutorial in my blog here: http://www.sapui5tutors.com/2016/03/sapui5-application-project-structuring.html
+This project structuring is according to the best practices, so I would suggest to follow this."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In the view folder create a view named CustomControlView.  Now, the Best practice would suggest that there should be a separate folder for controller, but for the sake of simplicity, I have collected both view and controller in the same folder itself."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic3.png" width="70%" />
+
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In the view, define the inputControl and the button"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="CustomControlView.view.xml" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic4.PNG" width="70%" />
+				<Label class="sapUiSmallMargin" design="Bold" text="CustomControlView.controller.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic5.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now Create a new folder in the webcontent named as control and create a new js file. You can name it accordingly, here I have named it SpeechRecognitionInputControl.js."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic6.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This is the main file, where the coding is to be done"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="SpeechRecognitionInputControl.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic7.png" width="70%" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic8.png" width="70%" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic9.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Output would look like something like this:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic10.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Even though the speech functionality wont work, unless cordova plugin is installed and https://github.com/macdonst/SpeechRecognitionPlugin.git is integrated into the eclipse.Still, we learned how to implement custom control in sap ui5 application."/>
+				
+				
+				
+				</content>
+					<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,21 @@
+<mvc:View controllerName="ShopCart.controller.Categories" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>Products}">
+				<content>
+					<List id="productsList" items="{ path : 'JSON>/Categories'}">
+						<headerToolbar>
+							<Toolbar>
+								<SearchField search="onFilter"/>
+							</Toolbar>
+						</headerToolbar>
+						<items>
+							<ObjectListItem title="{JSON>CategoryName}" number="{JSON>NumberOfProducts}" type="Active" press="onClick">
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

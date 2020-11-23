@@ -1,0 +1,73 @@
+[{
+	"Material": "Gauges",
+	"Description": "Delivered Quantity",
+	"Quantity": "320.000",
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21"
+},
+{
+	"CustomerId": "18",
+	"Material": "Gears",
+	"SalesOrganization": "VKS1",
+	"Description": "Required Quantity",
+	"DistChannel": "V4",
+	"Quantity": "21",
+	"Division": "21"
+},
+{
+	"CustomerId": "18",
+	"Material": "Gears",
+	"SalesOrganization": "VKS1",
+	"Description": "Pending Quantity",
+	"DistChannel": "V4",
+	"Quantity": "2",
+	"Division": "21"
+},
+{
+	"CustomerId": "18",
+	"Material": "Gears",
+	"SalesOrganization": "VKS1",
+	"Description": "Returns",
+	"DistChannel": "V4",
+	"Quantity": "4",
+	"Division": "21"
+},
+{
+	"CustomerId": "18",
+	"Material": "Gauge",
+	"SalesOrganization": "VKS1",
+	"Description": "Delivered Quantity",
+	"DistChannel": "V4",
+	"Quantity": "11",
+	"Division": "21"
+},
+{
+	"CustomerId": "18",
+	"Material": "Gauge",
+	"SalesOrganization": "VKS1",
+	"Description": "Required Quantity",
+	"DistChannel": "V4",
+	"Quantity": "15",
+	"Division": "21"
+},
+{
+	"CustomerId": "18",
+	"Material": "Gauge",
+	"SalesOrganization": "VKS1",
+	"Description": "Pending Quantity",
+	"DistChannel": "V4",
+	"Quantity": "3",
+	"Division": "21"
+},
+{
+	"CustomerId": "18",
+	"Material": "Gauge",
+	"SalesOrganization": "VKS1",
+	"Description": "Returns",
+	"DistChannel": "V4",
+	"Quantity": "1",
+	"Division": "21"
+}
+]

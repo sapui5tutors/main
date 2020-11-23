@@ -1,0 +1,137 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Blog_Tutorials.BlogTutorial"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Blogs on SAPUI5"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuBloButton1" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				
+				<content>
+				<Link class="sapUiSmallMargin" text="Responsive Table in SAPUI5" href="http://www.sapui5tutors.com/2016/08/responsive-sapui5-table.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this particular post, I will discuss about responsive web design in sapui5 and why responsiveness is important and how to implement responsiveness in sapui5 applications."/>
+				<Link class="sapUiSmallMargin" text="Margins and Padding in SAPUI5" href="http://www.sapui5tutors.com/2016/08/margins-and-padding-in-sapui5.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial blog you learn about Margins and paddings in SAPUI5 applications. SAP has provided some predefined classes that you can make use in the application for margin and padding purposes of your control elements."/>
+				<Link class="sapUiSmallMargin" text="SAPUI5 Interview Questions" href="http://www.sapui5tutors.com/p/interview-question.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" SAPUI5 Interview Questions A"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" SAPUI5 Interview Questions B"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" SAPUI5 Interview Questions C"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" SAPUI5 Interview Questions D"/>
+				
+				<Link class="sapUiSmallMargin" text="Formatters and Inline Expressions" href="http://www.sapui5tutors.com/2016/07/formatters-and-inline-expressions.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I have explained things about custom formatters and Inline expressions. How formatters help in a particular sapui5 application. I have covered almost everything related to both formatters and inline expressions with the help of examples."/>
+				<Link class="sapUiSmallMargin" text="Setting up SAP Web IDE in SAP HANA Cloud" href="http://www.sapui5tutors.com/2016/06/setting-up-sap-web-ide.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hi, in this tutorial we will look forward to setting up SAP Web IDE. In my previous blog I have discussed about SAP Web IDE, have a look at the Introduction of SAP Web IDE . Now that you are familiar with this IDE, now I will discuss the steps to set up SAP Web IDE in the hana cloud cockpit."/>
+				<Link class="sapUiSmallMargin" text="Configuring Northwind oData Destination in SAP Web IDE" href="http://www.sapui5tutors.com/2016/06/configuring-destinations-in-sap-web-ide.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I will help you to configure destinations in Sap Web IDE. In normal scenario, we require a odata service which we have to integrate with the frontend, to display the data on the UI. Similarly, here we will use northwind service as an example for setting the destination in Sap Web IDE."/>
+				<Link class="sapUiSmallMargin" text="Mock Data In SAP Web IDE" href="http://www.sapui5tutors.com/2016/06/mock-data-in-sap-web-ide.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I will explain how to run sap ui5 application with mock data in SAP Web IDE. This tutorial would be helpful for those who don’t have a backend connectivity with the server or don’t have  a network connectivity. "/>
+				
+				
+				<Link class="sapUiSmallMargin" text="Mock Server In SAPUI5 Application" href="http://www.sapui5tutors.com/2016/06/mockserver-in-sapui5.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I will explain how to run SAPUI5 applications through mockserver with the dummy data, i.e mock Data"/>
+				<Link class="sapUiSmallMargin" text="Hello World Application in SAP Web IDE" href="http://www.sapui5tutors.com/2016/05/hello-world-in-sap-web-ide.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I will explain how to create your first application in SAP web IDE from scratch. We will try to create a hello world application, since this is the ideal application for starters."/>
+				<Link class="sapUiSmallMargin" text="SAP Web IDE" href="http://www.sapui5tutors.com/2016/05/sap-web-ide.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE (Integrated Development Environment) is a web-based tool that empowers users to rapidly create and extend applications for browser and mobile devices. It simplifies the end-to-end application lifecycle: prototyping, development, packaging, deployment, and customer extensions for SAP Fiori and SAPUI5 applications."/>
+				<Link class="sapUiSmallMargin" text="Integrate Google Maps with SAPUI5 Application" href="http://www.sapui5tutors.com/2016/05/integrate-google-maps-with-sapui5.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hi readers!! I was just trying out integrating google maps in ui5 application, so here I am with another tutorial blog. In this blog, I will show you how to create Google developer API key and then how to use it in sap ui5 application to integrate google maps"/>
+				<Link class="sapUiSmallMargin" text="" href=""/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this blog, I will be taking about what is a Custom control in sapui5, how to develop it and how to use it once its implemented.  The idea is simple, we will create a simple custom control apart from what already exists in sapui5 framework."/>
+				<Link class="sapUiSmallMargin" text="Speech Recognition Custom Control " href="http://www.sapui5tutors.com/2016/04/speech-recognition-custom-control.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=""/>
+				<Link class="sapUiSmallMargin" text="CSS in SAP UI5 Application" href="http://www.sapui5tutors.com/2016/04/css-in-sapui5-application.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this blog, I will try to explain how CSS works in SAPUI5 application. As you must know, CSS is used for presentation purposes, i.e  how the elements should be rendered on the screen. Using CSS, one can control the color of Text, the style of fonts, spacing, background images, and on and on."/>
+				
+				<Link class="sapUiSmallMargin" text="Charts Using VizFrame Control" href="http://www.sapui5tutors.com/2016/04/sapui5-vizframe.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hi, in this tutorial, we will learn how to design viz frame charts. Unlike Viz charts, Vizframe charts are a bit different. SAP no longer supports Viz charts, it emphasize developers to use VizFrame, since viz charts are now depreciated since 1.32.0, are no longer actively developed and won’t be getting any new features."/>
+				<Link class="sapUiSmallMargin" text="Charts Using Viz Control" href="http://www.sapui5tutors.com/2016/04/sapui5-viz-charts.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hi, in this tutorial, we will learn how to design charts. SAP provide different controls for charts, like makit, viz charts, VizFrame. Viz Charts are simple to create and to understand. However,  SAP no longer supports Viz charts, it emphasize developers to use VizFrame, viz charts are now depreciated since 1.32.0, are no longer actively developed and won’t be getting any new features. Still for newbies, viz charts might provide a better understanding about the charts."/>
+				<Link class="sapUiSmallMargin" text="Using Fragments in SAP UI5 Application" href="http://www.sapui5tutors.com/2016/03/fragments.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Fragments are reusable UI parts like views and can be used in any other app if they fit in. Fragments should only contain UI elements. It does not have controllers like views. Event handling methods for UI elements which are defined in Fragment can be implemented in the respective view controllers in which they are used."/>
+				
+				
+				<Link class="sapUiSmallMargin" text="Project Structuring in SAP UI5 Application" href="http://www.sapui5tutors.com/2016/03/sapui5-application-project-structuring.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="With the release of latest update of SAPUI5, project structure has been changed slightly. All the configuration that used to be maintained in the configuration file is now managed by manifest.json , moreover it takes care of routing, which previously was maintained by component.js. Similarly, there have been many more changes"/>
+				
+				<Link class="sapUiSmallMargin" text="Globalization(i18n)" href="http://www.sapui5tutors.com/2016/03/internationalization-resourcebundle.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We use internationalization and localization in our Sapui5 application for replacing the hard coded text from the application. It is one of the best practices of SAP to use i18n for hard coded texts. It is a way, how a computer software could be adapted to different languages"/>
+			
+				<Link class="sapUiSmallMargin" text="Component Preload in SAP UI5 Application" href="http://www.sapui5tutors.com/2016/03/how-to-remove-component-preloadjs-error_3.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" In order to improve loading performance, we need to package the Javascript files in a way that allows us to only send one file to the browser that contains all of the code. SAP packages their UI5 libraries into single files called 'preloads'. This same method can be used for the application code of UI5 apps. In order to make the packaging step as quick as possible we will use a Javascript task runner"/>
+				<Link class="sapUiSmallMargin" text="Building CRUD application using ODATA" href="http://www.sapui5tutors.com/2016/02/how-to-build-application-using-create.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This blog explains how to create a CRUD application using SAPUI5 Using Odata Model."/>
+				
+				<Link class="sapUiSmallMargin" text="Data Binding in SAPUI5 application" href="http://www.sapui5tutors.com/2016/01/data-binding.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The process for using data binding for SAPUI5 controls in a simple application comprises five steps: Deciding on the model, creating a model and a control instance, binding the properties or lists to the model and, if required, unbinding the properties again."/>
+				
+				<Link class="sapUiSmallMargin" text="Routing in Full Screen Application" href="http://www.sapui5tutors.com/2016/01/routing-in-full-screen-application.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Navigation is one of the most important functionality in any application and UI5 is not any exception either. One of the way is through routing. In this article, you will learn to implement routing in SAPUI5 application, set custom URLs for views or pages, and understand the recommended way of navigation in SAPUI5."/>
+				<Link class="sapUiSmallMargin" text="Routing in Split Screen Application" href="http://www.sapui5tutors.com/2016/01/routing-in-split-application.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this article, you will learn to implement routing in Split screen  application, set custom URLs for views or pages, and understand the recommended way of navigation in SAPUI5."/>
+				<Link class="sapUiSmallMargin" text="Navigation and Routing in a glance" href="http://www.sapui5tutors.com/2016/01/routing-in-application.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this blog, you will learn the basics of routing.  How navigation works? Moreover, the basic terminologies in routing."/>
+				<Link class="sapUiSmallMargin" text="Routing from Full screen to split screen" href="http://www.sapui5tutors.com/2016/01/routing-from-full-to-split-screen.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this article, you will learn to implement routing from full screen to Split screen  application, set custom URLs for views or pages, and understand the recommended way of navigation in SAPUI5"/>
+				
+				<Link class="sapUiSmallMargin" text="SAP UI5 Most Common Examples" href="http://www.sapui5tutors.com/2016/01/sap-ui5-most-common-and-basic-examples.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here is a collection of examples of the most commonly used sap ui5 controls."/>
+				<Link class="sapUiSmallMargin" text="Installation" href="http://www.sapui5tutors.com/2016/01/installation.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here are some basic steps to install eclipse in your system, these steps will guide you to install and set up environment for Eclipse and SAPUI5 plugins.  Download Eclipse luna or juno."/>
+				<Link class="sapUiSmallMargin" text="Split App" href="http://www.sapui5tutors.com/2016/01/split-app.html"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, I will show you how to create a simple split app. Split app basically is a an app divided into two segments (pages), one is the Master Page and the other is the Detail Page"/>
+				
+				</content>
+				<footer>
+		<Toolbar>
+			<Button text="Have a Query?" press="click" icon="sap-icon://question-mark"></Button>
+		</Toolbar>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,74 @@
+.sapMIBar.sapMHeader-CTX{
+	display: none;
+}
+
+.sapMPage>section{
+	top: 0 !important;
+}
+
+.sapUiHLayoutChildWrapper {
+    padding: 0.4rem;
+}
+.sapMITBContent {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sapMITH {
+	margin: 0 auto;
+	display: table;
+}
+
+#__xmlview0--ratingimage{
+	left: 26%;
+}
+
+.sapMImageContent {
+    display: inline-block;
+    margin: 20px;
+}
+
+.sapUiLargeMarginBottom {
+    margin-bottom: 1.5rem!important;
+}
+
+.sapMScrollContV .sapMScrollContScroll {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.sapMImageContentImageIcon {
+    width: 8rem;
+    max-height: 7rem !important;
+}
+
+#__xmlview0--home-scroll{
+	padding-top:0 !important;
+}
+
+.gs{
+    filter: grayscale(1);
+}
+
+.gs:hover{
+	filter: grayscale(0);
+}
+
+#__content15,#__content16,#__content17,#__content18,#__content19,#__content20{
+	margin-top:0rem !important;
+}
+
+#__content21,#__content21-icon-image,#__content22,#__content22-icon-image,#__content23,#__content23-icon-image,
+#__content24,#__content24-icon-image,#__content25,#__content25-icon-image,#__content26,#__content26-icon-image,
+#__content27,#__content27-icon-image,#__content28,#__content28-icon-image,#__content29,#__content29-icon-image{
+	width: 5rem;
+	margin-top:0rem !important;
+}
+
+#__content30-icon-image,#__content31-icon-image,#__content32-icon-image{
+	    width: 7rem;
+}
+#__content30,#__content31,#__content32{
+	margin-top:0rem !important;
+}

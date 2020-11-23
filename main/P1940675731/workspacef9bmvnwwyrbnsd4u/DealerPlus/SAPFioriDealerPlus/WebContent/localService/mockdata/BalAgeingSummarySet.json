@@ -1,0 +1,49 @@
+[{
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"DayRange": "0-30 DAYS",
+	"Amount": "0.00",
+	"Currency": "INR"
+}, {
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"DayRange": "31-60 DAYS",
+	"Amount": "180.00",
+	"Currency": "INR"
+}, {
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"DayRange": "18-90 DAYS",
+	"Amount": "45.00",
+	"Currency": "INR"
+}, {
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"DayRange": "91-120 DAYS",
+	"Amount": "45.00",
+	"Currency": "INR"
+}, {
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"DayRange": "120-360 DAYS",
+	"Amount": "90.00",
+	"Currency": "INR"
+}, {
+	"CustomerId": "18",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"DayRange": ">360 DAYS",
+	"Amount": "0.00",
+	"Currency": "INR"
+}]

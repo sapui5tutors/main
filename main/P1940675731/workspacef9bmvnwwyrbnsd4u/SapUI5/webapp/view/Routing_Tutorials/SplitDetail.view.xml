@@ -1,0 +1,80 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Routing_Tutorials.SplitDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Routing in Split App">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Routing in Split App"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, we will implement routing in a Split screen application. The scenario is, there would be 3 Pages, one is the master Page and other two are the detail Pages and we will show navigation to one detail page to another through the click of a list Item on the first detail page."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Routing in general and within a full screen Application"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/fL0kTJo1zEs" frameborder="0" allowfullscreen="true"/>
+    			<Label class="sapUiSmallMargin" design="Bold" text="Follow these simple steps:" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Create a SAPUI5 Project, name it accordingly."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic11.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, I have named it as Splitapp_routing"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Create 4 views and controllers:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="a) App.view.js and App.controller.js"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="b) masterpage.view.js and masterpage.controller.js"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="c) detailpage.view.js and detailpage.controller.js"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="d) detailpage1.view.js and detailpage1.controller.js"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="I have defined routes in the Component.js this time unlike my last post, where I have defined the routes in index.html."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Index.html" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic12.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="App.view,js:" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic13.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="masterpage.view.js:" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic14.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="masterpage.controller.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic15.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Detailpage.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic16.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="detailpage.controller.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic17.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="detailpage1.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic18.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="detail.json" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic19.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, in the Json, I have used many .png and .jpg images, you can use your own images."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Output" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic20.png" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic21.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hope it Helped!!! Thanks….. "/>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

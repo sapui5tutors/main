@@ -1,0 +1,235 @@
+{
+	"Roles": [
+		{
+			"SITE": "FNZ1",
+			"Feature": "HOMESCREEN",
+			"Description": "Homescreen>Click screen to open",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "DISRUPTION_DISRUPTION_LIST",
+			"Description": "Disruption list>Filter and display disruption list per criteria",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "DISRUPTION_DIS_DETAIL_CONSULT",
+			"Description": "Disruption_Detail>Consult disruption detailed information",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "DISRUPTION_DIS_DETAIL_EDIT",
+			"Description": "Disruption_Detail>Edit a disruption",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "DISRUPTION_DIS_DETAIL_UPDATE",
+			"Description": "Disruption_Detail>Update disruption status (ACK, in progress, solution solved)",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "DISRUPTION_DIS_DETAIL_EDIT",
+			"Description": "Disruption_Detail>Edit a disruption",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "DISRUPTION_DIS_DETAIL_ESCALATE",
+			"Description": "Disruption_Detail>Escalate a disruption",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_GANTT_BOXING",
+			"Description": "Station Tracker>Gantt>Boxing",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_GANTT_GROUPING",
+			"Description": "Station Tracker>Gantt>Grouping",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_GANTT_CRITICAL",
+			"Description": "Station Tracker>Gantt>Critical path view",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_DRILL_MISSING",
+			"Description": "Station Tracker>Drill Down>Missing Part Info",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_DRILL_OSW",
+			"Description": "Station Tracker>Drill Down>OSW info",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_DRILL_DISRUPTION",
+			"Description": "Station Tracker>Drill Down>Disruption info",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_KPI_DISRUPTIONS",
+			"Description": "Disruption Overview",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_KPI_TAKT",
+			"Description": "Takt Adherence",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_OP_ACTIVATE",
+			"Description": "Work Tracker>Operation>Activate an OP",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_OP_PAUSE",
+			"Description": "Work Tracker>Operation>Pause an OP",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_OP_PAR_CONF",
+			"Description": "Work Tracker>Operation>Partial confirm an OP",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_OP_TOT_CONF",
+			"Description": "Work Tracker>Operation>Total confirm an OP",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_DIS_CREATE",
+			"Description": "Work Tracker>Disruption>Create",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_DIS_PICTURE",
+			"Description": "Work Tracker>Disruption>Take and import picture",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_DIS_ANNOTATE_DOC",
+			"Description": "Work Tracker>Disruption>Annotate document",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_DIS_ATTACH_DOC",
+			"Description": "Work Tracker>Disruption>Attach document",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_DIS_ESCALATE",
+			"Description": "Work Tracker>Disruption>ESCALATE",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_DIS_TIME_LOST",
+			"Description": "Work Tracker>Disruption>Enter time lost",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "WORK_DIS_CLOSE",
+			"Description": "Work Tracker>Disruption>close",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "PROFILE _PREF_LANG",
+			"Description": "My_Profile>Preference>langage",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "PROFILE_PREF_HOME",
+			"Description": "My_Profile>Preference>homepage",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "MES_ADMIN_SETTING",
+			"Description": "MES Administration>Site Settings",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "LINE_DIS_LINE_STAT",
+			"Description": "Line Tracker>Display Line Status",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "LINE_START_ASSEMBLY",
+			"Description": "Line Tracker>Start of Assembly",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "LINE_END_ASSEMBLY",
+			"Description": "Line Tracker>End of Assembly",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "LINE_LOAD_MSN",
+			"Description": "Line Tracker>Load Next MSN",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "LINE_EMPTY_STAT",
+			"Description": "Line Tracker>Empty Station",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_GANTT_RESCHEDULE",
+			"Description": "Station Tracker>Gantt View>Reschedule an OP inside a line balance",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_GANTT_CREATE",
+			"Description": "Station Tracker>Gantt View>Create a new line balance in the Gantt",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_GANTT_MOVE",
+			"Description": "Station Tracker>Gantt View>Move an OP from a line to a different one",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_OSW_OPEN",
+			"Description": "Station Tracker>OSW>Open list of OSW/Unplanned activities",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_OSW_FILTER",
+			"Description": "Station Tracker>OSW>Filter list per criteria",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_OSW_SELECT",
+			"Description": "Station Tracker>OSW>Select and Insert an OP on a line balance",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "PM_RESOURCE_MANAGE",
+			"Description": "PM>Resource Pool>Manage link between resource pool and users, shifts and WC",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "PM_POLY_ASSESS",
+			"Description": "PM>POLY>Assess Personnel",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_DRILL_RESCHEDULE",
+			"Description": "Station Tracker>Drill>Reschedule Dates",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_DRILL_OSW",
+			"Description": "Station Tracker>Drill Down>OSW info",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}, {
+			"SITE": "FNZ1",
+			"Feature": "STATION_DRILL_DISRUPTION",
+			"Description": "Station Tracker>Drill Down>Disruption info",
+			"Roles": ["SAP_XMII_Developer", "SAP_XMII_User", "Everyone", "eval host('local|sopra|dmi')&&!feature('role')"]
+		}
+
+
+
+
+
+	]
+}

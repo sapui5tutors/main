@@ -1,0 +1,23 @@
+[
+{
+	"CustomerId": "18",
+	"ImageFlag": false,
+	"CustomerName": "Standard Trading Co.",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"SalesOrgName": "Vikalp Sales ORg",
+	"DistChannelName": "Trading",
+	"DivisionName": "Pressure Gauges",
+	"Street": "Plot A-104, Sector 43",
+	"City": "NOIDA",
+	"PostalCode": "201301",
+	"CityZip": "Plot A-104, Sector 43,NOIDA,201301",
+	"ContactNumber": "9818146780",
+	"MailId": "info@standardtrading.com",
+	"SalesValue": "267584.000",
+	"Receivables": "178000.000",
+	"Currency": "INR"
+}
+
+		]

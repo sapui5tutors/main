@@ -1,0 +1,69 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Intermediate_tutorials.CssDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="CSS">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="CSS"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuIntButton2" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="CSS is used for presentation purposes, i.e  how the elements should be rendered on the screen."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Using CSS, one can control the color of Text, the style of fonts, spacing, background images, and on and on.
+Taking about applying CSS in SAPUI5 application, well it can be done in the following ways:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) External style sheet"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Internal style sheet"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Watch the video for better understanding:"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/_L6kO9dUBWE" frameborder="0" allowfullscreen="true"></html:iframe>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="External Style Sheet" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This is the best way to style elements, here a separate .css file is maintained for style purpose. The entire look an application can be changed, just by changing a single file. Normally it is named  as style.css. We need to provide the path to the .css file, most of the time, it is provide in the index.html file, since the latest release, sap insist on using manifest.json file where the reference to the external .css file can be given. I will show you both the ways."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Reference in the index.html file" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic1.PNG" width="70%" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Reference in the manifest.json file" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic2.PNG" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This is how, style.css looks"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic3.PNG" width="70%" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Internal Style Sheet" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Internal Style Sheet is mainly used,  for a particular element. Internal style is defined within the style tag, within the head tag in an html page, i.e in the index.html page."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Suppose, there is  a scenario to style a particular button then this method is best suited."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic4.PNG" width="70%" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="How to use it in view" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Suppose you have to use CSS in text control, refer the code"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" 'tag' Text class='dealerButton' text='abc' 'tag' "/>
+				</content>
+				<footer>
+		<!--<Toolbar>-->
+		<!--	<ToolbarSpacer/>-->
+		<!--	<Button text="Mark as Read" press="onRead"/>-->
+		<!--	</Toolbar>-->
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

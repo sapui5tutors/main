@@ -1,0 +1,87 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Advanced_Tutorials.VizFrameDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="VizFrame Charts" >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="VizFrame Charts"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuAdvButton7" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				<Label class="sapUiSmallMargin" design="Bold" text="Charts Using VizFrame Control" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Hi, in this tutorial, we will learn how to design viz frame charts. Unlike Viz charts, Vizframe charts are a bit different. SAP no longer supports Viz charts, it emphasize developers to use VizFrame, since viz charts are now depreciated since 1.32.0, are no longer actively developed and won’t be getting any new features.
+VizFrame is available in sap.viz.ui5.controls. We will go through this new control with the help of a simple example of a bar chart depicting the no. of cars bought on an yearly basis."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Forbetter understanding watch the video here:"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/7gKJeu7QfiE" frameborder="0" allowfullscreen="true"/>
+    			<Label class="sapUiSmallMargin" design="Bold" text="Example" width="100%"/>
+    
+				<FormattedText class="labelsize" width="90%"
+				htmlText="  Alto: '758620',
+Zen: '431160',
+Santro: '515100',
+Matiz: '293780',
+Wagon R: '1974010' "/>
+				
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic33.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Steps" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Create SAPUI5 application in Eclipse and provide an appropriate name to it."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic34.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) 2) In the View folder create a VizChart.view.xml and refer the code"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic35.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3)In the controller folder create a VizChart.controller.js and refer code. Define the chart and its properties in the init method."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic36.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) Refer the code in index.html file"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic37.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="5) Maintain the Json file(chartdetail.json)"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="6) Maintain the index.html file"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic38.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="6) Execute index.html file"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic39.png" />
+				
+				
+			<FormattedText class="labelsize" width="90%"
+				htmlText="Chart type can be changed according to need,  just change the viz type in viz Properties  to column, line etc, just like we have used “bar” here."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="oVizFrame.setVizType('bar');" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Points to keep in mind" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="a) Create data set"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="b) Flattend dataset consists of dimensions and measures. Dimensions are generally used for axis, and measures are used for value trends."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="c) Bind flattend dataset to chart"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="d) Dimesions and Measure depends on the type of chart. It mostly depends on the type of requirement."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="e) VizProperties genrally describe the look and feel of the chart. We can define the title of the chart here, or maybe use different colours for different bar, and similarly."/>
+				
+				</content>
+					<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

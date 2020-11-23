@@ -1,0 +1,716 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+<edmx:DataServices m:DataServiceVersion="2.0">
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="/VK01DPBE/DLR_PLUS_SRV" xml:lang="en" sap:schema-version="1">
+<EntityType Name="CreditInfo" sap:content-version="1">
+<Key>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="CtrlAreatext" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ControlArea" Type="Edm.String" MaxLength="4" sap:label="Cred.Contr.Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CreditLimit" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Credit limit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesValue" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Sales value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Receivables" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Receivables" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CreditLimitUsed" Type="Edm.String" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CreditAvailable" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Credit exposure" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CreditExposure" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Credit exposure" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="SalesOrder" sap:content-version="1">
+<Key>
+<PropertyRef Name="SalesOrderNumber"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PO" Type="Edm.String" MaxLength="20" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TotalAmount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Currency" sap:label="Total Amount in Document Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Doc. Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="Status" Type="Edm.String" MaxLength="1" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToPartyName" Type="Edm.String" MaxLength="35" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="OrderDate" Type="Edm.String" sap:label="Order Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RequestedDate" Type="Edm.String" sap:label="Request Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToContact" Type="Edm.String" sap:label="Contact" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToAddressLine1" Type="Edm.String" MaxLength="35" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToAddressLine2" Type="Edm.String" MaxLength="35" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToAddressLine3" Type="Edm.String" MaxLength="35" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentTerms" Type="Edm.String" sap:label="Order Items Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="NetPriceAmount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Currency" sap:label="Net value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TaxAmount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Currency" sap:label="Tax Amount in Document Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerName" Type="Edm.String" MaxLength="35" sap:label="Customer Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShippingStatusCode" Type="Edm.String" MaxLength="2" sap:label="DP SO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="OverallStatusCode" Type="Edm.String" MaxLength="2" sap:label="DP SO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DocumentType" Type="Edm.String" MaxLength="4" sap:label="Sales Doc. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToCarrier" Type="Edm.String" sap:label="Ship to Carrier" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToIncoterms" Type="Edm.String" sap:label="Ship to Incoterms" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<NavigationProperty Name="OrderItems" Relationship="/VK01DPBE/DLR_PLUS_SRV.SalesOrderItem" FromRole="FromRole_SalesOrderItem" ToRole="ToRole_SalesOrderItem"/>
+</EntityType>
+<EntityType Name="PastSale" sap:content-version="1">
+<Key>
+<PropertyRef Name="Material"/>
+<PropertyRef Name="SdDoc"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Returns" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Order quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SdDoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CreationDate" Type="Edm.String" MaxLength="8" sap:label="char8" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="ReqQty" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Order quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DlvQty" Type="Edm.Decimal" Precision="13" Scale="3" sap:label="Delivery qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DocType" Type="Edm.String" MaxLength="4" sap:label="Sales Doc. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PendingQty" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Pending quantity in Sales Units" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="PastSaleItem" sap:content-version="1">
+<Key>
+<PropertyRef Name="Material"/>
+<PropertyRef Name="SdDoc"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="Item" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Returns" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Order quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ReqDate" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="char8" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SdDoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CreationDate" Type="Edm.String" MaxLength="8" sap:label="char8" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DlvDate" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="char8" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ReqQty" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Order quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DlvQty" Type="Edm.Decimal" Precision="13" Scale="3" sap:label="Delivery qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DocType" Type="Edm.String" MaxLength="4" sap:label="Sales Doc. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PendingQty" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Pending quantity in Sales Units" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="PastSaleSummary" sap:content-version="1">
+<Key>
+<PropertyRef Name="Material"/>
+<PropertyRef Name="Description"/>
+</Key>
+<Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Char" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Quantity" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Order quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="CustomerLedger" sap:content-version="1">
+<Key>
+<PropertyRef Name="CompCode"/>
+<PropertyRef Name="Customer"/>
+<PropertyRef Name="PstngDate"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="CompCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Customer" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PstngDate" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="char8" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="LocCurrcy" Type="Edm.String" MaxLength="5" sap:label="Local Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="RefDocNo" Type="Edm.String" MaxLength="16" sap:label="Reference" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DocType" Type="Edm.String" MaxLength="2" sap:label="Document Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DbCrInd" Type="Edm.String" MaxLength="1" sap:label="Debit/Credit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="LcAmount" Type="Edm.Decimal" Precision="23" Scale="4" sap:label="Amount in LC" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ItemText" Type="Edm.String" MaxLength="50" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="BlineDate" Type="Edm.DateTime" Precision="7" sap:label="Baseline Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="NegPostng" Type="Edm.String" MaxLength="1" sap:label="Negative pstng" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RefDocNoLong" Type="Edm.String" MaxLength="35" sap:label="Reference" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="BillDoc" Type="Edm.String" MaxLength="10" sap:label="Billing Doc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Balance" Type="Edm.Decimal" Precision="23" Scale="4" sap:label="FC balance" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="OrderItem" sap:content-version="1">
+<Key>
+<PropertyRef Name="ItemNumber"/>
+<PropertyRef Name="SalesOrderNumber"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="ItemNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Name" Type="Edm.String" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Quantity" Type="Edm.Decimal" Precision="15" Scale="3" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="UnitOfMeasure" Type="Edm.String" sap:label="Unit Of Measure" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PricePerUnit" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Currency" sap:label="Price Per Unit in Document Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Amount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Currency" sap:label="Net value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="MaterialNumber" Type="Edm.String" MaxLength="18" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Description" Type="Edm.String" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerMaterialNumber" Type="Edm.String" MaxLength="22" sap:label="Cust.material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Doc. Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ReasonOfRejection" Type="Edm.String" MaxLength="25" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DeliveryDate" Type="Edm.DateTime" Precision="7" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="ReturnOrder" sap:content-version="1">
+<Key>
+<PropertyRef Name="SalesOrderNumber"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToPostalcode" Type="Edm.String" MaxLength="10" sap:label="Postal Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToRegion" Type="Edm.String" MaxLength="3" sap:label="Region" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToCountry" Type="Edm.String" MaxLength="3" sap:label="Country" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PO" Type="Edm.String" MaxLength="20" sap:label="PO Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TotalAmount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Currency" sap:label="Total Amount in Document Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Doc. Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="Status" Type="Edm.String" MaxLength="1" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToPartyName" Type="Edm.String" MaxLength="35" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="OrderDate" Type="Edm.String" sap:label="Order Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RequestedDate" Type="Edm.String" sap:label="Request Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToContact" Type="Edm.String" sap:label="Contact" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToAddresslLne1" Type="Edm.String" MaxLength="35" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToAddressLine2" Type="Edm.String" MaxLength="35" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShiptoAddressLine3" Type="Edm.String" MaxLength="35" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TotalSchedulesCount" Type="Edm.String" sap:label="Total Schedules Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="OpenSchedulesCount" Type="Edm.String" sap:label="Total Schedules Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="InProcessSchedulesCount" Type="Edm.String" sap:label="Open Schedules Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShippedSchedulesCount" Type="Edm.String" sap:label="In Process Schedules Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="OrderItemsCount" Type="Edm.String" sap:label="Shipped Schedules Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PaymentTerms" Type="Edm.String" sap:label="Order Items Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="NetPriceAmount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Currency" sap:label="Net value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TaxAmount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Currency" sap:label="Tax Amount in Document Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerName" Type="Edm.String" MaxLength="35" sap:label="Customer Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToCity" Type="Edm.String" MaxLength="35" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShippingStatusCode" Type="Edm.String" MaxLength="2" sap:label="DP SO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="OverallStatusCode" Type="Edm.String" MaxLength="2" sap:label="DP SO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ReasonOfRejection" Type="Edm.String" MaxLength="25" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DocumentType" Type="Edm.String" MaxLength="4" sap:label="Sales Doc. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToCarrier" Type="Edm.String" sap:label="Ship to Carrier" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ShipToIncoterms" Type="Edm.String" sap:label="Ship to Incoterms" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<NavigationProperty Name="ReturnOrdersItems" Relationship="/VK01DPBE/DLR_PLUS_SRV.ReturnOrderOrderItems" FromRole="FromRole_ReturnOrderOrderItems" ToRole="ToRole_ReturnOrderOrderItems"/>
+</EntityType>
+<EntityType Name="UpcmgDelivery" sap:content-version="1">
+<Key>
+<PropertyRef Name="ItemNumber"/>
+<PropertyRef Name="SalesOrderNumber"/>
+<PropertyRef Name="RequestedDate"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="ItemNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TrafficLight" Type="Edm.String" MaxLength="1" sap:label="Traflght" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="StatusCode" Type="Edm.String" MaxLength="2" sap:label="DP SO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RequestedDate" Type="Edm.String" Nullable="false" sap:label="Requested Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="UnitOfMeasure" Type="Edm.String" MaxLength="10" sap:label="Meas. unit text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Quantity" Type="Edm.String" sap:label="Quantity Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Description" Type="Edm.String" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DocumentType" Type="Edm.String" MaxLength="4" sap:label="Sales Doc. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="Period" sap:content-version="1">
+<Key>
+<PropertyRef Name="DateFrom"/>
+<PropertyRef Name="DateTo"/>
+</Key>
+<Property Name="DateFrom" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="char8" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DateTo" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="char8" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="CustomerAgeing" sap:content-version="1">
+<Key>
+<PropertyRef Name="Docno"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="OverdueDays" Type="Edm.String" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DocType" Type="Edm.String" MaxLength="2" sap:label="Document Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Docno" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Document Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PostingDate" Type="Edm.DateTime" Precision="7" sap:label="Posting Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Amount" Type="Edm.Decimal" Precision="23" Scale="4" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DueOn" Type="Edm.DateTime" Precision="7" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DocDate" Type="Edm.DateTime" Precision="7" sap:label="Document Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PmntTrms" Type="Edm.String" MaxLength="4" sap:label="Payt Terms" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="NetTerms" Type="Edm.Decimal" Precision="3" Scale="0" sap:label="Days net" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="BalAgeing" sap:content-version="1">
+<Key>
+<PropertyRef Name="Amount"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="Amount" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="RangeDay1" Type="Edm.Decimal" Precision="14" Scale="3" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RangeDay2" Type="Edm.Decimal" Precision="14" Scale="3" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RangeDay3" Type="Edm.Decimal" Precision="14" Scale="3" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RangeDay4" Type="Edm.Decimal" Precision="14" Scale="3" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RangeDay5" Type="Edm.Decimal" Precision="14" Scale="3" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="RangeDay6" Type="Edm.Decimal" Precision="14" Scale="3" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="BalAgeingSummary" sap:content-version="1">
+<Key>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DayRange"/>
+</Key>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DayRange" Type="Edm.String" Nullable="false" sap:label="DAYRANGE" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+<Property Name="Amount" Type="Edm.Decimal" Precision="14" Scale="3" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+</EntityType>
+<EntityType Name="Customer" sap:content-version="1">
+<Key>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ImageFlag" Type="Edm.Boolean" sap:label="Flag for Image" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerName" Type="Edm.String" MaxLength="35" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrgName" Type="Edm.String" MaxLength="20" sap:label="SalesOrganizationName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannelName" Type="Edm.String" MaxLength="20" sap:label="DistributionChannelName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DivisionName" Type="Edm.String" MaxLength="20" sap:label="DivisionName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Street" Type="Edm.String" MaxLength="60" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="City" Type="Edm.String" MaxLength="40" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PostalCode" Type="Edm.String" MaxLength="10" sap:label="Postal Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CityZip" Type="Edm.String" MaxLength="51" sap:label="City/Zip" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="ContactNumber" Type="Edm.String" MaxLength="16" sap:label="Contact Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="MailId" Type="Edm.String" MaxLength="100" sap:label="Mail Id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesValue" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Sales value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Receivables" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Receivables" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<NavigationProperty Name="Contacts" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerContact" FromRole="FromRole_CustomerContact" ToRole="ToRole_CustomerContact"/>
+<NavigationProperty Name="CreditInfo" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerCreditInfo" FromRole="FromRole_CustomerCreditInfo" ToRole="ToRole_CustomerCreditInfo"/>
+<NavigationProperty Name="SalesOrders" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerSalesOrder" FromRole="FromRole_CustomerSalesOrder" ToRole="ToRole_CustomerSalesOrder"/>
+<NavigationProperty Name="PastSales" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerPastSale" FromRole="FromRole_CustomerPastSale" ToRole="ToRole_CustomerPastSale"/>
+<NavigationProperty Name="PastSalesItem" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerPastSalesItem" FromRole="FromRole_CustomerPastSalesItem" ToRole="ToRole_CustomerPastSalesItem"/>
+<NavigationProperty Name="PastSalesSummary" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerPastSalesSummary" FromRole="FromRole_CustomerPastSalesSummary" ToRole="ToRole_CustomerPastSalesSummary"/>
+<NavigationProperty Name="CustomerLedgers" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerCustomerLedger" FromRole="FromRole_CustomerCustomerLedger" ToRole="ToRole_CustomerCustomerLedger"/>
+<NavigationProperty Name="ReturnOrders" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerReturnOrder" FromRole="FromRole_CustomerReturnOrder" ToRole="ToRole_CustomerReturnOrder"/>
+<NavigationProperty Name="UpcomingDeliveries" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerUpcmgDlrv" FromRole="FromRole_CustomerUpcmgDlrv" ToRole="ToRole_CustomerUpcmgDlrv"/>
+<NavigationProperty Name="Ageing" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerCustomerAgeing" FromRole="FromRole_CustomerCustomerAgeing" ToRole="ToRole_CustomerCustomerAgeing"/>
+<NavigationProperty Name="BalAgeing" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerBalAgeing" FromRole="FromRole_CustomerBalAgeing" ToRole="ToRole_CustomerBalAgeing"/>
+<NavigationProperty Name="BalAgeingSummary" Relationship="/VK01DPBE/DLR_PLUS_SRV.CustomerBalAgeingSummary" FromRole="FromRole_CustomerBalAgeingSummary" ToRole="ToRole_CustomerBalAgeingSummary"/>
+</EntityType>
+<EntityType Name="Contact" sap:content-version="1">
+<Key>
+<PropertyRef Name="PartnerEmployeeId"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Key>
+<Property Name="PartnerEmployeeId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Contact Person" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannel" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="SalesOrgName" Type="Edm.String" MaxLength="20" sap:label="SalesOrganizationName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DistChannelName" Type="Edm.String" MaxLength="20" sap:label="DistributionChannelName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="DivisionName" Type="Edm.String" MaxLength="20" sap:label="DivisionName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="FirstName" Type="Edm.String" MaxLength="35" sap:label="First Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="LastName" Type="Edm.String" MaxLength="35" sap:label="Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="City" Type="Edm.String" MaxLength="40" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PostlCod1" Type="Edm.String" MaxLength="10" sap:label="Postal Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Street" Type="Edm.String" MaxLength="60" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Tel1Numbr" Type="Edm.String" MaxLength="30" sap:label="Telephone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="NameChar" Type="Edm.String" MaxLength="1" sap:label="Single FirstName Character" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="EMail" Type="Edm.String" MaxLength="241" sap:label="E-Mail Address" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityType Name="CustomerImage" m:HasStream="true" sap:content-version="1">
+<Key>
+<PropertyRef Name="CustomerId"/>
+</Key>
+<Property Name="CustomerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="CustomerId" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="MimeType" Type="Edm.String" MaxLength="128" sap:label="MimeType" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<Association Name="CustomerContact" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerContact"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Contact" Multiplicity="*" Role="ToRole_CustomerContact"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerContact">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Principal>
+<Dependent Role="ToRole_CustomerContact">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerCreditInfo" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerCreditInfo"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.CreditInfo" Multiplicity="1" Role="ToRole_CustomerCreditInfo"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerCreditInfo">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Principal>
+<Dependent Role="ToRole_CustomerCreditInfo">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerSalesOrder" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerSalesOrder"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.SalesOrder" Multiplicity="*" Role="ToRole_CustomerSalesOrder"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerSalesOrder">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Principal>
+<Dependent Role="ToRole_CustomerSalesOrder">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerPastSale" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerPastSale"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.PastSale" Multiplicity="*" Role="ToRole_CustomerPastSale"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerPastSale">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Principal>
+<Dependent Role="ToRole_CustomerPastSale">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerPastSalesItem" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerPastSalesItem"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.PastSaleItem" Multiplicity="*" Role="ToRole_CustomerPastSalesItem"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerPastSalesItem">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Principal>
+<Dependent Role="ToRole_CustomerPastSalesItem">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerPastSalesSummary" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerPastSalesSummary"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.PastSaleSummary" Multiplicity="*" Role="ToRole_CustomerPastSalesSummary"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerPastSalesSummary">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Principal>
+<Dependent Role="ToRole_CustomerPastSalesSummary">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerCustomerLedger" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerCustomerLedger"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.CustomerLedger" Multiplicity="*" Role="ToRole_CustomerCustomerLedger"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerCustomerLedger">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Principal>
+<Dependent Role="ToRole_CustomerCustomerLedger">
+<PropertyRef Name="Customer"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerReturnOrder" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerReturnOrder"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.ReturnOrder" Multiplicity="*" Role="ToRole_CustomerReturnOrder"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerReturnOrder">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Principal>
+<Dependent Role="ToRole_CustomerReturnOrder">
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="Division"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerUpcmgDlrv" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerUpcmgDlrv"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.UpcmgDelivery" Multiplicity="*" Role="ToRole_CustomerUpcmgDlrv"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerUpcmgDlrv">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Principal>
+<Dependent Role="ToRole_CustomerUpcmgDlrv">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerCustomerAgeing" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerCustomerAgeing"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.CustomerAgeing" Multiplicity="*" Role="ToRole_CustomerCustomerAgeing"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerCustomerAgeing">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Principal>
+<Dependent Role="ToRole_CustomerCustomerAgeing">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerBalAgeing" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerBalAgeing"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.BalAgeing" Multiplicity="*" Role="ToRole_CustomerBalAgeing"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerBalAgeing">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+</Principal>
+<Dependent Role="ToRole_CustomerBalAgeing">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="DistChannel"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="CustomerBalAgeingSummary" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.Customer" Multiplicity="1" Role="FromRole_CustomerBalAgeingSummary"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.BalAgeingSummary" Multiplicity="*" Role="ToRole_CustomerBalAgeingSummary"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_CustomerBalAgeingSummary">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Principal>
+<Dependent Role="ToRole_CustomerBalAgeingSummary">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="SalesOrderItem" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.SalesOrder" Multiplicity="1" Role="FromRole_SalesOrderItem"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.OrderItem" Multiplicity="*" Role="ToRole_SalesOrderItem"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_SalesOrderItem">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrderNumber"/>
+</Principal>
+<Dependent Role="ToRole_SalesOrderItem">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrderNumber"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<Association Name="ReturnOrderOrderItems" sap:content-version="1">
+<End Type="/VK01DPBE/DLR_PLUS_SRV.ReturnOrder" Multiplicity="1" Role="FromRole_ReturnOrderOrderItems"/>
+<End Type="/VK01DPBE/DLR_PLUS_SRV.OrderItem" Multiplicity="*" Role="ToRole_ReturnOrderOrderItems"/>
+<ReferentialConstraint>
+<Principal Role="FromRole_ReturnOrderOrderItems">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrderNumber"/>
+</Principal>
+<Dependent Role="ToRole_ReturnOrderOrderItems">
+<PropertyRef Name="Division"/>
+<PropertyRef Name="DistChannel"/>
+<PropertyRef Name="SalesOrganization"/>
+<PropertyRef Name="CustomerId"/>
+<PropertyRef Name="SalesOrderNumber"/>
+</Dependent>
+</ReferentialConstraint>
+</Association>
+<EntityContainer Name="/VK01DPBE/DLR_PLUS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+<EntitySet Name="SalesOrderSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.SalesOrder" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="PastSaleSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.PastSale" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="PastSaleItemSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.PastSaleItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="PastSaleSummarySet" EntityType="/VK01DPBE/DLR_PLUS_SRV.PastSaleSummary" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="CustomerLedgerSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.CustomerLedger" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="OrderItemSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.OrderItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="ReturnOrderSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.ReturnOrder" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="UpcmgDeliverySet" EntityType="/VK01DPBE/DLR_PLUS_SRV.UpcmgDelivery" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="PeriodSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.Period" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="CustomerAgeingSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.CustomerAgeing" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="BalAgeingSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.BalAgeing" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="BalAgeingSummarySet" EntityType="/VK01DPBE/DLR_PLUS_SRV.BalAgeingSummary" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="CustomerSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.Customer" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="ContactSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.Contact" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="CustomerImageSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.CustomerImage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+<EntitySet Name="CreditInfoSet" EntityType="/VK01DPBE/DLR_PLUS_SRV.CreditInfo" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<AssociationSet Name="CustomerUpcmgDlrvSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerUpcmgDlrv" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerUpcmgDlrv"/>
+<End EntitySet="UpcmgDeliverySet" Role="ToRole_CustomerUpcmgDlrv"/>
+</AssociationSet>
+<AssociationSet Name="CustomerBalAgeingSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerBalAgeing" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerBalAgeing"/>
+<End EntitySet="BalAgeingSet" Role="ToRole_CustomerBalAgeing"/>
+</AssociationSet>
+<AssociationSet Name="CustomerBalAgeingSummarySet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerBalAgeingSummary" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerBalAgeingSummary"/>
+<End EntitySet="BalAgeingSummarySet" Role="ToRole_CustomerBalAgeingSummary"/>
+</AssociationSet>
+<AssociationSet Name="CustomerReturnOrderSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerReturnOrder" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerReturnOrder"/>
+<End EntitySet="ReturnOrderSet" Role="ToRole_CustomerReturnOrder"/>
+</AssociationSet>
+<AssociationSet Name="SalesOrderItemSet" Association="/VK01DPBE/DLR_PLUS_SRV.SalesOrderItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="SalesOrderSet" Role="FromRole_SalesOrderItem"/>
+<End EntitySet="OrderItemSet" Role="ToRole_SalesOrderItem"/>
+</AssociationSet>
+<AssociationSet Name="CustomerContactSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerContact" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerContact"/>
+<End EntitySet="ContactSet" Role="ToRole_CustomerContact"/>
+</AssociationSet>
+<AssociationSet Name="CustomerCustomerLedgerSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerCustomerLedger" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerCustomerLedger"/>
+<End EntitySet="CustomerLedgerSet" Role="ToRole_CustomerCustomerLedger"/>
+</AssociationSet>
+<AssociationSet Name="CustomerPastSaleSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerPastSale" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerPastSale"/>
+<End EntitySet="PastSaleSet" Role="ToRole_CustomerPastSale"/>
+</AssociationSet>
+<AssociationSet Name="CustomerCreditInfoSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerCreditInfo" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerCreditInfo"/>
+<End EntitySet="CreditInfoSet" Role="ToRole_CustomerCreditInfo"/>
+</AssociationSet>
+<AssociationSet Name="CustomerPastSalesSummarySet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerPastSalesSummary" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerPastSalesSummary"/>
+<End EntitySet="PastSaleSummarySet" Role="ToRole_CustomerPastSalesSummary"/>
+</AssociationSet>
+<AssociationSet Name="ReturnOrderOrderItemsSet" Association="/VK01DPBE/DLR_PLUS_SRV.ReturnOrderOrderItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="ReturnOrderSet" Role="FromRole_ReturnOrderOrderItems"/>
+<End EntitySet="OrderItemSet" Role="ToRole_ReturnOrderOrderItems"/>
+</AssociationSet>
+<AssociationSet Name="CustomerPastSalesItemSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerPastSalesItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerPastSalesItem"/>
+<End EntitySet="PastSaleItemSet" Role="ToRole_CustomerPastSalesItem"/>
+</AssociationSet>
+<AssociationSet Name="CustomerCustomerAgeingSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerCustomerAgeing" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerCustomerAgeing"/>
+<End EntitySet="CustomerAgeingSet" Role="ToRole_CustomerCustomerAgeing"/>
+</AssociationSet>
+<AssociationSet Name="CustomerSalesOrderSet" Association="/VK01DPBE/DLR_PLUS_SRV.CustomerSalesOrder" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+<End EntitySet="CustomerSet" Role="FromRole_CustomerSalesOrder"/>
+<End EntitySet="SalesOrderSet" Role="ToRole_CustomerSalesOrder"/>
+</AssociationSet>
+</EntityContainer>
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://vecc.vikalpsolutions.com:8000/sap/opu/odata/VK01DPBE/DLR_PLUS_SRV/$metadata"/>
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="http://vecc.vikalpsolutions.com:8000/sap/opu/odata/VK01DPBE/DLR_PLUS_SRV/$metadata"/>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>

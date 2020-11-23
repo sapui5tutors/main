@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<l:Grid id="detailFragment" defaultSpan="L12 M12 S12" width="auto">
+		<l:content>
+			<f:SimpleForm id="idSmipleForm" minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" title="" labelSpanL="3" labelSpanM="3"
+				emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+				<f:content>
+					<Label text="Employee ID"/>
+					<Text text="{EmployeeID}"/>
+					<Label text="Ship Name"/>
+					<Text text="{ShipName}"/>
+					<Label text="Ship Address"/>
+					<Text text="{ShipAddress}"/>
+					<Label text="Ship City"/>
+					<Text text="{ShipCity}"/>
+					<Label text="PostalCode"/>
+					<Text text="{ShipPostalCode}"/>
+					<Label text="Ship Country"/>
+					<Text text="{ShipCountry}"/>
+				</f:content>
+			</f:SimpleForm>
+		</l:content>
+	</l:Grid>
+</core:FragmentDefinition>

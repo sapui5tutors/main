@@ -1,0 +1,133 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+<meta charset="UTF-8">  
+<meta name=viewport content="width=device-width, initial-scale=1">  
+<meta name="author" content="Mauricio Lauffer">  
+<title>Storage Test</title>  
+<script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" id="sap-ui-bootstrap"  
+  data-sap-ui-libs="sap.m" data-sap-ui-theme="sap_bluecrystal">  
+</script>  
+<script type="text/javascript">  
+  var data = {  
+  "Collection" : [ {  
+  "id" : "1"  
+  } ]  
+  };  
+  //Create Model  
+  var oModel = new sap.ui.model.json.JSONModel();  
+  oModel.setData(data);  
+  //Storage  
+  jQuery.sap.require("jquery.sap.storage");  
+  oStorage = jQuery.sap.storage(jQuery.sap.storage.Type.local);  
+  //Check if there is data into the Storage  
+  if (oStorage.get("myLocalData")) {  
+  console.log("Data is from Storage!");  
+  var oData = oStorage.get("myLocalData");  
+  oModel.setData(oData);  
+  }  
+  //Create Elements  
+  var oList = new sap.m.List("localStorage");  
+  var oBtn1 = new sap.m.Button({  
+  icon : "sap-icon://add",  
+  text : "Add to Model and Storage",  
+  press : function() {  
+  var oNew = {  
+  id : $.now()  
+  };  
+  var oData = oModel.getData(); 
+   oData.Collection.pop();
+  oData.Collection.push(oNew);  
+  oModel.refresh(true);  
+  oStorage.put("myLocalData", oData);  
+  }  
+  });  
+  var oBtn2 = new sap.m.Button({  
+  icon : "sap-icon://delete",  
+  text : "Clear Storage",  
+  press : function() {  
+  oStorage.clear();  
+  }  
+  });  
+  var oPage = new sap.m.Page("page1", {  
+  title : "Storage Test",  
+  content : [ oList ],  
+  subHeader : new sap.m.Bar({  
+  contentRight : [ oBtn1, oBtn2 ]  
+  })  
+  });  
+  //Create Application  
+  var oApp = new sap.m.App("myApp");  
+  oApp.setModel(oModel);  
+  oApp.addPage(oPage);  
+  oApp.placeAt("content");  
+  //Binding  
+  oList.bindItems("/Collection", new sap.m.StandardListItem({  
+  title : "{id}",  
+  description : "Local Storage"  
+  }));  
+</script>  
+</head>  
+<body class="sapUiBody" role="application">  
+  <div id="content"></div>  
+<!--  <div dir="ltr" style="text-align: left;" trbidi="on">-->
+<!--<br /></div>-->
+<!--<style type='text/css'>#indJobContent{padding-bottom: 5px; margin-left:25px;}#indJobContent .company_location{font-size: 18px;overflow: hidden;display:block;}#indJobContent.wide .job{display:block;float:left; margin-top:"20px"; width: 200px;overflow: hidden}#indeed_widget_wrapper{position: relative;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 20px;font-weight: normal;line-height: 25px;padding: 15px;margin-left:10px;height: auto;overflow: hidden;}#indeed_widget_header{font-size:18px; padding-bottom: 5px; }#indeed_search_wrapper{clear: both;font-size: 16px;margin-top: 0px;padding-top: 2px;}#indeed_search_wrapper label{font-size: 12px;line-height: inherit;text-align: left; margin-right: 5px;}#indeed_search_wrapper input[type='text']{width: 100px; font-size: 11px; }#indeed_search_wrapper #qc{padding-left:20px;float:left}#indeed_search_wrapper #lc{padding-right:20px;float:right;}#indeed_search_wrapper.stacked #qc, #indeed_search_wrapper.stacked #lc{float: none; clear: both;}#indeed_search_wrapper.stacked input[type='text']{width: 150px;}#indeed_search_wrapper.stacked label{display: block;padding-bottom: 5px;}#indeed_search_footer{width:295px; padding-top: 5px; clear: both;}#indeed_link{position: absolute;bottom: 1px;right: 5px;clear: both;font-size: 11px;  }#indeed_link a{text-decoration: none;}#results .job{padding: 10px 0px;}#pagination { clear: both; }</style><style type='text/css'>-->
+<!--#indeed_widget_wrapper{ width: 700px; height: 1600px; background: #ffffff;}-->
+<!--#indeed_widget_wrapper{ border: 1px solid #FFFFFF; }-->
+<!--#indeed_widget_wrapper, #indeed_link a{ color: #000000;}-->
+<!--#indJobContent, #indeed_search_wrapper{ border-top: 1px solid #FFFFFF; }-->
+<!--#indJobContent a { color: #158535; }-->
+<!--#indeed_widget_header{ color: #050505; }-->
+<!--#q{height:40px; width:80px;}-->
+<!--#l{height:40px; width:80px;}-->
+<!--</style>-->
+<!--<script type='text/javascript'>-->
+<!--var ind_pub = '6513164136151334';-->
+<!--var ind_el = 'indJobContent';-->
+<!--var ind_pf = '';-->
+<!--var ind_q = 'sap abap';-->
+<!--var ind_l = 'India';-->
+<!--var ind_chnl = 'sap+abap';-->
+<!--var ind_n = 20;-->
+<!--var ind_d = 'http://www.indeed.co.in';-->
+<!--var ind_t = 40;-->
+<!--var ind_c = 30;-->
+<!--var ind_pgn = 1;-->
+<!--var ind_pgnCnt = 6;-->
+<!--</script>-->
+<!--<script type='text/javascript' src='http://www.indeed.co.in/ads/jobroll-widget-v3.js'></script>-->
+<!--<div id='indeed_widget_wrapper' style=''>-->
+<!--    <div id='indeed_widget_header'><b>SAP ABAP JOBS</b></div>-->
+
+<!--    <div id='indJobContent' class=""></div>-->
+    
+<!--        <div id='indeed_search_wrapper'>-->
+<!--            <script type='text/javascript'>-->
+<!--                function clearDefaults() {-->
+<!--                    var formInputs = document.getElementById('indeed_jobform').elements;-->
+<!--                    for(var i = 0; i < formInputs.length; i++) {-->
+<!--                        if(formInputs[i].value == 'title, keywords' || formInputs[i].value == 'city, state, or pin') {-->
+<!--                            formInputs[i].value = '';-->
+<!--                        }-->
+<!--                    }-->
+<!--                }-->
+<!--            </script>-->
+<!--            <form onsubmit='clearDefaults();' method='get' action='http://www.sapabaptutors.com/2016/09/sap-abap-jobs.html' id='indeed_jobform' target="_blank">-->
+<!--                <div id="qc"><label>What:</label><input type='text' value="SAP ABAP" name='q' id='q'></div>-->
+<!--                <div id="lc"><label>Where:</label><input type='text' value='India' name='l' id='l'></div>-->
+<!--                <div id='indeed_search_footer'>-->
+<!--                    <div style='float:right'><input type='submit' value='Find Jobs' class='findjobs'></div>-->
+<!--                </div>-->
+<!--                <input type='hidden' name='indpubnum' id='indpubnum' value='6513164136151334'>-->
+<!--            </form>-->
+<!--        </div>-->
+    
+<!--    <div id='indeed_link'>-->
+<!--        <a title="Job Search" href="http://www.indeed.co.in/" target="_new">jobs by <img alt=Indeed src='http://www.indeed.com/p/jobsearch.gif' style='border: 0;vertical-align: bottom;'>-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</div>-->
+</body>  
+</html>

@@ -1,0 +1,55 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Intermediate_tutorials.ExpressionsDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Expression Binding"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuIntButton3" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Expression binding is an enhancement of the SAPUI5 binding syntax, which allows for providing expressions instead of custom formatter functions."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This saves the overhead of defining a function and is recommended in cases where the formatter function has a trivial implementation like comparison of values"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Expression binding is especially useful in the context of SAPUI5XML templating where XML views with templating are preprocessed so that the SAPUI5 controller is a natural place to put custom formatter functions that are not available."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="There are some predefined status for this, like Success, Error, Critical. Now for an example, I will make use of it."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So here, our use case is to display a success state, if the price of the product is less than 250 else show an error state. So, in our application, we will display it in the numberstate property of the list."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic30.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, this is a ternary expression here that we have used, if the price is greater than 250 then error else success."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic29.png" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Watch my video on Custom formatter and Inline Expressions"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/RzNdqvUTmc0" frameborder="0" allowfullscreen="true"></html:iframe>
+    
+				<FormattedText class="labelsize" width="90%"
+				htmlText="I hope you understood the concept of the formatters and Inline Expressions. For any queries, mail me at sapui5tutors@gmail.com."/>
+				
+				
+
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

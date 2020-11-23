@@ -1,0 +1,201 @@
+{
+	"ProductCollection": [
+		{
+			"ProductId": "1239102",
+			"Name": "Real Madrid Home Shirt",
+			"Category": "Projector",
+			"SupplierName": "Titanium",
+			"Description": "HOME/WHITE",
+			"WeightMeasure": 1467,
+			"WeightUnit": "g",
+			"Price": 856.49,
+			"CurrencyCode": "EUR",
+			"Status": "Available",
+			"Quantity": 3,
+			"UoM": "PC",
+			"Width": 51,
+			"Depth": 42,
+			"Height": 18,
+			"DimUnit": "cm",
+			"ProductPicUrl": "http://image1.kbobject.com/rm-176749.jpg?width=170&height=170&quality=95"
+		},
+		{
+			"ProductId": "2212-121-828",
+			"Name": "Real Madrid Home Shirt Long Sleeve",
+			"Category": "Graphics Card",
+			"SupplierName": "Technocom",
+			"Description": "HOME/WHITE",
+			"WeightMeasure": 321,
+			"WeightUnit": "g",
+			"Price": 81.7,
+			"CurrencyCode": "EUR",
+			"Status": "Discontinued",
+			"Quantity": 10,
+			"UoM": "PC",
+			"Width": 34,
+			"Depth": 14,
+			"Height": 2,
+			"DimUnit": "cm",
+			"ProductPicUrl": "http://image2.kbobject.com/rm-176604.jpg?width=170&height=170&quality=95"
+		},
+		{
+			"ProductId": "K47322.1",
+			"Name": "Real Madrid Home Shorts",
+			"Category": "Graphics Card",
+			"SupplierName": "Red Point Stores",
+			"Description": "HOME/WHITE",
+			"WeightMeasure": 588,
+			"WeightUnit": "g",
+			"Price": 219,
+			"CurrencyCode": "EUR",
+			"Status": "Out of Stock",
+			"Quantity": 25,
+			"UoM": "PC",
+			"Width": 34,
+			"Depth": 14,
+			"Height": 2,
+			"DimUnit": "cm",
+			"ProductPicUrl": "http://image2.kbobject.com/rm-176615.jpg?width=170&height=170&quality=95"
+		},
+		{
+			"ProductId": "22134T",
+			"Name": "Real Madrid away Shirt Short Sleeve",
+			"Category": "Accessory",
+			"SupplierName": "Technocom",
+			"Description": "AWAY/BLUE",
+			"WeightMeasure": 700,
+			"WeightUnit": "g",
+			"Price": 59,
+			"CurrencyCode": "EUR",
+			"Status": "Available",
+			"Quantity": 22,
+			"UoM": "PC",
+			"Width": 18,
+			"Depth": 19,
+			"Height": 21,
+			"DimUnit": "cm",
+			"ProductPicUrl": "http://image1.kbobject.com/rm-176589.jpg?width=170&height=170&quality=95"
+		},
+		{
+			"ProductId": "P1239823",
+			"Name": "Real Madrid away Shirt Long Sleeve",
+			"Category": "Accessory",
+			"SupplierName": "Technocom",
+			"Description": "AWAY/BLUE",
+			"WeightMeasure": 40,
+			"WeightUnit": "g",
+			"Price": 13.49,
+			"CurrencyCode": "EUR",
+			"Status": "Available",
+			"Quantity": 30,
+			"UoM": "PC",
+			"Width": 11,
+			"Depth": 11,
+			"Height": 3,
+			"DimUnit": "cm",
+			"ProductPicUrl": "http://image2.kbobject.com/rm-176590.jpg?width=170&height=170&quality=95"
+		},
+		{
+			"ProductId": "214-121-828",
+			"Name": "Real Madrid away Shorts",
+			"Category": "Accessory",
+			"SupplierName": "Red Point Stores",
+			"Description": "AWAY/BLUE",
+			"WeightMeasure": 1289,
+			"WeightUnit": "g",
+			"Price": 78.99,
+			"CurrencyCode": "EUR",
+			"Status": "Discontinued",
+			"Quantity": 15,
+			"UoM": "PC",
+			"Width": 53,
+			"Depth": 34,
+			"Height": 7,
+			"DimUnit": "cm",
+			"ProductPicUrl": "http://image2.kbobject.com/rm-176750.jpg?width=170&height=170&quality=95"
+		}
+	],
+	"ProductCollectionStats": {
+		"Counts": {
+			"Total": 14,
+			"Weight": {
+				"Ok": 7,
+				"Heavy": 5,
+				"Overweight": 2
+			}
+		},
+		"Groups": {
+			"Category": {
+				"Projector": 1,
+				"Graphics Card": 2,
+				"Accessory": 4,
+				"Printer": 2,
+				"Monitor": 3,
+				"Laptop": 1,
+				"Keyboard": 1
+			},
+			"SupplierName": {
+				"Titanium": 3,
+				"Technocom": 3,
+				"Red Point Stores": 5,
+				"Very Best Screens": 3
+			}
+		},
+		"Filters": [
+			{
+				"type": "Category",
+				"values": [
+					{
+						"text": "Projector",
+						"data": 1
+					},
+					{
+						"text": "Graphics Card",
+						"data": 2
+					},
+					{
+						"text": "Accessory",
+						"data": 4
+					},
+					{
+						"text": "Printer",
+						"data": 2
+					},
+					{
+						"text": "Monitor",
+						"data": 3
+					},
+					{
+						"text": "Laptop",
+						"data": 1
+					},
+					{
+						"text": "Keyboard",
+						"data": 1
+					}
+				]
+			},
+			{
+				"type": "SupplierName",
+				"values": [
+					{
+						"text": "Titanium",
+						"data": 3
+					},
+					{
+						"text": "Technocom",
+						"data": 3
+					},
+					{
+						"text": "Red Point Stores",
+						"data": 5
+					},
+					{
+						"text": "Very Best Screens",
+						"data": 3
+					}
+				]
+			}
+		]
+	}
+}

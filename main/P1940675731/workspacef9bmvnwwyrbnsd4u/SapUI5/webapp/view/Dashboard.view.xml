@@ -1,0 +1,105 @@
+<mvc:View controllerName="com.sapui5.controller.Dashboard" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App>
+		<pages>
+			<Page  id="dashboard">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="SAPUI5 Tutorials"/>
+						</contentMiddle>
+						
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+		<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Basic Tutorials"
+		  press="onBasTutorialpress" subheader="Topics Covered:6" >
+		<tileContent>
+			<TileContent  unit="" footer="" >
+				<content>
+					<Image src="css/Image/Basic.png"/>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+			<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Intermediate Tutorials"
+		  press="onIntTutorialpress" subheader="Topics Covered:6" >
+		<tileContent>
+			<TileContent  unit="" footer="" >
+				<content>
+					<Image src="css/Image/Intemediate.png"/>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+			<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Advanced Tutorials"
+		  press="onAdvTutorialpress" subheader="Topics Covered:7" >
+		<tileContent>
+			<TileContent  unit="" footer="" >
+				<content>
+					<Image src="css/Image/Advanced.png"/>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+			<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Routing"
+		  press="onRoutPress" subheader="Topics Covered:3" >
+		<tileContent>
+			<TileContent  unit="" footer="" >
+				<content>
+					<Image src="css/Image/routing.png"/>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+			<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="SAP WebIDE"
+		  press="onIDEpress" subheader="Topics Covered:5" >
+		<tileContent>
+			<TileContent  unit="" footer="" >
+				<content>
+					<Image src="css/Image/WebIDE.png"/>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+				<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="SAPUI5 Blogs"
+		 press="onBlogpress" subheader="Blog Count: 30+" >
+		<tileContent>
+			<TileContent  unit="" footer="" >
+				<content>
+					<Image src="css/Image/Blog.png"/>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+					<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Video Tutorials"
+		  press="onVideopress" subheader="Videos : 20+" >
+		<tileContent>
+			<TileContent  unit="" footer="" >
+				<content>
+					<Image src="css/Image/Videos.png"/>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Interview Questions"
+		  press="onInterviewpress" subheader=" Question: 100+" >
+		<tileContent>
+			<TileContent  unit="" footer="" >
+				<content>
+					<Image src="css/Image/Interview.png"/>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+				</content>
+				
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

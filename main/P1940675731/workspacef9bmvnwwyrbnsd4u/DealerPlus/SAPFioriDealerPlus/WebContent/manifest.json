@@ -1,0 +1,106 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+	"_version": "1.1.0",
+	"id": "vikalp.cus.sd.dealer.plus",
+	"type": "application",
+	"i18n": "i18n/i18n.properties",
+	"title": "{{appTitle}}",
+	"description": "{{appDescription}}",
+	"applicationVersion": {
+	  "version": "1.0.0"
+	},
+	"ach": "CA-UI5-DOC",
+	"dataSources": {
+		"dealerRemote": {
+			"uri": "/sap/opu/odata/VK01DPBE/DLR_PLUS_SRV/",
+			"type": "OData",
+			"settings": {
+				"odataVersion": "2.0"
+				}
+		}
+	}
+  },
+  "sap.ui": {
+	"_version": "1.1.0",
+	"technology": "UI5",
+	"deviceTypes": {
+	  "desktop": true,
+	  "tablet": true,
+	  "phone": true
+	},
+	"supportedThemes": [
+	  "sap_bluecrystal"
+	]
+  },
+  "sap.ui5": {
+	"_version": "1.1.0",
+	"rootView": "vikalp.cus.sd.dealer.plus.view.App",
+	"dependencies": {
+	  "minUI5Version": "1.30",
+	  "libs": {
+		"sap.m": {}
+		
+	  }
+	},
+	"config": {
+	  "dealerRemote": "/sap/opu/odata/VK01DPBE/DLR_PLUS_SRV/"
+	},
+	"models": {
+	  "dealer": {
+		"dataSource": "dealerRemote"
+	}
+	},
+	    "routing" : {
+		"config" : {
+			"routerClass": "sap.m.routing.Router",
+			"viewType" : "XML",
+			"viewPath" : "vikalp.cus.sd.dealer.plus.view",
+			"controlId": "app",
+			"targetAggregation" : "pages"
+			},
+		"routes" : [
+			{
+				"pattern" : "",
+				"name" : "main",
+				"viewName" : "S2",
+				"targetAggregation" : "pages"
+				},
+			{
+				"pattern" : "Dealer/{cusId}",
+				"name" : "detail",
+				"viewName" : "S3",
+				"targetAggregation" : "pages"
+			},
+			{
+				"pattern" : "Order/{order}",
+				"name" : "order",
+				"viewName" : "OrderDetails",
+				"targetAggregation" : "pages"
+			},
+			{
+				"pattern" : "Returns/{rOrder}",
+				"name" : "return",
+				"viewName" : "ReturnOrderDetails",
+				"targetAggregation" : "pages"
+			},
+			{
+				"pattern" : "ShiptoParty/{ship}",
+				"name" : "Ship",
+				"viewName" : "ShiptoPartyEdit",
+				"targetAggregation" : "pages"
+			}
+			
+		]
+		
+	},
+
+	"resources": {
+		"css": [
+			{
+				"uri": "css/style.css"
+			}
+		]
+	}
+  }
+}

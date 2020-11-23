@@ -1,0 +1,8 @@
+<mvc:View id="appView"
+    controllerName="nw.epm.refapps.purchaseorders.approve.controller.Root"
+	displayBlock="true"
+	busy="{= ${globalProperties>/isMetaDataLoading} || ${globalProperties>/isBusyApproving} }"
+	busyIndicatorDelay="{= ${globalProperties>/metaDataLoaded} ? ${globalProperties>/originalBusyDelay} : 0 }" 
+	xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+	<SplitApp id="approvalApp" />
+</mvc:View>

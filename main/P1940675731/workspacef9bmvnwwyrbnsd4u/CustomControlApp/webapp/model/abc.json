@@ -1,0 +1,72 @@
+{
+	"Rowsets": {
+		"DateCreated": "2016-12-21T13:27:34",
+		"Version": "15.1 SP2 Patch 13 (Oct 6, 2016)",
+		"StartDate": "2016-12-21T12:27:34+0100",
+		"EndDate": "2016-12-21T13:27:34+0100",
+		"CachedTime": "",
+		"Rowset": [{
+			"Columns": {
+				"Column": []
+			},
+			"Row": [
+			
+			{"wp01":[
+						{"wo_no":"26557", "op01":[
+													{"op_no":"50002137-1-0-0010", "dp01":[
+																							{"dis_no":"0030","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0031","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0032","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]},
+													{"op_no":"50002137-1-0-0011", "dp02":[
+																							{"dis_no":"0040","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0041","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0042","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]},
+													{"op_no":"50002137-1-0-0012", "dp03":[
+																							{"dis_no":"0050","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0051","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0052","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]}
+						]},
+						
+						{"wo_no":"26558", "op02":[
+													{"op_no":"50002137-1-0-0020", "dp04":[
+																							{"dis_no":"0060","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0061","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0062","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]},
+													{"op_no":"50002137-1-0-0021", "dp05":[
+																							{"dis_no":"0070","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0071","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0072","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]},
+													{"op_no":"50002137-1-0-0022", "dp06":[
+																							{"dis_no":"0080","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0081","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0082","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]}
+						]},
+						{"wo_no":"26559", "op01":[
+													{"op_no":"50002137-1-0-0030", "dp07":[
+																							{"dis_no":"0090","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0091","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0092","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]},
+													{"op_no":"50002137-1-0-0031", "dp08":[
+																							{"dis_no":"0010","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0011","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0012","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]},
+													{"op_no":"50002137-1-0-0032", "dp09":[
+																							{"dis_no":"0020","dis_des":"test 06 MJ","gravity":"2","status":"InProgress"},
+																							{"dis_no":"0021","dis_des":"test 06 MJ","gravity":"3","status":"Paused"},
+																							{"dis_no":"0022","dis_des":"test 06 MJ","gravity":"4","status":"InProgress"}
+													]}
+						]}
+			
+			]
+			}]
+		}]
+	}
+}

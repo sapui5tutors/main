@@ -1,0 +1,79 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="vikalp.cus.sd.dealer.plus.controller.ReturnOrderDetails"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>ReturnOrderTitle}" showNavButton="true"
+		navButtonPress="onBackPress">
+		<footer>
+			<Toolbar>
+			</Toolbar>
+		</footer>
+		<content>
+			<ObjectHeader id="returnObjectHeader" info="{dealer>CustomerId}"
+				title="{dealer>SalesOrderNumber}" 
+				number="{
+							path : 'dealer>NetPriceAmount',
+						    type: 'sap.ui.model.type.Float',
+						    formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+						     }"
+				numberUnit="{dealer>Currency}">
+				<statuses>
+					<ObjectStatus title="{i18n>s4OrderTotalAmount}"
+						text="{
+						parts:[{
+											path : 'dealer>Ordertotalamount',
+						    					type: 'sap.ui.model.type.Float',
+						   						formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+												},
+												{
+											path:'dealer>Currency'
+											}]
+
+						}" />
+					<ObjectStatus title="{i18n>s4OrderHeaderOrder}"
+						text="{
+						path : 'dealer>OrderDate',
+						type: 'sap.ui.model.type.Date',
+					    formatOptions: { source: { pattern: 'yyyyMMdd' }
+					    }
+						}" />
+				</statuses>
+				<attributes>
+				<core:ExtensionPoint name="extReturnHeaderDetails">
+					<ObjectAttribute title="{i18n>ReturnReason}"
+						text="{dealer>ReasonOfRejection}" />
+				</core:ExtensionPoint>
+				</attributes>
+				
+					
+			</ObjectHeader>
+
+			<Table id="idReturnItemTable"  inset="true" updateFinished="onUpdateFinished"
+				growing="true" growingThreshold="5">
+
+				<columns>
+					<Column width="12em">
+						<Text text="{i18n>s4TableMaterialColumn}" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="{i18n>s4TableQuantityColumn}" />
+					</Column>
+					<Column>
+						<Text text="{i18n>s4TablePriceColumn}" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="{i18n>ReturnReason}" />
+					</Column>
+					<core:ExtensionPoint name="extReturnTableColumn">
+					</core:ExtensionPoint>
+
+				</columns>
+
+			</Table>
+
+		</content>
+	</Page>
+</core:View>

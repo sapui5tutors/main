@@ -1,0 +1,17 @@
+<mvc:View controllerName="ShopCart.controller.Details" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Details">
+				<content>
+					<!--<List id="CategoriesNumber" />-->
+					<ObjectListItem id="idDetailsList"/>
+						<!--<items>-->
+						<!--	<ObjectListItem title="{SUB>CategoryName}" number="{SUB>NumberOfProducts}" type="Active" press="onClick">-->
+						<!--	</ObjectListItem>-->
+						<!--</items>-->
+					<!--</ObjectListItem>-->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

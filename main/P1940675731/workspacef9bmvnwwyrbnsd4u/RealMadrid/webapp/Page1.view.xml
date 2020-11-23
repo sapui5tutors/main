@@ -1,0 +1,405 @@
+<core:View height="100%"
+		   xmlns:core="sap.ui.core"
+		   xmlns="sap.m"
+		   xmlns:l="sap.ui.layout"
+		   xmlns:tnt="sap.tnt"
+		   xmlns:html="http://www.w3.org/1999/xhtml"
+		   xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+		   controllerName="RealMadrid.Page1">
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<Button id="sideNavigationToggleButton"
+						icon="sap-icon://menu2"
+						type="Transparent"
+						press="onSideNavButtonPress">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+				<ToolbarSpacer width="43.5%" />
+				<Image
+					id="logo"
+					src="Images/rma_small.png"
+					width="45px"
+					height="45px"
+					densityAware="true">
+				</Image>
+				<Text text="Welcome to Real Madrid Official Website"/>
+				</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation expanded="true"
+								itemSelect="onItemSelect">
+				<tnt:NavigationList items="{path: '/navigation'}">
+					<tnt:NavigationListItem text="{title}"
+											icon="{icon}"
+											enabled="{enabled}"
+											expanded="{expanded}"
+											items="{items}"
+											key="{key}">
+						<tnt:NavigationListItem text="{title}"
+												key="{key}"
+												enabled="{enabled}">
+						</tnt:NavigationListItem>
+					</tnt:NavigationListItem>
+				</tnt:NavigationList>
+				<tnt:fixedItem>
+					<tnt:NavigationList items="{path: '/fixedNavigation'}">
+						<tnt:NavigationListItem text="{title}"
+												icon="{icon}"
+												key="{key}">
+						</tnt:NavigationListItem>
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<NavContainer id="pageContainer">
+				<pages>
+					<ScrollContainer id="home"
+									 horizontal="false"
+									 vertical="true"
+									 height="100%">
+								<Image
+									src="Images/banner.jpg"
+									densityAware="false"
+									width="100%">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+								
+								<l:HorizontalLayout class="slideTilesLayout">
+									<SlideTile class="sapUiTinyMarginTop">
+										<tiles>
+											<GenericTile backgroundImage="{img>/news/news1}" frameType="TwoByOne" >
+												<tileContent>
+													<TileContent footer="August 21, 2016">
+														<content>
+															<NewsContent contentText="CRISTIANO RONALDO NAMED CHAMPIONS LEAGUE PLAYER OF THE WEEK" subheader="Today, RMA News"></NewsContent>
+														</content>
+													</TileContent>
+												</tileContent>
+											</GenericTile>
+											
+											<GenericTile backgroundImage="{img>/news/news2}" frameType="TwoByOne" >
+												<tileContent>
+													<TileContent footer="August 21, 2016">
+														<content>
+															<NewsContent contentText="WE ARE AT THE TOP OF THE TABLE AND THATS IMPORTANT" subheader="Today, RMA News"></NewsContent>
+														</content>
+													</TileContent>
+												</tileContent>
+											</GenericTile>
+										</tiles>
+									</SlideTile>
+									
+									<SlideTile class="sapUiTinyMarginTop">
+										<tiles>
+											<GenericTile backgroundImage="{img>/news/news3}" frameType="TwoByOne" >
+												<tileContent>
+													<TileContent footer="August 21, 2016">
+														<content>
+															<NewsContent contentText="LUKA MODRIC: I AM VERY HAPPY TO RENEW WITH THE BEST CLUB IN THE WORLD" subheader="Today, RMA News"></NewsContent>
+														</content>
+													</TileContent>
+												</tileContent>
+											</GenericTile>
+											<GenericTile backgroundImage="{img>/news/news4}" frameType="TwoByOne" >
+												<tileContent>
+													<TileContent footer="August 21, 2016">
+														<content>
+															<NewsContent contentText="5-1: REAL MADRID SEE OFF LEGIA TO REGISTER SECOND EMPHATIC WIN IN THREE DAYS"></NewsContent>
+														</content>
+													</TileContent>
+												</tileContent>
+											</GenericTile>
+										</tiles>
+									</SlideTile>
+									
+									<SlideTile class="sapUiTinyMarginTop">
+										<tiles>
+											<GenericTile backgroundImage="{img>/news/news5}" frameType="TwoByOne" >
+												<tileContent>
+													<TileContent footer="August 21, 2016">
+														<content>
+															<NewsContent contentText="REALMADRID TV LAUNCHES IT'S HD CHANNEL LIVE ON DIGITAL TV IN SPAIN" subheader="Today, RMA News"></NewsContent>
+														</content>
+													</TileContent>
+												</tileContent>
+											</GenericTile>
+											<GenericTile backgroundImage="{img>/news/news6}" frameType="TwoByOne" >
+												<tileContent>
+													<TileContent footer="August 21, 2016">
+														<content>
+															<NewsContent contentText="KROOS : THE BEST PASSER IN LA LIGA" subheader="Today, RMA News"></NewsContent>
+														</content>
+													</TileContent>
+												</tileContent>
+											</GenericTile>
+										</tiles>
+									</SlideTile>
+								</l:HorizontalLayout>
+								
+					</ScrollContainer>
+					
+					<ScrollContainer id="onlineStore"
+									 horizontal="false"
+									 vertical="true"
+									 height="100%">
+						 <Table id="idProductsTable"
+							inset="false"
+							items="{
+								path: 'products>/ProductCollection',
+								sorter: {
+									path: 'Name'
+								}
+							}">
+							<headerToolbar>
+								<Toolbar>
+									<Title text="Products" level="H2"/>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column
+									hAlign="Begin"
+									vAlign="Inherit"
+									>
+									<Text text="Product" />
+								</Column>
+								<Column
+									minScreenWidth="Tablet"
+									demandPopin="true">
+									<Text text="Product Image" />
+								</Column>
+								<Column
+									hAlign="Right">
+									<Text text="Price" />
+								</Column>
+								<Column 
+									width="10em"
+									hAlign="Right">
+									<Text text="Add" /> 
+								</Column>
+							</columns>
+							
+							<items>
+								<ColumnListItem>
+									<cells>
+										<ObjectIdentifier
+											title="{products>Name}"
+											text="{products>Description}"/>
+										<Image
+											src="{products>ProductPicUrl}"
+											densityAware="true"
+											activeSrc=""
+											mode="Image"
+											backgroundSize="cover"
+											backgroundPosition="initial"
+											backgroundRepeat="no-repeat"
+											
+										/>
+										<ObjectNumber
+												number="{
+													parts:[{path:'products>Price'},{path:'products>CurrencyCode'}],
+													type: 'sap.ui.model.type.Currency'
+												}"
+												unit="{products>CurrencyCode}" 
+												
+												/>
+										<Button text="Add to cart"
+												press="addtoCart"
+												icon= "sap-icon://cart"></Button>
+											
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</ScrollContainer>
+					
+					<ScrollContainer id="fifa17Ratings"
+									 horizontal="false"
+									 vertical="true"
+									 height="100%">
+						<Text text="REAL MADRID C.F. - FIFA 17 PLAYER RATINGS"></Text>
+						<ToolbarSpacer width="38%" />
+						
+						<IconTabBar	id="idIconTabBar" expanded="false">
+							<items>
+								<IconTabFilter id="idTabFilter1" text="GOALKEEPERS">
+									<content>
+										<Image src="Images/gk1.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/gk2.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/gk3.jpg" width = "250px" height = "350px"/>
+									</content>
+								</IconTabFilter>
+								
+								<IconTabFilter id="idTabFilter2" text="DEFENDERS">
+									<content>
+										<Image src="Images/df1.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/df2.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/df3.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/df4.jpg" width = "250px" height = "350px"/>
+									</content>
+								</IconTabFilter>
+								
+								<IconTabFilter id="idTabFilter3" text="MIDFIELDERS">
+									<content>
+										<Image src="Images/mf1.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/mf2.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/mf3.jpg" width = "250px" height = "350px"/>
+									</content>
+								</IconTabFilter>
+								
+								<IconTabFilter id="idTabFilter4" text="ATTACKERS">
+									<content>
+										<Image src="Images/at1.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/at2.jpg" width = "250px" height = "350px"/>
+										<Image src="Images/at3.jpg" width = "250px" height = "350px"/>
+									</content>
+								</IconTabFilter>
+							</items>	
+						</IconTabBar>
+						 
+						 <ToolbarSpacer width="38%" />
+						 <Image id = "ratingimage" src="Images/ratings.jpg" 
+							   width = "500px"/>
+					</ScrollContainer>
+					
+					<ScrollContainer id="sponsors"
+									 horizontal="false"
+									 vertical="true"
+									 height="100%">
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/emirateslogo.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/adidaslogo.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/ipic.png">
+						</ImageContent>
+						
+						<ToolbarSpacer width="38%" />
+						
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/cepsa.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/microsoft.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/audi.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/hankook.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/EA.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/boss.png">
+						</ImageContent>
+						
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/nivea.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/stc.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/sanitas.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/cola.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/samsung.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/tecate.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/fud.png"
+							description="Logo"
+							press="press">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/NBAD.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/star.png">
+						</ImageContent>
+						
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/btSport.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/ooredoo.png">
+						</ImageContent>
+						<ImageContent
+							class="sapUiLargeMarginTop sapUiLargeMarginBottom gs"
+							src="Images/Solan.png">
+						</ImageContent>
+					</ScrollContainer>
+					
+					<ScrollContainer id="trophy"
+									 horizontal="false"
+									 vertical="true"
+									 height="100%">
+						
+						<Carousel class="sapUiContentPadding" loop="true">
+							<pages>
+								<Image src="{img>/products/pic1}" />
+					 
+								<Image src="{img>/products/pic2}" />
+					 
+								<Image src="{img>/products/pic3}" />
+					 
+								<Image src="{img>/products/pic4}" />
+								
+								<Image src="{img>/products/pic5}" />
+					 
+								<Image src="{img>/products/pic6}" />
+					 
+								<Image src="{img>/products/pic7}" />
+					 
+								<Image src="{img>/products/pic8}" />
+								
+								<Image src="{img>/products/pic9}" />
+					 
+								<Image src="{img>/products/pic10}" />
+					 
+								<Image src="{img>/products/pic11}" />
+					 
+								<Image src="{img>/products/pic12}" />
+					 
+							</pages>
+						</Carousel>
+					</ScrollContainer>
+				</pages>
+			</NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</core:View>

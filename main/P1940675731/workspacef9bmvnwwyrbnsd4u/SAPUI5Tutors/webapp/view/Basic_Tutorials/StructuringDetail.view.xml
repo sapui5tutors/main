@@ -1,0 +1,80 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Basic_Tutorials.StructuringDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page>
+		<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Project Structuring in SAPUI5"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuButton6" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="With the release of latest update of SAPUI5, project structure has been changed slightly. All the configuration that used to be maintained in the configuration file is now managed by manifest.json , moreover it takes care of routing, which previously was maintained by component.js. Similarly, there have been many more changes. An example with the latest project structure is shown."/>	
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic3.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This is a sample project structure, which almost covers every aspect.The WebContent contains all the folders, including Component-preload.js, Component.js, index.html , and manifest.json.  Gulpfile  and node_modules are of no use here, it is mainly used to create the Component-preload.js file."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The First change that you notice is, now the controller files are kept separate in the controller folder, and not in the view folder itself. The controller folder include all the javascript files."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic4.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Then comes the CSS folder, which include customizing the sap ui5 application. Add any css files in this folder."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic5.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Next is the i18n folder, which is used for Globalization purpose. It includes i18n files for particular languages."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic6.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="localService and test folder is used for mockserver, which consists of mockdata , metadata,  mockserver.js and testService.html which acts an index.html file for the mockserver."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic7.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="model folder consists of the formatter.js file."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic8.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="util folder consists the dialog.js file, if it is used in a particular project, and similarly the fragment files are contained in the view folder."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic9.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Next comes the view folder, which now purely consists only the views, both xml or maybe javascript files too. Moreover, it also includes the fragment files too."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic10.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Component-preload.js file is mainly used for optimization purpose, it is created using grunt operations or maybe using gulpfile."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="  Component.js file is used here for declaring the models, (odata, json, or i18n)but in the latest version of sapui5, that step is also done in the manifest.json file."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Moreover, here the router initialization is also done.
+
+·         Index.html file serves the same purpose here, we declare the shell  here. And all the library files are loaded in index.html. Mainly there is no change in the index file. It serves the same purpose similar to what it used to serve in previous versions."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Manifest.json file here is used to declare the OData, here  the version of sap.ui5, sap.ui, sap.app is done. Moreover, the routes are defined here itself, and not in the component.js file."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Go through my video from Youtube, on Project Structuring:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In the First session I have covered, views, controllers, Component.js, and Manifest.json"/>
+				<html:iframe class="labelsize"   width="90%" height="90%"
+    src="https://www.youtube.com/embed/-vhBWvtDjmA" frameborder="0" allowfullscreen="true"></html:iframe>
+    			<FormattedText class="labelsize" width="90%"
+				htmlText="In the Second Session, I have covered the models, i.e JSON model"/>
+				<html:iframe class="labelsize" width="90%" height="90%"
+    src="https://www.youtube.com/embed/eECncPhsPJI" frameborder="0" allowfullscreen="true"></html:iframe>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In the third Session, I have covered the Internationalization topic "/>
+				<html:iframe class="labelsize"   width="90%" height="90%"
+    src="https://www.youtube.com/embed/paKQCoe6uhY" frameborder="0" allowfullscreen="true"></html:iframe>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

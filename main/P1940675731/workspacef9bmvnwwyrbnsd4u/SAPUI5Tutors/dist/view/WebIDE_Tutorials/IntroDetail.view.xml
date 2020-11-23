@@ -1,0 +1,117 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.WebIDE_Tutorials.IntroDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="Introduction to SAP WebIDE">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Intro to SAP WebIDE"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuWebButton3" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE (Integrated Development Environment) is a web-based tool that empowers users to rapidly create and extend applications for browser and mobile devices. It simplifies the end-to-end application lifecycle: prototyping, development, packaging, deployment, and customer extensions for SAP Fiori and SAPUI5 applications."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE offers highly efficient tools to easily build and extend apps applying SAP Fiori UX and generic SAPUI5 apps using wizards, templates, sample applications, drag and drop tools, code editor and much more."/>
+				<html:iframe class="labelsize" id="routFullToSplit"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/oGQSqkVjO3I" frameborder="0" allowfullscreen="true"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE is available on SAP HANA Cloud Platform and can be accessed via SAP Store for productive or trial usage."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP has brought its own IDE into play, while many users are still stuck on conventional IDE like eclipse, which by the way is the best platform for the beginners.  But for developers, who already have taken their first step towards development in sap ui5, I would personally recommend using web IDE, since it allows following proper guidelines and following best practices while coding."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Applications developed with SAP Web IDE can run on different platforms like SAP HANA Cloud Platform, SAP ABAP using Business Server Pages (BSP), or SAP Mobile Platform (SMP)."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE comes with integrated deployment options for"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) SAP HANA Cloud Platform"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) SAPUI5 ABAP Repository on a SAP ABAP Server"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) SAP Fiori launchpad"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) SAP HANA Cloud Platform mobile services"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="5) SAP Mobile Platform."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Features of SAP web IDE" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Free-style coding" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE supports free-style coding by providing robust editors with capabilities of code completion (XML, property files, JavaScript and SAPUI5), code validation, pre- and user-defined code templates, and many more. Advanced Search on basis of file name across the workspace allows the users with a better coding experience."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Layout Editor (WYSIWYG) tooling" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="It allows Drag and drop editor which provides a user-friendly visual editor including control galleries to easily build and customize applications."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Wizards, Templates and Sample Applications" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Project templates provided by a wizard-based gallery allows you to create new applications with only a few clicks, following specific best practices. In addition you can create projects based on Sample Applications. Sample Applications are complete applications with all coding and mock data. They provide best-practice coding and comprehensive comments.
+"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Extensibility support" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE provides the ability to extend existing SAP Fiori applications in a nice and easy manner through a visual extensibility editor to graphically choose an element you would like to extend. SAP Fiori, cloud edition leverages SAP Web Ide to extend and customize SAP Fiori apps."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Instant preview" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE includes an instant preview so you can launch the application in the browser at different resolutions and in different languages, either with real or mock data."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Mock data support" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Mock data can be automatically generated or manually created to run the application independently for front-end/back-end development de-coupling, testing and demoing purposes."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Support for several environments" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Seamlessly run on any device - automatically renders for phone, tablet, and desktop. Integrated deployment to SAP platforms: HANA Cloud Platform (HCP), SAP ABAP, Fiori launchpad (FLP), HANA Cloud Platform mobile Services (HCPms) and SAP Mobile Platform (SMP)."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Extensible and modular architecture for “adding your own plug-ins”" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE has an extensible and modular architecture built up of plug-ins. SAP web IDE streamlines the ability to add your own plug-in/template via wizards and templates."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Benefits of using SAP web IDE" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Reduced cost and complexity" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE is offered as a cloud solution hosted on SAP HANA Cloud Platform, so no initial installation is required, and local IT infrastructure is untouched. Developers can access development projects anytime, anywhere - all that is needed is a PC with a browser. SAP Web IDE also provides you the ability to develop your application once and deploy to on premise (SAPUI5 ABAP repository), Cloud (HCP, Fiori launchpad), HANA Cloud Platform mobile services (HCPms) and SAP Mobile Platform (SMP). You can then run your application on any device - mobile, tablet, and desktop."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Increased productivity" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE aims to increase development productivity by delivering a holistic development experience, providing efficient tools e.g. templates, wizards, sample applications, visual editors, code completion, code snippets, mock data, instant preview, integrated deployment and SAP best practices to rapidly build test and deploy applications."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Empower developers, business experts and designers and reduced training effort required" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAP Web IDE comes with a user experience adjusted to both, developers and non-technical people. Wizard Templates, Sample Applications and Layout Editor (WYSIWYG) tooling can be used as jump starter to create new SAPUI5 applications following the Fiori UX guidelines and help to understand SAPUI5 concepts."/>
+				
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Screen Shots" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here I am providing some screen shots of Web IDE, to help you understand better."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This is the first screen of Sap Web IDE, where you could start a new project from template or build a new extension project"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic1.png" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Code editor with code completion with an API reference pane."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic2.png" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="It includes, creating the project from the existing templates. You could also choose fiori like template or even master detail template."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic3.png" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Create hybrid apps using Apache Cordova and the SAP Mobile Platform SDK"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic4.png" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="It includes a code editor and Search and Replace capabilities linked to the code editor."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic5.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This was all about SAP Web IDE introduction, for any queries, mail me at sapui5tutors@gmail.com"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=""/>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

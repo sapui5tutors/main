@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-resourceroots='{
+				"com.googlemaps":"./"
+				}'>
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+		var app = new sap.m.App({initialPage:"idapp"});
+		var page1 = sap.ui.view({id:"idapp", viewName:"com.googlemaps.view.app", 
+			type:sap.ui.core.mvc.ViewType.XML});
+// 		var dpage = sap.ui.view({id:"idDetailPage1", viewName:"test_9_8_2.detailPage", 
+// 			type:sap.ui.core.mvc.ViewType.JS});
+		
+		app.addPage(page1);
+// 		app.addDetailPage(dpage);
+		app.placeAt("content");
+		</script>
+   		<script 
+   		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp73xj1VnpQAZ0l4KWS7e1D0YeZMzhsnc&libraries=places"  
+        type ="text/javascript">
+   		</script>
+   		        <style>  
+            .myMap {  
+                height: 100%;  
+                width: 100%  ;	
+            }  
+        </style> 
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

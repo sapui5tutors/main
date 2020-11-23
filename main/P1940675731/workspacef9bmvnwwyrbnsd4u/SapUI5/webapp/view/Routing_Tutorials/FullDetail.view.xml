@@ -1,0 +1,80 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Routing_Tutorials.FullDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Routing in Full App">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Routing in Full App"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				
+				
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, we will implement routing in a full screen application. The scenario is, there would be 3 Pages, and we will show navigation to every page through buttons."/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/VF2LVxPaYFo" frameborder="0" allowfullscreen="true"/>
+    			<Label class="sapUiSmallMargin" design="Bold" text="Follow these simple steps:" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Create a SAPUI5 Project, name it accordingly."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic1.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, I have named it as “nav”, you can choose your own project name"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Create 3 views and 3controllers, since we are showing navigation among these 3 pages."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, I have created 3 views and 3 controllers with the name new.view.js, new2.view.js, new3.view.js and new.controller.js, new2.controller.js, new3.controller.js."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Start coding in the index.html file for the adding the routes. This is not the best way for routing, since we add the routes in component.js file, which is made separately. Still, in this project we will add routes in index.html file."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Index.html" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic2.png" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic3.png" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic4.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="a) Here callback function defines the default view, or if the view is not found then what viewhas to be loaded."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="b) We define the router using the class sap.ui.core.routing.Router(myroutes)"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="c) Then we register the router, so that it could be used anywhere within the application"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="d) Then we Initialise the router."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=""/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) Create buttons in each Page, for navigating from one Page to another."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="new.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic5.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="new2.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic6.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Place the buttons in page’s content."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="new3.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic7.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Output - Page 1" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic8.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Output - Page 2" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic9.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Output - Page 3" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic10.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hope it Helped!!! Thanks….. "/>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,35 @@
+<mvc:View controllerName="Test_OperationsOnList.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+						<List id="list" headerText="Attachments" mode="Delete"
+			delete="onDelete"
+			items="{
+		 path: 'Model>/items' }">
+			<headerToolbar>
+				<Toolbar>
+					<Text id="header" class="sapUiSmallMargin" text="List of Products" />
+					<ToolbarSpacer></ToolbarSpacer>
+					<Button text="Add Entries" press="OnAddClick"/>
+				</Toolbar>
+			</headerToolbar>
+			<items>
+				<CustomListItem>
+					<HBox>
+						<core:Icon size="2em" src="sap-icon://iphone"
+							class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+						<VBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom">
+							<Link text="{Model>Title}" />
+							<Label text="{Model>Price}" />
+						</VBox>
+					</HBox>
+				</CustomListItem>
+			</items>
+		</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

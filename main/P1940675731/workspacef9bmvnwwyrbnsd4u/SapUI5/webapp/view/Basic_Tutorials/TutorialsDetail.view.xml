@@ -1,0 +1,69 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Basic_Tutorials.TutorialsDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Installation of SAPUI5 Plugin"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<VBox>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here are some basic steps to install eclipse in your system, these steps will guide you to install and set up environment for Eclipse and SAPUI5 plugins" />	
+				<Label class="sapUiSmallMargin" design="Bold" text="Step 1: Install Java Development(JDK)" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The JDK is the Java package for developers, which includes a complete Java Runtime and tools for developing, debugging  and monitoring java applications. Download latest version from: "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="http://www.oracle.com/technetwork/java/javase/downloads/index.html"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Step 2: Setup Environment Variables" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="After the installation of your JDK, it's important to create a new environment variable called JAVA_HOME. To do this, open your 'Run' window in Windows and type in 'control sysdm.cpl'. On the Advanced tab, click Environment Variables. Then create a new System variable called JAVA_HOME. The value of this should be the path to your JDK."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic1.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Step 3: Install  Eclipse" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Use this (http://www.eclipse.org/downloads/)  site to download latest version of Eclipse IDE for Java EE Developers. Extract the zip-file to a directory of your choice (for example 'C:\Program Files\eclipse'). When you start eclipse, you have to choose a workspace."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Step 4: Install SAPUI5 Plugin" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In the help menu in Eclipse, click “Install New Software”, paste one the URL according to the version of the Eclipse.
+
+    https://tools.hana.ondemand.com/luna for Eclipse Luna (4.4)
+ "/>			
+				<FormattedText class="labelsize" width="90%"
+				htmlText="https://tools.hana.ondemand.com/kepler for Eclipse Kepler (4.3)"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic2.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Select the entry 'UI development toolkit for HTML5' and finish the wizard. Restart eclipse after you complete the installation.
+
+You could also install tomcat server, but it will also work without it, if you have to run the project on the web browser and if you are connected to ECC.
+
+That’s it!!
+ "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Have a look at the installation of SAPUI5 plugin installation in Eclipse video by sapui5tutors
+ "/>			
+ 
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/p9-pd7yGAcY" frameborder="0" allowfullscreen="true"></html:iframe>
+ 
+				</VBox>	
+				
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

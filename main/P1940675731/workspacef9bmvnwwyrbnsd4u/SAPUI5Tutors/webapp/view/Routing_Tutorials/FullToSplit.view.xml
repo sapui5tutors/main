@@ -1,0 +1,91 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Routing_Tutorials.FullToSplit"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="Routing in Full to SplitApp">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Full to Split Routing"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuRouButton2" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, we will implement routing in a full screen to a split screen, hence clearing all aspects of routing. The scenario is, there would be 4 Pages, out of which 1st three are full screen pages and last one is a split screen."/>
+				<html:iframe class="labelsize" id="routFullToSplit"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/fL0kTJo1zEs" frameborder="0" allowfullscreen="true"/>
+    			<Label class="sapUiSmallMargin" design="Bold" text="Follow these simple steps:" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Create a SAPUI5 Project, name it accordingly."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic22.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, I have named it as “route”, you can choose your own project name."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Create 4 views and 4 controllers, for full pages and 3 views and 3 controllers for split screen, since we are showing navigation among these pages."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, I have created 4 views and 4 controllers with the name App.view.js which describe the full screen, page1.view.js, page2.view.js, page3.view.js and oapp.view.js which describe the split screen, omasterpage.view.js, odetailpage.view.js, similarly there controllers."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Start coding in the component.js file for the adding the routes. "/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Index.html" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic23.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) Create buttons in each Page, for navigating from one Page to another. "/>
+				<Label class="sapUiSmallMargin" design="Bold" text="App.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic24.png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Page1.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic25.png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Page2.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic26.png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Page3.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic27.png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Oapp.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic28png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Omasterpage.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic29.png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Odetailpage.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic30.png" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic31.png" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic32.png" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Component.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic33.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text=" Output Page 1" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic34.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text=" Output Page 2" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic35.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text=" Output Page 3" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic36.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text=" Output Page 4" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Routing/pic37.png" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hope it Helped!!! Thanks….. "/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText=""/>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,30 @@
+<mvc:View controllerName="DemoTable.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table id="Randomid" inset="true">
+						<columns>
+							<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+										<Text text="{i18n>Date}"/></Column>
+							<Column minScreenWidth="Medium" demandPopin="true" hAlign="Left">
+										<Text text="{i18n>DocumentType}"/></Column>
+							<Column width = "10em">
+										<Text text = "{i18n>DocumentDesc}"/> </Column> 
+							<Column minScreenWidth= "Medium" demandPopin="true" hAlign="Right">
+										<Text text="{i18n>DocNo}." /> </Column> 
+							<Column minScreenWidth="Medium" demandPopin="true" hAlign="Right">
+										<Text text= "{i18n>DebAmt}"/></Column>
+							<Column minScreenWidth= "Medium" demandPopin= "true" hAlign= "Right">
+										<Text text= "{i18n>CreAmt}"/></Column>
+							<Column hAlign="Right">
+										<Text text="{i18n>Balance}"/></Column>
+							<Column minScreenWidth="Tablet"  hAlign="Right">
+										<Text text="{i18n>Text}"/></Column>
+						</columns>
+								</Table>
+							</content>
+						</Page>
+					</pages>
+				</App>
+			</mvc:View>

@@ -1,0 +1,86 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Intermediate_tutorials.NestedDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="Nested Views">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Nested Views"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuIntButton6" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial we will be focusing on creating nested views, and how nested views are useful in SAPUI5. So as you must know, re usability is one of the main and important features that any framework must include. And as seen in my previous tutorial on Fragments, the concept of re usability was pretty clear."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Watch the video, for better understanding of both Formatters and Nested Views."/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/7qQjmaqKVqA" frameborder="0" allowfullscreen="true"></html:iframe>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Fragments are not only the container elements that can be used in a view for re usability. We can also nest Views into one another, i.e we could use Nested Views. This pattern is very useful , if you have parts of your UI which you want to reuse in different places of your particular application"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So unlike Fragments, which doesn’t have their own controllers, Nested views have their own controllers just as usual views. Just a single line of code is required to integrate a Nested view into a view."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="
+'tag' mvc:XMLView viewName=”name of you view”/  'tag' " width="100%"/>
+				
+				
+			
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So there are basically 3 steps required:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Create a View and its controller in the specific folders."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Instantiate  the Nested view in the view, with the above single line of code."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Write the desired code in the newly created Nested View."/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Example" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Suppose, I have to add a Text in two of my pages. Here these buttons are used twice, hence I will use Nested Views to achieve this. This won’t be any real life requirement, but just for the sake of understanding, I have chosen this scenario.
+Let me just follow the steps mentioned above."/>
+
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Create views"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic17.png" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So here NewView .view.xml is the new view that I have created in the view folder, similarly I have created the NewView.controller.js  in the controller folder. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Instantiate the Nested view in the views. I will Instantiate it in the App.view.xml and S2.view.xml."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="App.view.xml" width="100%"/>	
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic18.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="S2.view.xml" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic19.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Now, mention the code in the new view"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic20.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now that been done, our purpose here is done. We have reused the text 2 times in two different views. I am sharing my output here."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Output" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic21.png" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic22.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, this was all Nested Views in SAPUI5. You  might want to take a look at my previous tutorial on Fragments in SAPUI5."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="For any queries, mail me at sapui5tutors@gmail.com. Hope I served well.Thanks!"/>
+				
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,50 @@
+[
+	{
+	"OverdueDays": "31",
+	"DocType": "RV",
+	"Docno": "90000058",
+	"PostingDate": "\/Date(1454371200000)\/",
+	"Amount": "30750.0000",
+	"Currency": "INR",
+	"CustomerId": "18",
+	"DueOn": "\/Date(1454371200000)\/",
+	"DocDate": "\/Date(1454371200000)\/",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"PmntTrms": "0001",
+	"NetTerms": "0"
+},
+{
+	"OverdueDays": "31",
+	"DocType": "RV",
+	"Docno": "90000059",
+	"PostingDate": "\/Date(1454371200000)\/",
+	"Amount": "63000.0000",
+	"Currency": "INR",
+	"CustomerId": "18",
+	"DueOn": "\/Date(1454371200000)\/",
+	"DocDate": "\/Date(1454371200000)\/",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"PmntTrms": "0001",
+	"NetTerms": "0"
+},
+{
+	"OverdueDays": "31",
+	"DocType": "RV",
+	"Docno": "90000060",
+	"PostingDate": "\/Date(1454371200000)\/",
+	"Amount": "92000.0000",
+	"Currency": "INR",
+	"CustomerId": "18",
+	"DueOn": "\/Date(1454371200000)\/",
+	"DocDate": "\/Date(1454371200000)\/",
+	"SalesOrganization": "VKS1",
+	"DistChannel": "V4",
+	"Division": "21",
+	"PmntTrms": "0001",
+	"NetTerms": "0"
+}
+]

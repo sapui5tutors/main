@@ -1,0 +1,92 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Advanced_Tutorials.MockDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="Mock Server" >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Mock Server"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuAdvButton4" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				<FormattedText class="labelsize" width="90%"
+				htmlText="For better understanding on Mock Server watch this video"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/moR1U3hgPCE" frameborder="0" allowfullscreen="true"></html:iframe>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I will explain how to run SAPUI5 applications through mockserver with the dummy data, i.e mock Data"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="For development an d testing purpose, one must make use of mockserver. Since, the availability of the real time server is a question, therefore it is recommended for the testing purpose, mock data is used in place of the actual data coming from the real server."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="It is created at the system level itself, so that when the actual server is not available, testers can make use of this server and test their applications with ease without worrying the availability of actual data. Now for the purpose of mockserver, developers often make mock data similar to the actual data. It serves local files, but it simulates a back-end system more realistically than just loading the local data"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The mock server runs on the client and only uses the server terminology of 'start' and 'stop'. It does not require a network connection since there is no actual server involved."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The mock server needs the following require statement:"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="jQuery.sap.require('sap.ui.core.util.MockServer'); " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Files that are needed:"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="mockServer.html (Similar to index.html)" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This file is similar to index.html file, just the difference here is we provide the destination of mockserver.js , the title can be changed accordingly, moreover the path also is chaged. This file is now placed in a test folder within webapp, i.e  webapp/test/mockServer.html."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Example Code:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic11.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We copy the index.html to a separate file in the webapp/test folder and name it mockServer.html. From this point on, you have two different entry pages, one for the real “connected” app (index.html) and one for local testing (mockServer.html). You can freely decide if you want to do the next steps on the real service data or on the local data within the app."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="If no connection to the real service is available or the proxy configuration from the previous step does not work, you can always use the mockServer.html file. This will display the app with simulated test data. The index.html file will always load the data from a remote server."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="metadata.xml" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The metadata file contains information about the service interface and does not need to be written manually. If you are using a particular OData service,  then to create metadata of the particular service."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="To do so, call the metadata of the service in a browser and save it into metadata.xml  (e.g http://services.odata.org/V2/Northwind/Northwind.svc/$metadata).  Create a folder within webapp and set the name as localService. Now keep the metadata.xml file within the folder."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Mock data (json files)" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="You can let the mock server generate random mock data automatically based on services metadata. For this, provide only the path to the metadata file and omit the second parameter of the simulate function as follows:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic12.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="You can provide your own mock data in .json files, which can either be created manually or saved from an OData service response. Mock data in JSON format can be generated from an OData service by adding the $format=json parameter to the URL."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Save the browser response which is called 'entity type name'.json, for example Mock.json and put it into the mock data folder. Add the path to the simulate function"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="mockServer.js" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We load the MockServer module as a dependency and create a helper object that defines an init method to start the server. This method is called before the component initialization in the mockServer.html file above. The init method creates a MockServer instance with the same URL as the real service calls."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The URL in configuration parameter rootURI will now be served by our test server instead of the real service. It matches the URL of our data source in the descriptor file. Next, we set two global configuration settings that tell the server to respond automatically and introduce a delay of one second to imitate a typical server response time. Otherwise, we would have to call the respond method on the MockServer manually to simulate the call."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="To simulate a service, we can simply call the simulate method on the MockServer instance with the path to our newly created metadata.xml. This will read the test data from our local file system and set up the URL patterns that will mimic the real service."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Finally, we call start on oMockServer. From this point, each request to the URL pattern rootURI will be processed by the MockServer. If you switch from the index.html file to the mockServer.html file in the browser, you can now see that the test data is displayed from the local sources again, but with a short delay. The delay can be specified with the URI parameter serverDelay, the default value is one second."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This approach is perfect for local testing, even without any network connection. This way your development does not depend on the availability of a remote server, i.e. to run your tests."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic13.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="mockServer.js file is placed in test folder, i.e webapp/test/mockServer.js "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here is the sample project structure snapshot"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic14.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This was all about Mock Server, in the next blog I will show you how to create MockServer with SAP Web IDE. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="For any queries, mail me at sapui5tutors@gmail.com"/>
+				
+				</content>
+					<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,51 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<f:Form id="idGeneralForm" minWidth="1024" maxContainerCols="2"
+		editable="false" class="isReadonly">
+		<f:layout>
+			<f:ResponsiveGridLayout labelSpanL="3"
+				labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" />
+		</f:layout>
+		<f:formContainers>
+			<f:FormContainer>
+				<f:formElements>
+					<f:FormElement label="Name">
+						<f:fields>
+							<Text text="{dealer>CustomerName} ({dealer>CustomerId})" id="nameText" />
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Street">
+						<f:fields>
+							<Text text="{dealer>Street}" id="StreetText" />
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="City">
+						<f:fields>
+							<Text text="{dealer>City}" id="CityText" />
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Pin Code">
+						<f:fields>
+							<Text text="{dealer>PostalCode}" id="PinText" />
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Sales Area">
+						<f:fields>
+							<Text text="{dealer>SalesOrgName}, {dealer>DistChannelName}" />
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Telephone">
+						<f:fields>
+							<Text text="{dealer>ContactNumber}" />
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Email">
+						<f:fields>
+							<Text text="{dealer>MailId}" id="countryText" />
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+		</f:formContainers>
+	</f:Form>
+</core:FragmentDefinition>

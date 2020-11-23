@@ -1,0 +1,82 @@
+<mvc:View controllerName="vikalp.cus.sd.dealer.plus.controller.S2" 
+	xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>ApplicationName}">
+		<content>
+			<Table id="idDealersTable"
+			    updateFinished="onUpdateFinished"
+			    growing="true" 
+				growingThreshold="5" 
+				inset="true"
+				items="{dealer>/CustomerSet}">
+				<headerToolbar>
+				<OverflowToolbar design="Transparent" height="70px">
+				<Text text="{i18n>PageHeaderTitle}" >
+				<layoutData>
+				 <OverflowToolbarLayoutData shrinkable="true" />
+				 </layoutData>
+				</Text>
+				<ToolbarSpacer/>
+				<SearchField liveChange="onSearch" selectOnFocus="false">
+				 <layoutData>
+				 <OverflowToolbarLayoutData minWidth="200px" maxWidth="300px" shrinkable="true" priority="AlwaysOverflow"/>
+				 </layoutData>
+				</SearchField>
+				</OverflowToolbar>
+				</headerToolbar>              
+				<columns>				
+					<Column width="14em">
+						<Text text="{i18n>TableNameColumn}" />
+					</Column>
+					<Column width="12em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>TableSalesAreaColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XXLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Right">
+						<Text text="{i18n>TableSalesValesColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XXLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Right">
+						<Text text="{i18n>TableRecievablesColumn}" />
+					</Column>
+					<core:ExtensionPoint name="extDealerColumnHeader">
+					</core:ExtensionPoint>
+					<Column width="8em" hAlign="Right" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>TableContactNoColumn}" />
+					</Column>					
+					<Column minScreenWidth="XXLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Center">
+						<Text text="{i18n>TableEmailColumn}" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onTableRowClick">
+						<cells>
+							<Text text="{dealer>CustomerName},{dealer>CityZip}" />
+							<Text
+								text="{dealer>SalesOrgName},{dealer>DistChannelName},{dealer>DivisionName}" />
+							<Text text="{
+							path : 'dealer>SalesValue',
+						    type: 'sap.ui.model.type.Float',
+						    formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+						     } {dealer>Currency}" />
+							<Text text="{
+							path : 'dealer>Receivables',
+						    type: 'sap.ui.model.type.Float',
+						    formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+							} {dealer>Currency}" />
+							<core:ExtensionPoint name="extDealerColumnValue">
+					        </core:ExtensionPoint>
+							<ObjectNumber number="{dealer>ContactNumber}" />
+							<Link text="{dealer>MailId}" />
+						</cells>
+					</ColumnListItem>
+				</items>				
+			</Table>
+		</content>
+		<footer>
+		<Toolbar/>
+		</footer>
+	</Page>
+
+</mvc:View>

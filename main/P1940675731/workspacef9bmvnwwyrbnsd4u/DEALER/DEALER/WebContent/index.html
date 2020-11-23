@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+		<link rel="stylesheet" type="text/css" href="util/style.css"/>
+ 
+		<script id="sap-ui-bootstrap"
+				src="resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m,sap.ui.layout,sap.viz"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-preload="sync"
+				data-sap-ui-resourceroots='{
+				"com.vikalp.dealermgmt":"./"
+				}'
+				data-sap-ui-preload=''>
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+		/*	var oShell = new sap.m.Shell("main1Wrapper",{
+				app:new sap.ui.core.ComponentContainer({name:"com.vikalp.dealermgmt"})
+			});
+			oShell.placeAt("content");*/
+			
+			var com = new sap.ui.core.ComponentContainer({name:"com.vikalp.dealermgmt"});
+			com.placeAt("content");
+		</script>
+		
+		<script src="util/unifiedShell.js"></script>
+		<script src="util/validator.js"></script>
+		<script src="util/Formatter.js"></script> 
+	</head>
+	<body class="sapUiBody sapUShellFullHeight" id="content" role="application">
+		
+	</body>
+</html>
+ 

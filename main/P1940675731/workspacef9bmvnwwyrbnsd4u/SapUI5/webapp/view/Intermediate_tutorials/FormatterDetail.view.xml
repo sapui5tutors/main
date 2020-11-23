@@ -1,0 +1,83 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Intermediate_tutorials.FormatterDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Formatters">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Formatters"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<Label class="sapUiSmallMargin" design="Bold" text="Custom Formatters" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="If we want to do a more complex logic for formatting properties of our data model, we can also write a custom formatting function. We will add a localized status with a custom formatter, because the status in our data model is in a rather technical format."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Watch my video on Custom formatter and Inline Expressions"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/RzNdqvUTmc0" frameborder="0" allowfullscreen="true"></html:iframe>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, in this use case what here I am trying to do is to use a custom formatter for weigh measure and weight unit. So Here I am displaying a list of products with their particulars in the list item.  The data is coming from ES4 odata service and in that particular service, we are using the product set entityset."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The list item contains the title, intro, number, number unit, first status, second status. So in the first status we are displaying the weight unit and the measure of the particular weight, suppose 0.30 kg. So, I will display a message in the second status based on the values that we are getting from weight measure and unit."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic5.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" For that I will use a custom formatter, let’s say if the unit of the weight is in grams, then it is to be converted into KG and then I will compare it with a particular set quantity and then display the message that the particular weight is greater or less than a particular set quantity."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="For example the weight that is coming from the service is 1000grams, then the formatter would first convert it into KG, i.e. 1kG and then it will compare it with another set quantity, let’s say 5KG and then it would display a message that, it is less than 5KG."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So in our use case the particular set quantities are .5kg and 5kg"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Basically, there are three steps to follow to make use of custom formatter." width="100%"/>	
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Make a folder named as model in the project directory, and then make a file named formatter.js inside it."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Next is to mention the formatter in the controller"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Lastly, use the formatter in the view, which we have used in the second status."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, just follow the first step and to load our formatter functions, we have to add it in the controller. Mention the formatter in the module and add the parameter in the controller. Just follow the code here:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic23.PNG" />	
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Let me just share the portion of code for better understanding. Here is the code for list:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic24.PNG" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Current Output." width="100%"/>	
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic25.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So here, the fields marked yellow are the first status. As you can see the first value is 0.030KG which is less than .5KG, hence after formatting, the message would appear in second status that the weight is less than 0.5kg. And similarly for others. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now the third step,we will add the code for second status:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic26.PNG" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Note that, we are using the same fields that we have used in the first status, i.e WeightUnit and WeightMeasure. And Model is the id of the oData model that we have used"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Since we have used two fields, we are mentioning the path in the parts. Also we have mentioned the formatter here, and delivery is the name of the formatter that we have used in the formatter.js."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now add the code for formatter.js:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic27.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here the value of sResult is returned to the second status, hence the desired result is achieved through custom formatter."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Desired Output." width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Intermediate/pic28.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="I hope you understood the concept of the formatters. For any queries, mail me at sapui5tutors@gmail.com. "/>
+				
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,61 @@
+<mvc:View controllerName="nw.epm.refapps.purchaseorders.approve.controller.S2_PurchaseOrders" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns="sap.m" id="masterList">
+	<semantic:MasterPage id="page" navButtonPress="onNavButtonPress" showNavButton="true"
+		title="{path:'viewProperties>/itemCount', formatter: '.formatter.listTitle' }">
+		<semantic:multiSelectAction>
+			<semantic:MultiSelectAction
+			    id="multiSelectButton" pressed="{globalProperties>/isMultiSelect}"
+				enabled="{= (${globalProperties>/isMultiSelect} || ${viewProperties>/itemCount} > 0) &amp;&amp; 
+				!(${globalProperties>/isSwipeRunning} || ${globalProperties>/isBusyApproving}) }" 
+				press="onMultiSelectPressed" />
+		</semantic:multiSelectAction>
+		<semantic:subHeader>
+			<Bar id="subHeaderBar">
+				<contentMiddle>
+					<SearchField id="searchField" search="onSearch" showRefreshButton="{= !${device>/support/touch} }" width="100%"></SearchField>
+				</contentMiddle>
+			</Bar>
+		</semantic:subHeader>
+		<semantic:content>
+			<PullToRefresh id="pullToRefresh" refresh="onRefresh" visible="{device>/support/touch}"/>
+			<List id="list" modeAnimationOn="false"
+				busyIndicatorDelay="{= ${globalProperties>/masterImmediateBusy} ? 0 : ${viewProperties>/originalBusyDelayList} }" 
+				enableBusyIndicator="{= !${globalProperties>/isBusyApproving} }" includeItemInSelection="true"
+				items="{path: '/PurchaseOrders', sorter: [{path: 'ChangedAt', descending: true}, {path: 'POId', descending: false}], parameters: {select:
+				'POId,OrderedByName,SupplierName,GrossAmount,CurrencyCode,ChangedAt,ItemCount'}}"
+				mode="{= ${globalProperties>/isMultiSelect} ? 'MultiSelect' : (${device>/system/phone} ? 'None' : 'SingleSelectMaster') }" 
+				noDataText="{globalProperties>/listNoDataText}" 
+				select="onSelect" swipe="onSwipe" updateFinished="onUpdateFinished">
+				<items>
+					<ObjectListItem id="listItem" intro="{parts:[{path: 'i18n>xfld.orderedBy'}, {path: 'OrderedByName'}], formatter: 'jQuery.sap.formatMessage'}"
+						number="{parts: [ {path: 'GrossAmount'}, {path: 'CurrencyCode'}],
+                            type : 'sap.ui.model.type.Currency',
+                            formatOptions: { showMeasure: false }}" 
+                        numberUnit="{CurrencyCode}" press="onSelect" title="{SupplierName}"
+						type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}">
+						<secondStatus>
+							<ObjectStatus id="changedAtObjectStatus" text="{path: 'ChangedAt', type: 'sap.ui.model.type.Date',
+									formatOptions: { style: 'medium',
+													strictParsing: true,
+													relative: true }}"/>
+						</secondStatus>
+						<attributes>
+							<!--empty attribute added to align ItemCount with ChangeAt-->
+							<ObjectAttribute id="emptyAttribute"/>
+							<ObjectAttribute id="itemCountObjectAttribute" text="{path: 'ItemCount', formatter: '.formatter.items'}"/>
+						</attributes>
+					</ObjectListItem>
+				</items>
+				<swipeContent>
+					<Button id="swipeButton" press="onSwipeApprove" text="{i18n>xbut.approve}" type="Accept"/>
+				</swipeContent>
+			</List>
+		</semantic:content>
+		<semantic:customFooterContent>
+			<Button id="processButton" 
+			    enabled="{= ${globalProperties>/selectedPurchaseOrders}.length > 0}" text="{i18n>xbut.process}" type="Emphasized" 
+				visible="{= ${globalProperties>/isMultiSelect} &amp;&amp; ${device>/system/phone} }" 
+				press="onProcessPressed"/>
+		</semantic:customFooterContent>
+	</semantic:MasterPage>
+</mvc:View>

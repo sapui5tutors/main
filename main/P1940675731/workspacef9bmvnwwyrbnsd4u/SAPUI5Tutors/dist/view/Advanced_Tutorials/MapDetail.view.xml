@@ -1,0 +1,91 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Advanced_Tutorials.MapDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page  >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Google Map Integration"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuAdvButton3" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I will show you how to create Google developer API key and then how to use it in sap ui5 application to integrate google maps. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="To integrate Google Maps to sapui5 application, you will need  google map API. There are several API available for Google maps itself, like Google Map android API, Google Maps for IOS, Google maps for Street, Google maps Directions API, similarly many more. The one we are going to use is Google Maps JavaScript API."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="To use google API, you will need particular developer API key. The google Maps JavaScript APIs will only work with a Browser key. APIs of the same platform can use the same key. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now before proceeding with sapui5, I will just quickly go through with how to create a developer key and how we will use it in our sapui5 application."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Go to https://adf.ly/1dWmyJ"/>
+				<!--<Link href="https://console.developers.google.com/flows/enableapi"-->
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Create or select a project."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Click Continue to enable the API and any related services."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) On the Credentials page, get a Browser key (and set the API Credentials). "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Hereby, your API developer key will be created and then you can use it in your application.
+To specify a key, include it as the value of a key parameter when loading the API."/>
+		<!--		<FormattedText class="labelsize" width="90%"-->
+		<!--		htmlText=" For example:'tag'script async defer src='https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap'-->
+  <!--type='text/javascript''script endtag'"/>-->
+  <con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic22.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hope you got the basic idea how to create your API key, now that’s done, lets focus on how to use it in sap ui5 application."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Lets’ make an application, in which we will integrate google maps."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Step 1. Create a new Project in Eclipse, here I am naming it demo_GoogleMaps	"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic15.png" width="70%" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Step 2. Now, in the index.html file add the URL containing your API Key. Also add your first page, here I have named it as app.view.xml."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic16.PNG" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Step 3. In the app.view.xml file and the following piece of code:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic17.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here I have added new page, and named it as maps.view.xml. In this page I will add the google maps."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Step 4. Now in the maps.view.xml file I am placing a VBox and inside this VBox, I am placing three HBox. In the first HBox, I am placing search field and the distance button and in the second HBox, I am placing the input box for distance calculation. Lastly, in the third HBox I will place the map."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic18.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Step 5. We will do most of the coding in maps.controller.js file. I am adding the code here, I will try to explain it step wise through comments."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Find the code for maps.controller.js from here: http://www.sapui5tutors.com/2016/05/integrate-google-maps-with-sapui5.html"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="External Style Sheet" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Search a Place on the map"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic19.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Find Distance among two places"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic20.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="On clicking a place on a map"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic21.png" width="70%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hope You loved this tutorial blog on Integrating Google maps with SAPUI5 application. For any queries mail at sapui5tutors@gmail.com "/>
+				
+				
+				</content>
+					<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

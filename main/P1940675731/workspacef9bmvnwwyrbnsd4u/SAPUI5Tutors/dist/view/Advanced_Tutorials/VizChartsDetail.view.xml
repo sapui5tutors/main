@@ -1,0 +1,77 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Advanced_Tutorials.VizChartsDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="Viz Charts" >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Viz Charts"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuAdvButton6" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hi, in this tutorial, we will learn how to design charts. SAP provide different controls for charts, like makit, viz charts, VizFrame. Viz Charts are simple to create and to understand. However,  SAP no longer supports Viz charts, it emphasize developers to use VizFrame, viz charts are now depreciated since 1.32.0, are no longer actively developed and won’t be getting any new features. Still for newbies, viz charts might provide a better understanding about the charts."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Viz charts is available in sap.viz.ui5. We will go through this control with the help of a simple example of a bar chart depicting the no. of population over the years for a particular set of countries."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Forbetter understanding watch the video here:"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/GGfO1-L0EU8" frameborder="0" allowfullscreen="true"/>
+    			<Label class="sapUiSmallMargin" design="Bold" text="Example" width="100%"/>
+    
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" India: '13000',Pakistan: '5600',America: '10000',NewZealand: '1000' "/>
+				
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic26.png" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Steps" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Create SAPUI5 application in Eclipse and provide an appropriate name to it."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic27.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) In the charts folder create a fragmentchart.view.js and refer the code"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic28.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3)In the charts folder create a fragementchart.controller.js and refer the code."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic29.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) Copy Paste the code in index.html file"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic30.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="5) Maintain the Json file(chartdetail.json)"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic31.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="6) Execute index.html file"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic32.png" />
+			<FormattedText class="labelsize" width="90%"
+				htmlText="Chart type can be changed according to need,  just change the control to column, line etc, just like we have used “bar” here."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="var Bar = new sap.viz.ui5.Bar" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Points to keep in mind" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="a) Create data set"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="b) Flattend dataset consists of dimensions and measures. Dimensions are generally used for axis, and measures are used for value trends."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="c) Bind flattend dataset to chart"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="d) Dimesions and Measure depends on the type of chart. It mostly depends on the type of requirement."/>
+				</content>
+					<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

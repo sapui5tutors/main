@@ -1,0 +1,56 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.RFQ.controller.S2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>S2Title}">
+				<content>
+					<Table id="idOpenRFQTable"
+			    growing="true" 
+				growingThreshold="5" 
+				inset="true"
+				items="{RFQ>/}">
+				<headerToolbar>
+				<OverflowToolbar>
+				<Text text="{i18n>PageHeaderTitle}" >
+				<layoutData>
+				 <OverflowToolbarLayoutData shrinkable="true" />
+				 </layoutData>
+				</Text>
+				<ToolbarSpacer/>
+				<SearchField liveChange="onSearch" selectOnFocus="false">
+				 <layoutData>
+				 <OverflowToolbarLayoutData minWidth="200px" maxWidth="300px" shrinkable="true"/>
+				 </layoutData>
+				</SearchField>
+				</OverflowToolbar>
+				</headerToolbar>              
+				<columns>				
+					<Column width="14em">
+						<Text text="{i18n>TableRFQNoColumn}" />
+					</Column>
+					<Column width="12em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>CreationDateColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XXLarge" demandPopin="true" visible="{device>/isNoPhone}" hAlign="Right">
+						<Text text="{i18n>CreatedDateColumn}" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onTableRowClick">
+						<cells>
+							<Text text="{RFQ>RFQNumber}" />
+							<Text text="{RFQ>CreationDate}" />
+							<Text text="{RFQ>CreatedDate}" />
+							
+						</cells>
+					</ColumnListItem>
+				</items>				
+			</Table>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

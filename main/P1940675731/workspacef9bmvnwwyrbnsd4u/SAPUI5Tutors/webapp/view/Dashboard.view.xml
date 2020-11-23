@@ -1,0 +1,199 @@
+<mvc:View controllerName="com.sapui5tutors.controller.Dashboard" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page  id="dashboard">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="SAPUI5 Tutorials"/>
+						</contentMiddle>
+						
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+	<!--	<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Basic Tutorials"-->
+	<!--	  press="onBasTutorialpress" subheader="Topics Covered:6" >-->
+	<!--	<tileContent>-->
+	<!--		<TileContent  unit="" footer="" >-->
+	<!--			<content>-->
+	<!--				<Image src="css/Image/Basic.png"/>-->
+	<!--			</content>-->
+	<!--		</TileContent>-->
+	<!--	</tileContent>-->
+	<!--</GenericTile>-->
+	<!--		<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Intermediate Tutorials"-->
+	<!--	  press="onIntTutorialpress" subheader="Topics Covered:6" >-->
+	<!--	<tileContent>-->
+	<!--		<TileContent  unit="" footer="" >-->
+	<!--			<content>-->
+	<!--				<Image src="css/Image/Intemediate.png"/>-->
+	<!--			</content>-->
+	<!--		</TileContent>-->
+	<!--	</tileContent>-->
+	<!--</GenericTile>-->
+	<!--		<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Advanced Tutorials"-->
+	<!--	  press="onAdvTutorialpress" subheader="Topics Covered:7" >-->
+	<!--	<tileContent>-->
+	<!--		<TileContent  unit="" footer="" >-->
+	<!--			<content>-->
+	<!--				<Image src="css/Image/Advanced.png"/>-->
+	<!--			</content>-->
+	<!--		</TileContent>-->
+	<!--	</tileContent>-->
+	<!--</GenericTile>-->
+	<!--		<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Routing"-->
+	<!--	  press="onRoutPress" subheader="Topics Covered:3" >-->
+	<!--	<tileContent>-->
+	<!--		<TileContent  unit="" footer="" >-->
+	<!--			<content>-->
+	<!--				<Image src="css/Image/routing.png"/>-->
+	<!--			</content>-->
+	<!--		</TileContent>-->
+	<!--	</tileContent>-->
+	<!--</GenericTile>-->
+	<!--		<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="SAP WebIDE"-->
+	<!--	  press="onIDEpress" subheader="Topics Covered:5" >-->
+	<!--	<tileContent>-->
+	<!--		<TileContent  unit="" footer="" >-->
+	<!--			<content>-->
+	<!--				<Image src="css/Image/WebIDE.png"/>-->
+	<!--			</content>-->
+	<!--		</TileContent>-->
+	<!--	</tileContent>-->
+	<!--</GenericTile>-->
+	<!--			<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="SAPUI5 Blogs"-->
+	<!--	 press="onBlogpress" subheader="Blog Count: 30+" >-->
+	<!--	<tileContent>-->
+	<!--		<TileContent  unit="" footer="" >-->
+	<!--			<content>-->
+	<!--				<Image src="css/Image/Blog.png"/>-->
+	<!--			</content>-->
+	<!--		</TileContent>-->
+	<!--	</tileContent>-->
+	<!--</GenericTile>-->
+	<!--				<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Video Tutorials"-->
+	<!--	  press="onVideopress" subheader="Videos : 20+" >-->
+	<!--	<tileContent>-->
+	<!--		<TileContent  unit="" footer="" >-->
+	<!--			<content>-->
+	<!--				<Image src="css/Image/Videos.png"/>-->
+	<!--			</content>-->
+	<!--		</TileContent>-->
+	<!--	</tileContent>-->
+	<!--</GenericTile>-->
+	<!--<GenericTile class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom tileLayout genericTileImage" header="Interview Questions"-->
+	<!--	  press="onInterviewpress" subheader=" Question: 100+" >-->
+	<!--	<tileContent>-->
+	<!--		<TileContent  unit="" footer="" >-->
+	<!--			<content>-->
+	<!--				<Image src="css/Image/Interview.png"/>-->
+	<!--			</content>-->
+	<!--		</TileContent>-->
+	<!--	</tileContent>-->
+	<!--</GenericTile>-->
+	
+	
+	
+	
+
+	<TileContainer>
+		
+			<CustomTile press="onBasTutorialpress" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom genericTileImage">
+				<content>
+					<VBox>
+					<Text text="Basic" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom Tiletopictext"></Text>
+					<Text text="Topics covered : 6" class="sapUiSmallMarginBegin sapUiSmallMarginBottom Tileinfotext"></Text>
+					<Image src="css/Image/Basic.png" width="60px" height="60px" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom "/>
+					<!--<ProgressIndicator class="sapUiSmallMarginBegin  sapUiSmallMarginEnd sapUiSmallMarginBottom" percentValue="" displayValue="0%" showValue="true" height="20px" width="70%" state="None" />-->
+					</VBox>
+				</content>
+				</CustomTile>
+				<CustomTile press="onIntTutorialpress" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom genericTileImage">
+				<content>
+					<VBox>
+					<Text text="Intermediate" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom Tiletopictext"></Text>
+					<Text text="Topics covered : 6" class="sapUiSmallMarginBegin sapUiSmallMarginBottom Tileinfotext"></Text>
+					<Image src="css/Image/Intemediate.png" width="60px" height="60px" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom "/>
+					<!--<ProgressIndicator id="avbx" class="sapUiSmallMarginBegin  sapUiSmallMarginEnd sapUiSmallMarginBottom" percentValue="{mylocaldata>/Collection/percentValue}" displayValue="0%" showValue="true" height="20px" width="70%" state="None" />-->
+					
+					</VBox>
+				</content>
+				</CustomTile>
+				<CustomTile press="onAdvTutorialpress" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom genericTileImage">
+				<content>
+					<VBox>
+					<Text text="Advanced " class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom Tiletopictext"></Text>
+					<Text text="Topics covered : 7" class="sapUiSmallMarginBegin sapUiSmallMarginBottom Tileinfotext"></Text>
+					<Image src="css/Image/Advanced.png" width="60px" height="60px" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom "/>
+					<!--<ProgressIndicator class="sapUiSmallMarginBegin  sapUiSmallMarginEnd sapUiSmallMarginBottom" percentValue="" displayValue="0%" showValue="true" height="20px" width="70%" state="None" />-->
+					
+					</VBox>
+				</content>
+				</CustomTile>
+				<CustomTile press="onRoutPress" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom genericTileImage">
+				<content>
+					<VBox>
+					<Text text="Routing" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom Tiletopictext"></Text>
+					<Text text="Topics covered : 3" class="sapUiSmallMarginBegin sapUiSmallMarginBottom Tileinfotext"></Text>
+					<Image src="css/Image/routing.png" width="60px" height="60px" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom "/>
+					</VBox>
+				</content>
+				</CustomTile>
+				<CustomTile press="onIDEpress" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom genericTileImage">
+				<content>
+					<VBox>
+					<Text text="SAP WebIDE" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom Tiletopictext"></Text>
+					<Text text="Topics covered : 5" class="sapUiSmallMarginBegin sapUiSmallMarginBottom Tileinfotext"></Text>
+					<Image src="css/Image/WebIDE.png" width="60px" height="60px" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom "/>
+					</VBox>
+				</content>
+				</CustomTile>
+				<CustomTile press="onBlogpress" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom genericTileImage">
+				<content>
+					<VBox>
+					<Text text="SAPUI5 Blogs" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom Tiletopictext"></Text>
+					<Text text="Blog Count : 30+" class="sapUiSmallMarginBegin sapUiSmallMarginBottom Tileinfotext"></Text>
+					<Image src="css/Image/Blog.png" width="60px" height="60px" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom "/>
+					</VBox>
+				</content>
+				</CustomTile>
+				<CustomTile press="onVideopress" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom genericTileImage">
+				<content>
+					<VBox>
+					<Text text="Video Tutorials" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom Tiletopictext"></Text>
+					
+					<Text text="Videos covered : 20+" class="sapUiSmallMarginBegin sapUiSmallMarginBottom Tileinfotext"></Text>
+					<Image src="css/Image/Videos.png" width="60px" height="60px" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom "/>
+					</VBox>
+				</content>
+				</CustomTile>
+				<CustomTile press="onInterviewpress" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom genericTileImage">
+				<content>
+					<VBox>
+					<Text text="Interview Questions" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom Tiletopictext"></Text>
+					<Text text="Questions : 100+" class="sapUiSmallMarginBegin sapUiSmallMarginBottom Tileinfotext"></Text>
+					<Image src="css/Image/Interview.png" width="60px" height="60px" class="sapUiSmallMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd sapUiTinyMarginBottom "/>
+					</VBox>
+				</content>
+				</CustomTile>
+				
+				<!--<StandardTile-->
+				<!--icon="css/Image/Intemediate.png"-->
+				<!--title="Intermediate Tutorials"-->
+				<!--info="Topics Covered:6"-->
+				<!--press="onIntTutorialpress"-->
+				<!--/>-->
+				
+		</TileContainer>
+				</content>
+				
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

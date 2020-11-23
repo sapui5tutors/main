@@ -1,0 +1,120 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="vikalp.cus.sd.dealer.plus.controller.OrderDetails"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>s4PageTitle}" showNavButton="true"
+		navButtonPress="onBackPress">
+		<footer>
+			<Toolbar>
+			</Toolbar>
+		</footer>
+		<content>
+			<ObjectHeader id="s4ObjectHeader" info="{dealer>CustomerId}"
+				title="{dealer>SalesOrderNumber}" 
+				number="{
+							path : 'dealer>TotalAmount',
+						    type: 'sap.ui.model.type.Float',
+						    formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+						     }"
+				numberUnit="{dealer>Currency}">
+				<statuses>
+					<ObjectStatus title="{i18n>s4OrderTotalAmount}"
+						text="{
+						parts:[{
+												path : 'dealer>Ordertotalamount',
+						    					type: 'sap.ui.model.type.Float',
+						   						formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+												},
+												{
+											path:'dealer>Currency'
+											}]
+
+						}" />
+					<ObjectStatus title="{i18n>s4OrderHeaderStatus}"
+						text="{
+						path: 'dealer>ShippingStatusCode',
+						formatter: '.formatter.DeliveryStatus'
+						}" />
+					
+				</statuses>
+				<attributes>
+				<core:ExtensionPoint name="extOrderHeaderDetails">
+					<ObjectAttribute title="{i18n>s4OrderHeaderOrder}"
+						text="{
+						path : 'dealer>OrderDate',
+						type: 'sap.ui.model.type.Date',
+					    formatOptions: { source: { pattern: 'yyyyMMdd' }
+					    }
+						}" />
+					<ObjectAttribute title="{i18n>s4OrderHeaderRequested}"
+						text="{
+						path : 'dealer>RequestedDate',
+						type: 'sap.ui.model.type.Date',
+					    formatOptions: { source: { pattern: 'yyyyMMdd' }
+					    }
+						}" />
+				</core:ExtensionPoint>
+				</attributes>
+			</ObjectHeader>
+			<l:Grid defaultSpan="L12 M12 S12" width="auto">
+				<l:content>
+					<f:SimpleForm id="shipToForm" 
+						maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+						title="{i18n>s4ShipToFormHeaderTitle}" labelSpanL="3" labelSpanM="3"
+						emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+						<f:content>
+							<Label text="{i18n>s4ShipAdderssLabel}" />
+							<Text
+								text="{dealer>ShipToAddressLine1} {dealer>ShipToAddressLine2} {dealer>ShipToAddressLine3}" />
+							<Label text="{i18n>s4ShipCarrierLabel}" />
+							<Text text="{dealer>ShipToCarrier}" />
+							<Label text="{i18n>s4Incoterms}" />
+							<Text text="{dealer>ShipToIncoterms}" />
+							<core:ExtensionPoint name="extOrderForm">
+							</core:ExtensionPoint>
+						</f:content>
+					</f:SimpleForm>
+				</l:content>
+			</l:Grid>
+
+			<Table id="idMaterialTable" inset="true" updateFinished="onUpdateFinished"
+				growing="true" growingThreshold="5">
+
+				<columns>
+					<Column width="8em">
+						<Text text="{i18n>s4TableMaterialColumn}" />
+					</Column>
+					<Column width="7em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>s4TableQuantityColumn}" />
+					</Column>
+					<Column width="8em" hAlign="Right" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>s4TablePriceColumn}" />
+					</Column>
+					<Column width="8em" hAlign="Right" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>s4TableAmountColumn}" />
+					</Column>
+					<Column width="8em" minScreenWidth="XLarge" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>s4TableDeliveryColumn}" />
+					</Column>
+					<Column width="7em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>s4MaterialLabel}" />
+					</Column>
+					<Column width="7em" minScreenWidth="Large" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>s4OrderHeaderStatus}" />
+					</Column>
+					<Column width="9em" minScreenWidth="XXLarge" demandPopin="true" visible="{device>/isNoPhone}">
+						<Text text="{i18n>s4CusMaterialLabel}" />
+					</Column>
+					<core:ExtensionPoint name="extOrderTableColumn">
+					</core:ExtensionPoint>
+				</columns>
+
+			</Table>
+
+		</content>
+	</Page>
+</core:View>

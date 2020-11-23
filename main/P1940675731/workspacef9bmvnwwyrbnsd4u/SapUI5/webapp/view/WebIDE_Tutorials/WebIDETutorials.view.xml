@@ -1,0 +1,5 @@
+<mvc:View controllerName="com.sapui5.controller.WebIDE_Tutorials.WebIDETutorials" displayBlock="true" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<SplitApp id="WebIDETutorials">
+	</SplitApp>
+</mvc:View>

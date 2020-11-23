@@ -1,0 +1,94 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.WebIDE_Tutorials.MockIDEDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Setting Mock Data in SAP WebIDE">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Setting Mock Data"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial, I will explain how to run sap ui5 application with mock data in SAP Web IDE. This tutorial would be helpful for those who don’t have a backend connectivity with the server or don’t have  a network connectivity. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here we will create a kapsel master detail sample project from Web IDE smart templates. We would be requiring only to provide basic information regarding the northwind Odata service."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Before starting with the tutorial, I am assuming that you have a free trial access of web IDE. If you don’t have the  access to it, then do register for a free trial version of SAP HANA Cloud Platform."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Okay, now let’s start with the tutorial. First of all, we will create a SAPUI5  Kapsel app with SAP Web IDE."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) Open SAP Web IDE"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Click on File>New>Project from Template"/>
+				
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic24.png" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Select the SAPUI5 Master Detail Kapsel Application template and click on Next"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic25.png" />
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4) Enter a Project Name and click on next"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="5) Now click on Service URL and provide NorthWind URL here, and specify the service you want to access."/>
+				
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic26.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="6) Enter the necessary information you want to get from the service and click on Next"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic27.png" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic28.png" />
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic29.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="7) Now click on next and Finish."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="8) Now Run the Project as Web Application, everything would be working fine."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic30.png" />
+				
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now we, will generate some random data, i.e mock data. For that, follow the steps:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="a) Open the model folder located under the project we have just created in SAP Web IDE"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="b) Right click on the metadata.xml file and select Edit Mock Data"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic31.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="c) In the new screen, select one by one all the collections displayed in the list and for each one click on the Generate Random Data button. And Click on Ok button"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic32.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="d) Now in the project directory, within the model folder, a new file named Orders.json file will be generated. Similarly if you have generated other random data, it will be created in the model folder."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic33.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="e) Now to enable the application to take the mock data, i.e to enable the application to take always mock data. Now change the init function in the Component.js file."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" f) Replace the entire statement within if and else statement  at line no. 84 in component.js with the following code:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pict1.PNG" />
+				
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic34.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" This code will force the application to use always the mock server with the JSON files we have just generated
+Save the Component.js file and run the application again in the desktop to check that it's now taking data from the mock server"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, this was all about running  sap ui5 application using mock data with SAP Web IDE. You should take a look at my previous tutorial using Mock Server in eclipse."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="For any queries, mail me at sapui5tutors@gmail.com."/>
+				
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

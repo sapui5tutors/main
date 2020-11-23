@@ -1,0 +1,69 @@
+{
+	"SubCategories": [{
+		"CategoryName": "Mobiles",
+		"Category": "EC",
+		"NumberOfProducts": 3
+	}, {
+		"CategoryName": "Smart Watches",
+		"Category": "EC",
+		"NumberOfProducts": 2
+	}, {
+		"CategoryName": "Laptops",
+		"Category": "EC",
+		"NumberOfProducts": 2
+	}, {
+		"CategoryName": "Tablets",
+		"Category": "EC",
+		"NumberOfProducts": 1
+	}, {
+		"CategoryName": "Cameras",
+		"Category": "EC",
+		"NumberOfProducts": 1
+	}, {
+		"CategoryName": "Gaming",
+		"Category": "EC",
+		"NumberOfProducts": 2
+	},
+	{
+		"CategoryName": "Men",
+		"Category": "LF",
+		"NumberOfProducts": 2
+	}, {
+		"CategoryName": "Women",
+		"Category": "LF",
+		"NumberOfProducts": 2
+	}, {
+		"CategoryName": "Furniture",
+		"Category": "HF",
+		"NumberOfProducts": 2
+	}, {
+		"CategoryName": "Lighting",
+		"Category": "HF",
+		"NumberOfProducts": 1
+	}, {
+		"CategoryName": "Home Decor",
+		"Category": "HF",
+		"NumberOfProducts": 2
+	},
+	{
+		"CategoryName": "Televisions",
+		"Category": "TA",
+		"NumberOfProducts": 3
+	}, {
+		"CategoryName": "Audio & Video",
+		"Category": "TA",
+		"NumberOfProducts": 2
+	}, {
+		"CategoryName": "Kitchen Appliances",
+		"Category": "TA",
+		"NumberOfProducts": 1
+	}, {
+		"CategoryName": "Books",
+		"Category": "BM",
+		"NumberOfProducts": 2
+	}, {
+		"CategoryName": "Stationary",
+		"Category": "BM",
+		"NumberOfProducts": 2
+	}]
+}

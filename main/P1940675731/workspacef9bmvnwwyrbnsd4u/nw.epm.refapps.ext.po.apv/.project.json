@@ -1,0 +1,42 @@
+{
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/SEPMRA_PO_APV",
+    "loadCustomRequests": true,
+    "loadJSONFiles": true,
+    "metadataFilePath": "test/service/metadata.xml",
+    "mockRequestsFilePath": ""
+  },
+  "appparams": [
+    {
+      "paramName": "sap-ui-xx-lesssupport",
+      "paramValue": "true",
+      "paramActive": true
+    }
+  ],
+  "basevalidator": {
+    "validators": [
+      {
+        "validatorID": "fioriJsValidator"
+      },
+      {
+        "validatorID": "fioriXmlAnalysis"
+      }
+    ],
+    "services": {
+      "js": "fioriJsValidator",
+      "xml": "fioriXmlAnalysis"
+    }
+  },
+  "generation": [
+    {
+      "templateId": "fiorireferenceapps.approvePurchaseOrder",
+      "templateVersion": "3.0.0",
+      "dateTimeStamp": "Sat, 15 Oct 2016 15:24:49 GMT"
+    }
+  ],
+  "hcpdeploy": {
+    "account": "p1940675731trial",
+    "name": "nwepmrefappsextpoapv",
+    "lastVersionWeTriedToDeploy": "1.0.0"
+  }
+}

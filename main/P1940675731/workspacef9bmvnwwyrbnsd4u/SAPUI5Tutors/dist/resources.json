@@ -1,0 +1,957 @@
+{
+    "resources": [
+        {
+            "name": "model/WebIDE.json"
+        },
+        {
+            "name": "model/Tile.json"
+        },
+        {
+            "name": "model/IntermediateMaster.json"
+        },
+        {
+            "name": "model/Close.js"
+        },
+        {
+            "name": "model/BasicMaster.json"
+        },
+        {
+            "name": "model/AdvancedMaster.json"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "model/Local.json"
+        },
+        {
+            "name": "model/Routing.json"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "view/Video_Tutorials/VideoTutorials.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/MockDetail.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/Advanced_Tutorials.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/CustomDetail.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/AdvancedMaster.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/VizChartsDetail.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/ResponsiveDetail.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/VizFrameDetail.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/MapDetail.view.xml"
+        },
+        {
+            "name": "view/Advanced_Tutorials/ComponentDetail.view.xml"
+        },
+        {
+            "name": "view/app.view.xml"
+        },
+        {
+            "name": "view/Blog_Tutorials/BlogTutorial.view.xml"
+        },
+        {
+            "name": "view/Routing_Tutorials/FullToSplit.view.xml"
+        },
+        {
+            "name": "view/Routing_Tutorials/SplitDetail.view.xml"
+        },
+        {
+            "name": "view/Routing_Tutorials/FullDetail.view.xml"
+        },
+        {
+            "name": "view/Routing_Tutorials/RoutingMaster.view.xml"
+        },
+        {
+            "name": "view/Routing_Tutorials/RoutingTutorials.view.xml"
+        },
+        {
+            "name": "view/Interview_Tutorials/InterviewTutorials.view.xml"
+        },
+        {
+            "name": "view/Intermediate_tutorials/FragmentDetail.view.xml"
+        },
+        {
+            "name": "view/Intermediate_tutorials/IntermediateMaster.view.xml"
+        },
+        {
+            "name": "view/Intermediate_tutorials/IntermediateTutorials.view.xml"
+        },
+        {
+            "name": "view/Intermediate_tutorials/BindDetail.view.xml"
+        },
+        {
+            "name": "view/Intermediate_tutorials/ExpressionsDetail.view.xml"
+        },
+        {
+            "name": "view/Intermediate_tutorials/CssDetail.view.xml"
+        },
+        {
+            "name": "view/Intermediate_tutorials/NestedDetail.view.xml"
+        },
+        {
+            "name": "view/Intermediate_tutorials/FormatterDetail.view.xml"
+        },
+        {
+            "name": "view/Basic_Tutorials/StructuringDetail.view.xml"
+        },
+        {
+            "name": "view/Basic_Tutorials/TutorialsDetail.view.xml"
+        },
+        {
+            "name": "view/Basic_Tutorials/Tutorials.view.xml"
+        },
+        {
+            "name": "view/Basic_Tutorials/GlobalizationDetail.view.xml"
+        },
+        {
+            "name": "view/Basic_Tutorials/SplitDetail.view.xml"
+        },
+        {
+            "name": "view/Basic_Tutorials/MarginsDetail.view.xml"
+        },
+        {
+            "name": "view/Basic_Tutorials/HelloDetail.view.xml"
+        },
+        {
+            "name": "view/Basic_Tutorials/TutorialsMaster.view.xml"
+        },
+        {
+            "name": "view/WebIDE_Tutorials/WebIDETutorials.view.xml"
+        },
+        {
+            "name": "view/WebIDE_Tutorials/ConfigureDetail.view.xml"
+        },
+        {
+            "name": "view/WebIDE_Tutorials/HelloIDEDetail.view.xml"
+        },
+        {
+            "name": "view/WebIDE_Tutorials/MockIDEDetail.view.xml"
+        },
+        {
+            "name": "view/WebIDE_Tutorials/SettingDetail.view.xml"
+        },
+        {
+            "name": "view/WebIDE_Tutorials/WebIDEMaster.view.xml"
+        },
+        {
+            "name": "view/WebIDE_Tutorials/IntroDetail.view.xml"
+        },
+        {
+            "name": "view/Dialog.fragment.xml"
+        },
+        {
+            "name": "view/Dashboard.view.xml"
+        },
+        {
+            "name": "js/script.js"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "css/Image/Blog.png"
+        },
+        {
+            "name": "css/Image/ui5.png"
+        },
+        {
+            "name": "css/Image/WebIDE.png"
+        },
+        {
+            "name": "css/Image/Interview/pic5.png"
+        },
+        {
+            "name": "css/Image/Interview/Thumbs.db"
+        },
+        {
+            "name": "css/Image/Interview/pic3.png"
+        },
+        {
+            "name": "css/Image/Interview/pic2.png"
+        },
+        {
+            "name": "css/Image/Interview/pic4.png"
+        },
+        {
+            "name": "css/Image/Interview/pic1.PNG"
+        },
+        {
+            "name": "css/Image/Routing/pic17.png"
+        },
+        {
+            "name": "css/Image/Routing/pic32.png"
+        },
+        {
+            "name": "css/Image/Routing/pic13.png"
+        },
+        {
+            "name": "css/Image/Routing/pic34.png"
+        },
+        {
+            "name": "css/Image/Routing/pic16.png"
+        },
+        {
+            "name": "css/Image/Routing/pic4.png"
+        },
+        {
+            "name": "css/Image/Routing/pic30.png"
+        },
+        {
+            "name": "css/Image/Routing/pic19.png"
+        },
+        {
+            "name": "css/Image/Routing/pic28.png"
+        },
+        {
+            "name": "css/Image/Routing/pic29.png"
+        },
+        {
+            "name": "css/Image/Routing/pic5.png"
+        },
+        {
+            "name": "css/Image/Routing/pic26.png"
+        },
+        {
+            "name": "css/Image/Routing/pic25.png"
+        },
+        {
+            "name": "css/Image/Routing/pic23.png"
+        },
+        {
+            "name": "css/Image/Routing/pic21.png"
+        },
+        {
+            "name": "css/Image/Routing/pic37.png"
+        },
+        {
+            "name": "css/Image/Routing/pic31.png"
+        },
+        {
+            "name": "css/Image/Routing/pic18.png"
+        },
+        {
+            "name": "css/Image/Routing/pic27.png"
+        },
+        {
+            "name": "css/Image/Routing/pic33.png"
+        },
+        {
+            "name": "css/Image/Routing/pic36.png"
+        },
+        {
+            "name": "css/Image/Routing/pic24.png"
+        },
+        {
+            "name": "css/Image/Routing/pic15.png"
+        },
+        {
+            "name": "css/Image/Routing/pic7.png"
+        },
+        {
+            "name": "css/Image/Routing/pic12.png"
+        },
+        {
+            "name": "css/Image/Routing/pic22.png"
+        },
+        {
+            "name": "css/Image/Routing/pic9.png"
+        },
+        {
+            "name": "css/Image/Routing/pic11.png"
+        },
+        {
+            "name": "css/Image/Routing/Thumbs.db"
+        },
+        {
+            "name": "css/Image/Routing/pic6.png"
+        },
+        {
+            "name": "css/Image/Routing/pic10.png"
+        },
+        {
+            "name": "css/Image/Routing/pic14.png"
+        },
+        {
+            "name": "css/Image/Routing/pic20.png"
+        },
+        {
+            "name": "css/Image/Routing/pic3.png"
+        },
+        {
+            "name": "css/Image/Routing/pic1.png"
+        },
+        {
+            "name": "css/Image/Routing/pic2.png"
+        },
+        {
+            "name": "css/Image/Routing/pic35.png"
+        },
+        {
+            "name": "css/Image/Routing/pic8.png"
+        },
+        {
+            "name": "css/Image/white1.jpg"
+        },
+        {
+            "name": "css/Image/WebIDE/pic18.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic12.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic10.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic21.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic24.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic28.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic2.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic25.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic22.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic8.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic6.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic16.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic34.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic31.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic3.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic33.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic30.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic23.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic20.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic14.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic9.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic1.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic29.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic17.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic13.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic7.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic32.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic4.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic11.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic26.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pict1.PNG"
+        },
+        {
+            "name": "css/Image/WebIDE/pic5.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic27.png"
+        },
+        {
+            "name": "css/Image/WebIDE/pic19.png"
+        },
+        {
+            "name": "css/Image/WebIDE/Thumbs.db"
+        },
+        {
+            "name": "css/Image/WebIDE/pic15.png"
+        },
+        {
+            "name": "css/Image/banner1.PNG"
+        },
+        {
+            "name": "css/Image/lightsa.jpg"
+        },
+        {
+            "name": "css/Image/Videos.png"
+        },
+        {
+            "name": "css/Image/Basic_App.png"
+        },
+        {
+            "name": "css/Image/Tutorial.png"
+        },
+        {
+            "name": "css/Image/Examples.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic25.png"
+        },
+        {
+            "name": "css/Image/Intermediate/Thumbs.db"
+        },
+        {
+            "name": "css/Image/Intermediate/pic20.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic2.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic28.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic5.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic4.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic11.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic8.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic26.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic7.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic30.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic18.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic14.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic12.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic24.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic17.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic3.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic9.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic6.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic22.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic29.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic19.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic10.png"
+        },
+        {
+            "name": "css/Image/Intermediate/pic23.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic1.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic27.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic16.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic13.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic15.PNG"
+        },
+        {
+            "name": "css/Image/Intermediate/pic21.png"
+        },
+        {
+            "name": "css/Image/sapui5_app_pic2.png"
+        },
+        {
+            "name": "css/Image/Intemediate.png"
+        },
+        {
+            "name": "css/Image/sapui5_app_pic1.PNG"
+        },
+        {
+            "name": "css/Image/Interview.png"
+        },
+        {
+            "name": "css/Image/ui6.png"
+        },
+        {
+            "name": "css/Image/banner2.png"
+        },
+        {
+            "name": "css/Image/white1.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic16.PNG"
+        },
+        {
+            "name": "css/Image/Advanced/pic43.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic38.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic33.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic13.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic40.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic37.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic9.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic8.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic24.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic3.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic1.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic34.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic12.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic19.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic7.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic25.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic10.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic27.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic28.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic39.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic42.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic18.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic35.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic22.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic23.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic21.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic5.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic6.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic20.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic41.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic15.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic31.png"
+        },
+        {
+            "name": "css/Image/Advanced/Thumbs.db"
+        },
+        {
+            "name": "css/Image/Advanced/pic17.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic2.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic32.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic30.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic29.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic4.PNG"
+        },
+        {
+            "name": "css/Image/Advanced/pic14.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic11.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic26.png"
+        },
+        {
+            "name": "css/Image/Advanced/pic36.png"
+        },
+        {
+            "name": "css/Image/Basic/pic23.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic31.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic3.png"
+        },
+        {
+            "name": "css/Image/Basic/pic21.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic2.png"
+        },
+        {
+            "name": "css/Image/Basic/pic10.png"
+        },
+        {
+            "name": "css/Image/Basic/pic35.png"
+        },
+        {
+            "name": "css/Image/Basic/pic28.png"
+        },
+        {
+            "name": "css/Image/Basic/pic30.png"
+        },
+        {
+            "name": "css/Image/Basic/pic1.png"
+        },
+        {
+            "name": "css/Image/Basic/pic6.png"
+        },
+        {
+            "name": "css/Image/Basic/pic29.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic9.png"
+        },
+        {
+            "name": "css/Image/Basic/pic11.png"
+        },
+        {
+            "name": "css/Image/Basic/pic19.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic26.png"
+        },
+        {
+            "name": "css/Image/Basic/pic13.png"
+        },
+        {
+            "name": "css/Image/Basic/pic24.png"
+        },
+        {
+            "name": "css/Image/Basic/pic14.png"
+        },
+        {
+            "name": "css/Image/Basic/pic12.png"
+        },
+        {
+            "name": "css/Image/Basic/pic17.PNG"
+        },
+        {
+            "name": "css/Image/Basic/Thumbs.db"
+        },
+        {
+            "name": "css/Image/Basic/pic20.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic18.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic4.png"
+        },
+        {
+            "name": "css/Image/Basic/pic15.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic32.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic8.png"
+        },
+        {
+            "name": "css/Image/Basic/pic33.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic27.png"
+        },
+        {
+            "name": "css/Image/Basic/pic34.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic16.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic22.PNG"
+        },
+        {
+            "name": "css/Image/Basic/pic7.png"
+        },
+        {
+            "name": "css/Image/Basic/pic5.png"
+        },
+        {
+            "name": "css/Image/Basic/pic25.png"
+        },
+        {
+            "name": "css/Image/routing.png"
+        },
+        {
+            "name": "css/Image/Basic.png"
+        },
+        {
+            "name": "css/Image/Thumbs.db"
+        },
+        {
+            "name": "css/Image/Advanced.png"
+        },
+        {
+            "name": "control/Image.js"
+        },
+        {
+            "name": "preview_hidden.html"
+        },
+        {
+            "name": "cordova.js"
+        },
+        {
+            "name": "controller/Intermediate_tutorials/FormatterDetail.controller.js"
+        },
+        {
+            "name": "controller/Intermediate_tutorials/ExpressionsDetail.controller.js"
+        },
+        {
+            "name": "controller/Intermediate_tutorials/IntermediateTutorials.controller.js"
+        },
+        {
+            "name": "controller/Intermediate_tutorials/FragmentDetail.controller.js"
+        },
+        {
+            "name": "controller/Intermediate_tutorials/BindDetail.controller.js"
+        },
+        {
+            "name": "controller/Intermediate_tutorials/IntermediateMaster.controller.js"
+        },
+        {
+            "name": "controller/Intermediate_tutorials/CssDetail.controller.js"
+        },
+        {
+            "name": "controller/Intermediate_tutorials/NestedDetail.controller.js"
+        },
+        {
+            "name": "controller/Dashboard.controller.js"
+        },
+        {
+            "name": "controller/Basic_Tutorials/MarginsDetail.controller.js"
+        },
+        {
+            "name": "controller/Basic_Tutorials/Tutorials.controller.js"
+        },
+        {
+            "name": "controller/Basic_Tutorials/StructuringDetail.controller.js"
+        },
+        {
+            "name": "controller/Basic_Tutorials/HelloDetail.controller.js"
+        },
+        {
+            "name": "controller/Basic_Tutorials/TutorialsMaster.controller.js"
+        },
+        {
+            "name": "controller/Basic_Tutorials/TutorialsDetail.controller.js"
+        },
+        {
+            "name": "controller/Basic_Tutorials/SplitDetail.controller.js"
+        },
+        {
+            "name": "controller/Basic_Tutorials/GlobalizationDetail.controller.js"
+        },
+        {
+            "name": "controller/Blog_Tutorials/BlogTutorial.controller.js"
+        },
+        {
+            "name": "controller/Routing_Tutorials/RoutingMaster.controller.js"
+        },
+        {
+            "name": "controller/Routing_Tutorials/RoutingTutorials.controller.js"
+        },
+        {
+            "name": "controller/Routing_Tutorials/SplitDetail.controller.js"
+        },
+        {
+            "name": "controller/Routing_Tutorials/FullToSplit.controller.js"
+        },
+        {
+            "name": "controller/Routing_Tutorials/FullDetail.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/MapDetail.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/ResponsiveDetail.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/AdvancedMaster.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/ComponentDetail.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/VizChartsDetail.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/VizFrameDetail.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/CustomDetail.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/MockDetail.controller.js"
+        },
+        {
+            "name": "controller/Advanced_Tutorials/Advanced_Tutorials.controller.js"
+        },
+        {
+            "name": "controller/Interview_Tutorials/InterviewTutorials.controller.js"
+        },
+        {
+            "name": "controller/app.controller.js"
+        },
+        {
+            "name": "controller/WebIDE_Tutorials/WebIDETutorials.controller.js"
+        },
+        {
+            "name": "controller/WebIDE_Tutorials/HelloIDEDetail.controller.js"
+        },
+        {
+            "name": "controller/WebIDE_Tutorials/MockIDEDetail.controller.js"
+        },
+        {
+            "name": "controller/WebIDE_Tutorials/ConfigureDetail.controller.js"
+        },
+        {
+            "name": "controller/WebIDE_Tutorials/SettingDetail.controller.js"
+        },
+        {
+            "name": "controller/WebIDE_Tutorials/WebIDEMaster.controller.js"
+        },
+        {
+            "name": "controller/WebIDE_Tutorials/IntroDetail.controller.js"
+        },
+        {
+            "name": "controller/Video_Tutorials/VideoTutorials.controller.js"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

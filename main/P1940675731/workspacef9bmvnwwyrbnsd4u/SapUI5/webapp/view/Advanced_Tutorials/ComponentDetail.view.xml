@@ -1,0 +1,93 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Advanced_Tutorials.ComponentDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page>
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Component Preload"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+					
+				<Label class="sapUiSmallMargin" design="Bold" text=" How to remove component-preload.js error/ How to optimize sapui5/fiori application
+Problem" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="When applications run locally, on a computer with lightning-fast read speeds from the disk, the performance impact is negligible. However, when web applications need to be loaded into the browser there is a noticeable difference in speed between downloading a single large file and downloading many smaller files."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Solution " width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SapUi5 offers us many built in controls like table, list, and different kinds of forms and so on, which helps to develop almost any type of required application. What if we have a requirement, apart from what already exist in sapui5? The best probable solution might be to create a custom control."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="One of the way to remove the error is by just making a simple file named as Component-preload.js in the project directory. This would remove the error, but it’s not the correct way to handle the error. Since it doesn’t really does the purpose of component-preload.js file, ie. Optimizing the project."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In order to improve loading performance, we need to package the Javascript files in a way that allows us to only send one file to the browser that contains all of the code. SAP packages their UI5 libraries into single files called 'preloads'. This same method can be used for the application code of UI5 apps. In order to make the packaging step as quick as possible we will use a Javascript task runner."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Tools Required" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Automated build steps for Javascript projects are quite popular these days and projects like Grunt(http://gruntjs.com/) and Gulp(http://gulpjs.com/) are the leading Javascript task runners."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this example we are going to be using Gulp and specifically the gulp-ui5-preload(https://github.com/geekflyer/gulp-ui5-preload) plugin."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Prerequisites" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Before we can use Gulp, we first have to install Node.js(https://nodejs.org/en/) and npm(https://www.npmjs.com/) on the system."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Node.js can be downloaded for Windows and OS X from https://www.npmjs.com. npm is bundled with the Node.js installer and there is no need to install it separately."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We are now ready to install gulp. Type the following command on the command line"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="npm install gulp -g"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="npm install gulp-ui5-preload -g"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="npm install gulp-uglify -g"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="npm install gulp-if -g"/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Script" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Once this is done, create a new file named gulpfile.js in the root of your project (the same folder as your Component.js):"/>
+				
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic40.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Replace the YourNamespace text with your project's namespace."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Executing the Code" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In the project root directory execute the following command:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="gulp ui5preload"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="You should see an output similar to the following if it was successful:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic41.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In your project root folder you should now see a file named Component-preload.js. In order to utilize this preload, you have to initialize your UI5 project with the data-sap-ui-preload='sync' attribute. Here is an example of this:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic42.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="To prove that the web browser is using our Component-preload.js file, here is a screenshot of the Chrome debugging tools as the app loads:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic43.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="By loading the Javascript assets into the browser using a preload we are greatly reducing the number of individual files that have to be retrieved from the server and reducing the loading time, especially at high latencies."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="That's it, For any queries write to me at sapui5tutors@gmail.com"/>
+				
+				
+				
+				</content>
+					<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

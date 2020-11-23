@@ -1,0 +1,211 @@
+{
+"loginData":[
+
+		{
+			"logo":"util/images/logo.png"			
+		}
+		],
+		
+		"menuItem":[
+
+		{
+			"name":"My Visits",
+			"icon":"sap-icon://visits"
+			
+		},
+		
+		{
+			"name":"Orders",
+			"icon":"sap-icon://sales-order"
+		},
+		
+		{
+			"name":"Accounts",
+			"icon":"sap-icon://customer"
+		},
+		{
+			"name":"Payments",
+			"icon":"sap-icon://monitor-payments"
+		},
+		{
+			"name":"Products",
+			"icon":"sap-icon://product"
+		},
+		{
+			"name":"My Tasks",
+			"icon":"sap-icon://task"
+		}
+		
+		],
+		
+		"userdrpdwnItem":[
+		
+		{
+			"name":"User Preferences",
+			"icon":"sap-icon://action-settings"
+		},
+		
+		{
+			"name":"Help",
+			"icon":"sap-icon://hint"
+		},
+		
+		{
+			"name":"Log Out",
+			"icon":"sap-icon://log"
+		}
+		
+		],
+		"favouriteListItem":[
+		
+		{
+			"name":"Hero Motor",
+			"icon":"sap-icon://feeder-arrow"
+		},
+		
+		{
+			"name":"Panther Motor",
+			"icon":"sap-icon://feeder-arrow"
+		},
+		
+		{
+			"name":"Asian Pain",
+			"icon":"sap-icon://feeder-arrow"
+		}
+		
+		],
+		"customerList":[
+		
+		{
+			"CUSTOMER_ID":"14",
+			"CUSTOMER_NAME":"Eximcorp Sales",
+			"CITY":"Vadodra",
+			"TELEPHONE_NO":"080-99887765",
+			"SALES_ORGANIZATION":"XYZ",
+			"DISTRIBUTION_CHANNEL":"PQR",
+			"DIVISION":"ABC"
+		},
+		{
+			"CUSTOMER_ID":"15",
+			"CUSTOMER_NAME":"ZVR Sales",
+			"CITY":"Vadodra",
+			"TELEPHONE_NO":"080-99887765",
+			"SALES_ORGANIZATION":"XYZ",
+			"DISTRIBUTION_CHANNEL":"PQR",
+			"DIVISION":"ABC"
+		},
+		{
+			"CUSTOMER_ID":"16",
+			"CUSTOMER_NAME":"MNS Sales",
+			"CITY":"Vadodra",
+			"TELEPHONE_NO":"080-99887765",
+			"SALES_ORGANIZATION":"XYZ",
+			"DISTRIBUTION_CHANNEL":"PQR",
+			"DIVISION":"ABC"
+		},
+		{
+			"CUSTOMER_ID":"17",
+			"CUSTOMER_NAME":"PQR Sales",
+			"CITY":"Vadodra",
+			"TELEPHONE_NO":"080-99887765",
+			"SALES_ORGANIZATION":"XYZ",
+			"DISTRIBUTION_CHANNEL":"PQR",
+			"DIVISION":"ABC"
+		},
+		{
+			"CUSTOMER_ID":"18",
+			"CUSTOMER_NAME":"ABC sales",
+			"CITY":"Vadodra",
+			"TELEPHONE_NO":"080-99887765",
+			"SALES_ORGANIZATION":"XYZ",
+			"DISTRIBUTION_CHANNEL":"PQR",
+			"DIVISION":"ABC"
+		}
+		
+		],
+		
+		"accountMenuItem":[
+
+		{
+			"name":"Profile",
+			"icon":"sap-icon://customer-briefing"
+			
+		},
+		
+		{
+			"name":"Orders",
+			"icon":"sap-icon://sales-order"
+		},
+		
+		{
+			"name":"Invoices",
+			"icon":"sap-icon://batch-payments"
+		},
+		{
+			"name":"Inventory",
+			"icon":"sap-icon://inventory"
+		},
+		{
+			"name":"Performance",
+			"icon":"sap-icon://kpi-corporate-performance"
+		},
+		{
+			"name":"Notes",
+			"icon":"sap-icon://notes"
+		},
+		{
+			"name":"Payments",
+			"icon":"sap-icon://monitor-payments"
+		}
+		
+		],
+		"month":[
+		{
+		"name":"Jan",
+		"value":"01"
+		},
+		{
+		"name":"Feb",
+		"value":"02"
+		},
+		{
+		"name":"Mar",
+		"value":"03"
+		},
+		{
+		"name":"Apr",
+		"value":"04"
+		},
+		{
+		"name":"May",
+		"value":"05"
+		},
+		{
+		"name":"Jun",
+		"value":"06"
+		},
+		{
+		"name":"Jul",
+		"value":"07"
+		},
+		{
+		"name":"Aug",
+		"value":"08"
+		},
+		{
+		"name":"Sep",
+		"value":"09"
+		},
+		{
+		"name":"Oct",
+		"value":"10"
+		},
+		{
+		"name":"Nov",
+		"value":"11"
+		},
+		{
+		"name":"Dec",
+		"value":"12"
+		}]
+}

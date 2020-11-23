@@ -1,0 +1,12 @@
+[{
+		"items":"0014",
+		"Material":"M100-10",
+		"Shorttext":"Laptop",
+		"stddeldate":"12.02.2016",
+		"Materialgroup":"018",
+		"targetquantity":"10000",
+		"orderunit":"PC",
+		"netprice":"10000",
+		"amount":"sap-icon://edit"
+	}
+	]

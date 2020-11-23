@@ -1,0 +1,55 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.WebIDE_Tutorials.ConfigureDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Configure Destinations in SAP WebIDE">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Configure Destinations"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Hello folks! In this tutorial, I will help you to configure destinations in Sap Web IDE. In normal scenario, we require a odata service which we have to integrate with the frontend, to display the data on the UI. Similarly, here we will use northwind service as an example for setting the destination in Sap Web IDE.
+First Step is to login to your SAP hana cockpit account (https://account.hanatrial.ondemand.com/), if you don’t have an account, register yourself for a free trial account."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now, click on the destination bar on the left side of the screen, and create a new destination."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic11.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now, a form will pop up, and you will be required to fill in all the information. Use these information"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic12.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Provide Cloud Connector version as 2 if asked. "/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic13.png" />	
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Please make sure, you have entered the details correctly and do mention additional properties too. At this stage you have done your bit, the destination is set. You will be able to this screen, northwind service has been added to your destination."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic15.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Now to check if your service is working correctly, click on the star like button, ie the check connection button. It should show a message that your connection is successful.
+Congratulations!! You have setup your destination correctly and with success."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic16.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="
+Hope you, liked this tutorial. For any queries, mail me at sapui5tutors@gmail.com."/>
+				
+
+				
+				
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

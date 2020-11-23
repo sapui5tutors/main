@@ -1,0 +1,77 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.WebIDE_Tutorials.HelloIDEDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Hello World">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Hello World"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<Label class="sapUiSmallMargin" design="Bold" text="" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" In this tutorial, I will explain how to create your first application in SAP web IDE from scratch. We will try to create a hello world application, since this is the ideal application for starters."/>
+			
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Okay, now let us look at the process step wise. But before starting with the project, let us just revise the steps for accessing SAP Web IDE."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) First off all, create an account on SCN(scn.sap.com), it will allow access to the hana cockpit. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2) Now, log on to SAP HANA Cloud Cockpit, with your free developer edition account. Choose Subscriptions in the left hand pane. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) Details of which applications your account is currently subscribed to is displayed. Choose webide. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="4)In the Active Version area, you will see the Application URL with the active version number. Click on the URL to open SAP Web IDE. You are now logged on to SAP Web IDE and can immediately start developing. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Note(Now this is the Development Area, you are recommended to bookmark this URL, for future references.) "/>
+					<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic17.png" width="80%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" If everything has worked fine, you would be able to see this home page.
+Now, let’s start building the Hello World Application. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" 1) The first step to start developing an application with SAP Web IDE is to create a new project for the application. And for this from the File menu select New and then select Project from Template"/>
+			    <con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic18.png" width="80%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" 2) Now, Select SAPUI5 Application and click on Next."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic19.png" width="80%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="3) In the next window, write the name of the project and the namespace and click on next. "/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic20.png" width="80%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" 4) In the template customization screen, provide the view type as xml and make an initial view and click next."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic21.png" width="80%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" 5) Now it will ask for confirmation, click on finish. This should make a new project named as “NewProject”. In the workspace."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" 6) Now, let’s make some changes in the code so that we could get hello world text. Open the project by clicking the “+” sign and then open webapp folder and then open View folder and then view1.view.xml. Now in the Page title, just add the text “hello world!!” and within the content tags, add the following code:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic14.png" width="80%"/>
+				
+				<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic22.png" width="80%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="
+7) Finally, let’s just run the project. Right Click on the project, and then go to run as Web Application. "/>
+<con:Image class="sapUiSmallMargin" src="css/Image/WebIDE/pic23.png" width="80%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" "/>
+
+				
+				
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

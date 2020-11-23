@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>SAPUI5Tutors</title>
+
+		<script id="sap-ui-bootstrap"
+			src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m,sap.ui.commons"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"com.sapui5": ""}'>
+		</script>
+		<!--<script type="text/javascript" src="control/Image.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+		jQuery.sap.require("com.sapui5.control.Image");
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+				app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "com.sapui5"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	<script src="cordova.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+		
+	</body>
+
+</html>

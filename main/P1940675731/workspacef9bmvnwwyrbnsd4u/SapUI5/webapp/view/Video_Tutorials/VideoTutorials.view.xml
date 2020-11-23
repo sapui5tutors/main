@@ -1,0 +1,216 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Video_Tutorials.VideoTutorials"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Videos on SAPUI5" showNavButton="true"
+		navButtonPress="onNavBack">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Videos on SAPUI5"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://navigation-left-arrow" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+			
+				<content>
+					<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Introduction to SAPUI5" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="introduction"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/p9-pd7yGAcY" frameborder="0" allowfullscreen="true"/>
+				</HBox>	
+				</VBox>
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Routing Concepts" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="Routing1"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/VF2LVxPaYFo" frameborder="0" allowfullscreen="true"/>
+    				<html:iframe class="labelsize" id="Routing2"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/fL0kTJo1zEs" frameborder="0" allowfullscreen="true"/>
+				</HBox>	
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Charts in SAPUI5" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="Charts1"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/GGfO1-L0EU8" frameborder="0" allowfullscreen="true"/>
+    				<html:iframe class="labelsize" id="Charts2"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/7gKJeu7QfiE" frameborder="0" allowfullscreen="true"/>
+				</HBox>	
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Web IDE Fundamentals" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="IDE1"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/oGQSqkVjO3I" frameborder="0" allowfullscreen="true"/>
+    				<html:iframe class="labelsize" id="IDE2"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/FNrWd8_meEg" frameborder="0" allowfullscreen="true"/>
+				</HBox>	
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Project Structuring(Component.js,manifest.json)" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="Structure1"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/-vhBWvtDjmA" frameborder="0" allowfullscreen="true"/>
+    				<html:iframe class="labelsize" id="Structure2"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/eECncPhsPJI" frameborder="0" allowfullscreen="true"/>
+				</HBox>	
+				<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Project Structuring(Globalization i18n)" />
+					</HBox>
+					<HBox>
+						<html:iframe class="labelsize" id="Structure3"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/paKQCoe6uhY" frameborder="0" allowfullscreen="true"/>
+					</HBox>
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Defining the UI concepts" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="UI1"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/8TfsVOw_lBY" frameborder="0" allowfullscreen="true"/>
+    				<html:iframe class="labelsize" id="UI2"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/SUPdtROYCSI" frameborder="0" allowfullscreen="true"/>
+				</HBox>	
+				</VBox>
+				
+
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Containers in SAPUI5" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="Containers1"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/9CWh-QOdbk4" frameborder="0" allowfullscreen="true"/>
+    				
+				</HBox>	
+				</VBox>
+
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Data Binding in SAPUI5" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="Binding"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/sr0rCqoqQ_I" frameborder="0" allowfullscreen="true"/>
+				</HBox>	
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="SAPUI5 List - Searching, Sorting, Grouping" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="List"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/NXXbR-tK4Zg" frameborder="0" allowfullscreen="true"/>
+    				
+				</HBox>	
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Reusability - Fragments and Nested Views" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="Reusable"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/NXXbR-tK4Zg" frameborder="0" allowfullscreen="true"/>
+    				
+				</HBox>	
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Formatters and Inline Expressions" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="Formatters"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/RzNdqvUTmc0" frameborder="0" allowfullscreen="true"/>
+    				
+				</HBox>	
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="MockServer in SAPUI5" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="Mock"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/moR1U3hgPCE" frameborder="0" allowfullscreen="true"/>
+    				
+				</HBox>	
+				</VBox>
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Binding JSON - 3 simple Steps" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="JSON"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/dWh6r4LVVjM" frameborder="0" allowfullscreen="true"/>
+    				
+				</HBox>	
+				</VBox>
+				
+				
+				<VBox>
+					<HBox>	
+					<FormattedText class="labelsize" width="90%"
+				htmlText="Implementing CSS" />
+					</HBox>	
+					<HBox>
+					<html:iframe class="labelsize" id="CSS"  width="90%" height="90%"
+    	src="https://www.youtube.com/embed/_L6kO9dUBWE" frameborder="0" allowfullscreen="true"/>
+    				
+				</HBox>	
+				</VBox>
+				
+
+				</content>
+				<footer>
+		<Toolbar>
+			<Button text="Have a Query?" press="click" icon="sap-icon://question-mark"></Button>
+		</Toolbar>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

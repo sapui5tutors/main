@@ -1,0 +1,19 @@
+{
+  "webapp/controller/app.controller.js": "1466486934000",
+  "webapp/i18n/i18n.properties": "1466501495000",
+  "webapp/model/models.js": "1466486934000",
+  "webapp/Component.js": "1466493906000",
+  "webapp/css/style.css": "1466486934000",
+  "webapp/manifest.json": "1466501326000",
+  "webapp/index.html": "1466486934000",
+  "webapp/preview_hidden.html": "1466489525000",
+  "webapp/controller/S2.controller.js": "1466494419000",
+  "webapp/model/RFQ.json": "1466493965000",
+  "webapp/controller/S3.controller.js": "1466499901000",
+  "webapp/model/RFQDetails.json": "1466501058000",
+  "webapp/view/app.view.xml": "1466489202000",
+  "webapp/view/S3.view.xml": "1466504390000",
+  "webapp/view/S2.view.xml": "1466494104000",
+  "webapp/view/S4.view.xml": "1466504367000",
+  "webapp/controller/S4.controller.js": "1466503413000"
+}

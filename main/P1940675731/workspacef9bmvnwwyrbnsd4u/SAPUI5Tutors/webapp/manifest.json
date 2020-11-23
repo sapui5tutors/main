@@ -1,0 +1,395 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "com.sapui5tutors",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "com.sapui5tutors.view.app",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sapui5tutors.view",
+				"targetAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "Dashboard",
+					"view": "Dashboard",
+					"targetAggregation": "pages",
+					"controlId": "app"
+				},
+				{
+					"pattern": "Tutorials",
+					"name": "Tutorials",
+					"view": "Basic_Tutorials/Tutorials",
+					"targetAggregation": "pages",
+					"controlId": "app",
+					"subroutes": [
+						{
+							"pattern": "TutorialsMaster/",
+							"name": "TutorialsMaster",
+							"view": "Basic_Tutorials/TutorialsMaster",
+							"targetAggregation": "masterPages",
+							"targetControl": "tutorials",
+							"subroutes": [
+								{
+									"pattern": "Tutorials/",
+									"name": "TutorialsDetail",
+									"view": "Basic_Tutorials/TutorialsDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "ProjectStructuring/",
+									"name": "StructuringDetail",
+									"view": "Basic_Tutorials/StructuringDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "Globalization/",
+									"name": "Globalization",
+									"view": "Basic_Tutorials/GlobalizationDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "Margins/",
+									"name": "Margins",
+									"view": "Basic_Tutorials/MarginsDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "HelloWorld/",
+									"name": "HelloWorld",
+									"view": "Basic_Tutorials/HelloDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "SplitApp/",
+									"name": "SplitApp",
+									"view": "Basic_Tutorials/SplitDetail",
+									"targetAggregation": "detailPages"
+								}
+							]
+						}
+					]
+				},
+				{
+					"pattern": "IntermediateTutorials",
+					"name": "IntermediateTutorials",
+					"view": "Intermediate_tutorials/IntermediateTutorials",
+					"targetAggregation": "pages",
+					"controlId": "app",
+					"subroutes": [
+						{
+							"pattern": "IntermediateTutorialsMaster/",
+							"name": "IntermediateMaster",
+							"view": "Intermediate_tutorials/IntermediateMaster",
+							"targetAggregation": "masterPages",
+							"targetControl": "Intermediatetutorials",
+							"subroutes": [
+								{
+									"pattern": "IntermediateTutorials/",
+									"name": "CssDetail",
+									"view": "Intermediate_tutorials/CssDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "DataBinding/",
+									"name": "BindDetail",
+									"view": "Intermediate_tutorials/BindDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "Fragment/",
+									"name": "FragmentDetail",
+									"view": "Intermediate_tutorials/FragmentDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "NestedViews/",
+									"name": "NestedDetail",
+									"view": "Intermediate_tutorials/NestedDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "Formatters/",
+									"name": "FormatterDetail",
+									"view": "Intermediate_tutorials/FormatterDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "Expressions/",
+									"name": "ExpressionDetail",
+									"view": "Intermediate_tutorials/ExpressionsDetail",
+									"targetAggregation": "detailPages"
+								}
+							]
+						}
+					]
+				},
+				{
+					"pattern": "AdvancedTutorials",
+					"name": "AdvancedTutorials",
+					"view": "Advanced_Tutorials/Advanced_Tutorials",
+					"targetAggregation": "pages",
+					"controlId": "app",
+					"subroutes": [
+						{
+							"pattern": "AdvancedTutorialsMaster/",
+							"name": "AdvancedMaster",
+							"view": "Advanced_Tutorials/AdvancedMaster",
+							"targetAggregation": "masterPages",
+							"targetControl": "Advancedtutorials",
+							"subroutes": [
+								{
+									"pattern": "AdvancedTutorials/",
+									"name": "CustomDetail",
+									"view": "Advanced_Tutorials/CustomDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "MockServer/",
+									"name": "MockServer",
+									"view": "Advanced_Tutorials/MockDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "GoogleMaps/",
+									"name": "GoogleMaps",
+									"view": "Advanced_Tutorials/MapDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "ResponsiveTable/",
+									"name": "ResponsiveTable",
+									"view": "Advanced_Tutorials/ResponsiveDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "VizCharts/",
+									"name": "VizCharts",
+									"view": "Advanced_Tutorials/VizChartsDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "VizFrame/",
+									"name": "VizFrame",
+									"view": "Advanced_Tutorials/VizFrameDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "Component Preload/",
+									"name": "ComponentDetail",
+									"view": "Advanced_Tutorials/ComponentDetail",
+									"targetAggregation": "detailPages"
+								}
+							]
+						}
+					]
+				},
+				{
+					"pattern": "RoutingTutorials",
+					"name": "RoutingTutorials",
+					"view": "Routing_Tutorials/RoutingTutorials",
+					"targetAggregation": "pages",
+					"controlId": "app",
+					"subroutes": [
+						{
+							"pattern": "RoutingTutorialsMaster/",
+							"name": "RoutingMaster",
+							"view": "Routing_Tutorials/RoutingMaster",
+							"targetAggregation": "masterPages",
+							"targetControl": "RoutingTutorials",
+							"subroutes": [
+								{
+									"pattern": "RoutingTutorials/",
+									"name": "FullDetail",
+									"view": "Routing_Tutorials/FullDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "SplitAppRouting/",
+									"name": "SplitDetail",
+									"view": "Routing_Tutorials/SplitDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "FullToSplit/",
+									"name": "FullToSplit",
+									"view": "Routing_Tutorials/FullToSplit",
+									"targetAggregation": "detailPages"
+								}
+							]
+						}
+					]
+				},
+				{
+					"pattern": "WebIDETutorials",
+					"name": "WebIDETutorials",
+					"view": "WebIDE_Tutorials/WebIDETutorials",
+					"targetAggregation": "pages",
+					"controlId": "app",
+					"subroutes": [
+						{
+							"pattern": "WebIDETutorialsMaster/",
+							"name": "WebIDEMaster",
+							"view": "WebIDE_Tutorials/WebIDEMaster",
+							"targetAggregation": "masterPages",
+							"targetControl": "WebIDETutorials",
+							"subroutes": [
+								{
+									"pattern": "WebIDETutorials/",
+									"name": "IntroDetail",
+									"view": "WebIDE_Tutorials/IntroDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "SettingUpTutorials/",
+									"name": "SettingDetail",
+									"view": "WebIDE_Tutorials/SettingDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "ConfigureTutorials/",
+									"name": "ConfigureDetail",
+									"view": "WebIDE_Tutorials/ConfigureDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "HelloWorldIDE/",
+									"name": "HelloIDEDetail",
+									"view": "WebIDE_Tutorials/HelloIDEDetail",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "MockIDEDetail/",
+									"name": "MockIDEDetail",
+									"view": "WebIDE_Tutorials/MockIDEDetail",
+									"targetAggregation": "detailPages"
+								}
+							]
+						}
+					]
+				},
+				{
+					"pattern": "BlogTutorials",
+					"name": "BlogTutorials",
+					"view": "Blog_Tutorials/BlogTutorial",
+					"targetAggregation": "pages",
+					"controlId": "app"
+				},
+				{
+					"pattern": "VideoTutorials",
+					"name": "VideoTutorials",
+					"view": "Video_Tutorials/VideoTutorials",
+					"targetAggregation": "pages",
+					"controlId": "app"
+				},
+				{
+					"pattern": "InterviewTutorials",
+					"name": "InterviewTutorials",
+					"view": "Interview_Tutorials/InterviewTutorials",
+					"targetAggregation": "pages",
+					"controlId": "app"
+				}
+			]
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.sapui5tutors.i18n.i18n"
+				}
+			},
+			"Tiles": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Tile.json"
+			},
+			"basic": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/BasicMaster.json"
+			},
+			"Intermediate": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/IntermediateMaster.json"
+			},
+			"Advanced": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/AdvancedMaster.json"
+			},
+			"Routing": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Routing.json"
+			},
+			"WebIDE": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/WebIDE.json"
+			},
+			"mylocaldata": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Local.json"
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

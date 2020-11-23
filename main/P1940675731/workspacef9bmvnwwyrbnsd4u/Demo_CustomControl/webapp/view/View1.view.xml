@@ -1,0 +1,24 @@
+<mvc:View controllerName="Custom.controller.View1"  xmlns:core="sap.ui.core" xmlns:custom="Custom.control" xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					 <l:VerticalLayout width="100%">
+                        <l:content>
+                             <Label text="Extension Control" />
+                             <custom:Select
+                    width="50%"
+                    newValueCreated="handleNewValue"
+                    items="{/}">
+                                   <core:Item
+                       key="{CountryId}"
+                       text="{Name}" />
+                             </custom:Select>
+                        </l:content>
+                  </l:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

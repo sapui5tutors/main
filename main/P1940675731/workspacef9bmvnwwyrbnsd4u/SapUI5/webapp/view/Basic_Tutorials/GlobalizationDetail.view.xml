@@ -1,0 +1,88 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Basic_Tutorials.GlobalizationDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Globalization">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Globalization"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="It is a way how a computer software could be adapted to different languages.Internationalization is actually the process of designing a software so that it can be adapted to different languages across the world."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Localization is the process of adapting internationalized software for a particular region or language by adding locale specific components and translating text.
+				"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here's my video in youtube, explaining the concept of Globalization"/>
+				<html:iframe class="labelsize" id="video5"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/paKQCoe6uhY" frameborder="0" allowfullscreen="true"></html:iframe>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We use internationalization and localization in our Sapui5 application for replacing the hard coded text from the application. It is one of the best practices of SAP to use i18n for hard coded texts.  Generally we use Resource Model for defining, since it is one way binding "/>
+				<Label class="sapUiSmallMargin" design="Bold" text="(sap.ui.model.resource.ResourceModel)"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The i18n model is set up in the Component's initialization section, or it could also be defined in the manifest.json file."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic16.PNG" width="100%"/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now create a folder named i18n in the project directory and maintain i18n files according to the languages."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic11.png" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="The configuration specifies the relative location of the resource bundle. This is made absolute (in relation to our app's namespace) by use of the jQuery.sap.getModulePath utility function, and then used to create the named model, before it is set on the component.
+
+Now in the i18n.properties file, enter all the hard coded text that has been used in the application. And bind the data using the i18n model"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Example" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic15.PNG" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here we have used a table and, the column text name is a hard coded value, hence we are using i18n model for the same.  Now we have to maintain the same fields in the i18n.properties file.
+
+s3OrderColumnSales=Sales Order
+
+s3OrderColumnDelivery=Delivery Status
+
+s3OrderColumnOrder=Order Date
+
+s3OrderColumnRequested=Requested Date
+
+s3OderColumnAmount=Order Amount"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic12.png" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hence this is done, now to serve the real purpose of i18n file, another file will be created in the i18n folder for the german language. Name it as i18n_DE.properties"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic13.png" width="100%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now, maintain the same field names in this particular file.
+
+s3OrderColumnSales=Kundenauftrag
+
+s3OrderColumnDelivery=Lieferstatus
+
+s3OrderColumnOrder=Auftragsdatum
+
+s3OrderColumnRequested=Wunschtermin
+
+s3OderColumnAmount=Bestellbetrag"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now to see the output, in german language, just add DE instead of EN in the application url. Add ?sap-ui-language=DE after the url.)"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Suppose the default url is http://localhost:42067/demo_i18n/index.html just add ?sap-ui-language=DE. Now the url would be  http://localhost:42067/demo_i18n/index.html?sap-ui-language=DE"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Output" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic14.png" width="100%"/>
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

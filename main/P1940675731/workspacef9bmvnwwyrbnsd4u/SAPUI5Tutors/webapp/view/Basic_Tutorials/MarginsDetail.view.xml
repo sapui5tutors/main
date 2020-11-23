@@ -1,0 +1,82 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Basic_Tutorials.MarginsDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="Margins and Padding">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Margins and Padding"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuButton4" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this tutorial blog you learn about Margins and paddings in SAPUI5 applications. SAP has provided some predefined classes that you can make use in the application for margin and padding purposes of your control elements."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Margins and Padding are used for tuning the layout of the sapui5 screens. We can customize the margins of particular controls manually, by adding custom CSS. But we can also take use of predefined SAP provided CSS classes and this is suggested by SAP since these classes take care of consistent sizing steps, left to right support, and responsiveness.)"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Using these predefined classes; sapui5 provides the option of adding spaces in between the controls by adding a margin. And these margins clear an area around its respective control, outside of its border."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Margins are transparent and are not the part of control’s clickable area, and they collapse with adjacent margins. There are 4 standard sizes available, and they are tiny(8px), small(16px), medium(32px) and large(48px). "/>
+				
+				<FormattedText class="labelsize" width="90%"
+				htmlText="And there are 4 types of margins available:"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Full Margins" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" This is used if you want to clear an area all round your control, and this consists of:
+sapUiTinyMargins
+sapUiSmallMargins
+sapUiMediumMargins
+sapUiLargeMargins"/>
+
+				<Label class="sapUiSmallMargin" design="Bold" text="Single-Sided Margins" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This would only clear only one side of the control plus you will have to define which part of the control has to get the margin, for eg top, bottom, begin, end. These are the classes:)"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic17.PNG" width="100%" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Two-Sided Margins" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="This would clear spaces on the two sides, either top and bottom or begin or end. And these are the classes provided by sap:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic18.PNG" width="100%" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Responsive Margins" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" If the application is to run on different devices like mobiles, tablets, desktop then one must choose responsive margins, as they automatically align to the screen sizes.  sapUiResponsiveMargin class is for responsiveness .
+We can also remove margins, with the help of predefined sap class, like for example some of the controls comes with a margin, and then you don’t want to use the margin for a particular reason, then you can remove the margins by the predefined classes. If you don’t want any margin at all, then use  sapUiNoMargin. Otherwise use particular margins, some of them are:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic19.PNG"  />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Example" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this particular scenario, I have a view which consist of a Page, which includes an image, texts, buttons, icontabfilters, input fields. I will implement margin to the sap.m.App and then to the image. This would make you understand the concept of margins and paddings."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="I am sharing the portion of code for the UI and I have highlighted the portion of code where I have used the class."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic20.PNG" width="100%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, I have used the class in sap.m.App, also I have kept the width = “auto” , since if we run the application on different devices, the margin would be adjusted accordingly. For a tablet the margin width would be less automatically and for a mobile device there won’t be any margin at all so as to save space."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Similarly, I have used class='sapUiSmallMargin' for the image, a small margin would be maintained around the image."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Output Before" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic21.PNG" width="100%" />
+				<Label class="sapUiSmallMargin" design="Bold" text="Output After" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic22.PNG" width="100%" />
+				<Label class="sapUiSmallMargin" design="Bold" text="The difference in the margins is showed through a red line border." width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic23.PNG" width="100%" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Hope, you understood the tutorial blog. Do share the feedback in the comment section and if you have any doubts relating to this, mail me at sapui5tutors@gmail.com. Happy to help"/>
+				
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

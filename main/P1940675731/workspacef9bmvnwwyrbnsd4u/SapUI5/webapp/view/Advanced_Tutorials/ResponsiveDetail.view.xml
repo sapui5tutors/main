@@ -1,0 +1,62 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.controller.Advanced_Tutorials.ResponsiveDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5.control">
+	<App>
+		<pages>
+			<Page title="Responsive Table" >
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/sapui5_app_pic2.PNG" height="45px" width="45px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Responsive Table"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button icon="sap-icon://menu" press="onNavBack"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="In this particular post, I will discuss about responsive web design in sapui5 and why responsiveness is important and how to implement responsiveness in sapui5 applications."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, responsive web design is something that makes you web site look good on any devices, be it desktop, tablets or mobile phones. Mobile phones generally are constrained by display size and space, hence to display the content on mobile phones is a challenge while keeping the responsiveness factor in mind."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Responsive design allows sapui5 applications to run on desktop, smartphones, tablets and hybrid devices. As one switches across the devices, the sapui5 application automatically adjusts the resolution, image size."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="SAPUI5 offers a wide range of UI controls that automatically adjusts to different form factors, thus making the application responsive. Even though sap.m library offers controls that are responsive by default unlike sap.ui.commons library. But still there are controls like sap.m.Table which has to be made responsive by the user himself according to his requirement."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, in this post, I will show how to make a sap.m.Table control responsive."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Often, it happens that the data to be stored in table is quite a lot, including many columns and rows. In that condition, the responsiveness of the table matters. Tables with lot of data often don’t fit to the small screen, and for this SAPUI5 offers column hiding solution and popin(less imp data is skipped to next line) solution to solve this issue."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now suppose, this is our table data having too many columns."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic23.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="When displayed on the phone, then it looks something like this:"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic24.png"  />	
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Notice, the field Opening Balance and Balance (important fields) are on the top and are not hidden
+				And rest less important fields have been shifted down, we are showing them in pop-in."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, basically we can control the responsiveness of the table using 2 properties of sap.m.Column which is defined in the Table. And they are:"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="1) minScreenWidth:  This value defines the break point of the column visibility like Tablet (600px) and Desktop (1024px). These two values are predefined sap.m.ScreenSize."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="2)  demandPopin: Depending on the minScreenWidth, the column can be hidden in different screen sizes. Set the value to be true, if the particular column is to popin, instead of hiding the column itself."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, let me just share the code for the above table, so that the concept is clear."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Advanced/pic25.png"  />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="So, that was it regarding the responsiveness of the table in Sapui5. Hope you understood the concept , if you have any doubts regarding this, mail to me at sapui5tutors@gmail.com"/>
+				
+				</content>
+					<footer>
+		<Toolbar/>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

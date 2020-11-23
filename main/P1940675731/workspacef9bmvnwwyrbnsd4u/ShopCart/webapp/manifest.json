@@ -1,0 +1,136 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "ShopCart",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "ShopCart.view.app",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"routing": {
+
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "ShopCart.view",
+				"targetAggregation": "detailPages",
+				"clearTarget": false
+			},
+			"routes" : [
+
+			          {
+				"pattern" : "",
+				"name" : "Categories",
+				"view" : "Categories",
+				"targetAggregation" : "masterPages",
+				"targetControl" : "Splitapp",
+				
+				"subroutes" : [{
+					"pattern" : "",
+					"name" : "Welcome",
+					"view" : "Welcome",
+					"targetAggregation" : "detailPages"
+				}
+
+			  ]
+			},
+			{   
+				"pattern": "SubCategories/{val}/{Category}",
+				"name" : "SubCategories",
+				"view" : "SubCategories",
+				"targetAggregation" : "masterPages",
+				"targetControl" : "Splitapp"
+				
+			},
+			{   
+				"pattern": "Item/{val}/{Category}/{Product}",
+				"name" : "Item",
+				"view" : "Item",
+				"targetAggregation" : "masterPages",
+				"targetControl" : "Splitapp",
+				"subroutes" : [{
+					"pattern" : "Item/{val}/{Category}/{Product}",
+					"name" : "Details",
+					"view" : "Details",
+					"targetAggregation" : "detailPages"
+				}]
+				
+			}
+			]
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ShopCart.i18n.i18n"
+				}
+			},
+			"JSON": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/ProductCategory.json"
+			},
+			"SUB": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/ProductSubCategories.json"
+			},
+			"ITEMS": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Items.json"
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}

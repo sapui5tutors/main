@@ -1,0 +1,538 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:con="sap.suite.ui.commons" xmlns:viz="sap.viz.ui5.controls"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="vikalp.cus.sd.dealer.plus.controller.S3">
+	<Page title="{i18n>s3HeaderTitle}" showNavButton="true"
+		navButtonPress="onBackPress">
+		<footer>
+			<Toolbar>
+			</Toolbar>
+		</footer>
+		<content>
+			<ObjectHeader title="{dealer>CustomerName} ({dealer>CustomerId})">
+
+				<statuses>
+					<core:ExtensionPoint name="extDealerHeaderDetails">
+<!-- 						<ObjectStatus icon="sap-icon://iphone" text="{dealer>ContactNumber}" /> -->
+<!-- 						<ObjectStatus icon="sap-icon://email" text="{dealer>MailId}" /> -->
+						<ObjectStatus title="{i18n>s3ThirdObjectAttributeTitle}"
+							text="{
+							path : 'dealer>Receivables',
+						    type: 'sap.ui.model.type.Float',
+						    formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+							} {dealer>Currency}" />
+					</core:ExtensionPoint>
+				</statuses>
+				<attributes>
+<!-- 					<ObjectAttribute title="{i18n>s3FirstObjectAttributeTitle}" -->
+<!-- 						text="{dealer>CustomerName},{dealer>CityZip}" /> -->
+<!-- 					<ObjectAttribute text="{dealer>SalesOrgName}, {dealer>DistChannelName}" /> -->
+					<ObjectAttribute title="{i18n>s3SecondObjectAttributeTitle}"
+						text="{
+							path : 'dealer>SalesValue',
+						    type: 'sap.ui.model.type.Float',
+						    formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+						     } {dealer>Currency}" />
+
+				</attributes>
+
+			</ObjectHeader>
+
+			<IconTabBar id="idIconTabBar" upperCase="true"
+				backgroundDesign="Transparent" select="handleIconTabBarSelect">
+				<items>
+					<IconTabFilter id="idgeneraltab" text="{i18n>General}"
+						key="General">
+					</IconTabFilter>
+					<IconTabFilter id="idShiptoParty" text="{i18n>ShiptoParty}"
+						count="0" key="ShiptoParty">
+						<content>
+						<Table id="idShipTable" growing="true" growingThreshold="5"
+								updateFinished="onGetCount">
+								<columns>
+									<Column width="8em">
+										<Text text="{i18n>s3ShipName}" />
+									</Column>
+									<Column minScreenWidth="Large" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Center">
+										<Text text="{i18n>s3ShipSalesArea}" />
+									</Column>
+									<Column minScreenWidth="Large" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Center">
+										<Text text="{i18n>s3ShipStreet}" />
+									</Column>
+									<Column minScreenWidth="XXLarge" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Center">
+										<Text text="{i18n>s3ShipRegion}" />
+									</Column>
+									<Column hAlign="Right" minScreenWidth="Small"
+										demandPopin="true" visible="{device>/isNoPhone}">
+										<Text text="{i18n>s3ShipPinCode}" />
+									</Column>
+									<Column hAlign="Right" minScreenWidth="Small"
+										demandPopin="true" visible="{device>/isNoPhone}">
+										<Text text="{i18n>s3ShipTelephone}" />
+									</Column>
+									<Column hAlign="Center" minScreenWidth="Small"
+										demandPopin="true" visible="{device>/isNoPhone}">
+										<Text text="{i18n>s3ShipEmail}" />
+									</Column>
+									<Column hAlign="Right" minScreenWidth="Small"
+										demandPopin="true" visible="{device>/isNoPhone}">
+										<Text text="{i18n>s3ShipAction}" />
+									</Column>
+								</columns>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="contactstab" text="{i18n>Contacts}"
+						count="0" key="Contacts">
+						<content>
+							<List id="contactslist" growing="true" growingThreshold="5"
+								updateFinished="onGetCount" />
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="{i18n>CreditInfo}" key="Credit Info">
+						<content>
+							<l:Grid defaultSpan="L12 M12 S12" width="auto">
+								<l:content>
+									<f:SimpleForm id="idCreditInfoForm" minWidth="1024"
+										maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+										labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+										columnsL="1" columnsM="1">
+										<f:content>
+										    <Label text="{i18n>s3CreditInfoPayerName}" />
+											<Text text="{dealer>CustomerName} ({dealer>CustomerId})" />
+											<Label text="{i18n>s3CreditInfoArea}" />
+											<Text text="{dealer>CtrlAreatext} ({dealer>ControlArea})" />
+											<Label text="{i18n>s3CreditInfoLimit}" />
+											<Text
+												text="{
+												parts:[{
+												path : 'dealer>CreditLimit',
+						   						type: 'sap.ui.model.type.Float',
+						    					formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+												},{
+											path:'dealer>Currency'
+											}]
+							
+						     }" />
+											<Label text="{i18n>s3CreditInfoExposure}" />
+											<Text
+												text="{
+												parts:[{
+												path : 'dealer>CreditExposure',
+						    					type: 'sap.ui.model.type.Float',
+						    					formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+												},{
+											path:'dealer>Currency'
+											}]
+							
+						     }" />
+											<Label text="{i18n>s3CreditInfoAvailable}" />
+											<Text
+												text="{
+												parts:[{
+												path : 'dealer>CreditAvailable',
+						    					type: 'sap.ui.model.type.Float',
+						   						formatOptions: { groupingEnabled: true,
+                                            groupingSeparator: ',',
+                                           maxFractionDigits: 2}
+												},
+												{
+											path:'dealer>Currency'
+											}]					
+						     }" />
+											<Label text="{i18n>s3CreditInfoUsed}" />
+											<Text text="{dealer>CreditLimitUsed}%" />
+											<core:ExtensionPoint name="extCreditInfo">
+											</core:ExtensionPoint>
+										</f:content>
+									</f:SimpleForm>
+								</l:content>
+							</l:Grid>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="{i18n>Orders}" count="0" key="Orders">
+						<content>
+							<Table id="idOrderTable" growing="true" growingThreshold="5"
+								updateFinished="onGetCount">
+
+								<headerToolbar>
+									<OverflowToolbar height="70px">
+										<ToolbarSpacer />
+										<SearchField id="idOrderSearch" liveChange="onOrderSearch"
+											selectOnFocus="false">
+											<layoutData>
+												<OverflowToolbarLayoutData
+													minWidth="200px" maxWidth="300px" shrinkable="true" />
+											</layoutData>
+										</SearchField>
+										<OverflowToolbarButton id="idOrderFilter"
+											type="Transparent" text="{i18n>s3Filter}" icon="sap-icon://filter"
+											press="onOrderFilterPress" />
+									</OverflowToolbar>
+								</headerToolbar>
+								<columns>
+									<Column width="8em">
+										<Text text="{i18n>s3OrderColumnSales}" />
+									</Column>
+									<Column minScreenWidth="Large" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Center">
+										<Text text="{i18n>s3OrderColumnDelivery}" />
+									</Column>
+									<Column minScreenWidth="Large" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Center">
+										<Text text="{i18n>s3OrderColumnOrder}" />
+									</Column>
+									<Column minScreenWidth="XXLarge" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Center">
+										<Text text="{i18n>s3OrderColumnRequested}" />
+									</Column>
+									<Column hAlign="Right" minScreenWidth="Small"
+										demandPopin="true" visible="{device>/isNoPhone}">
+										<Text text="{i18n>s3OderColumnAmount}" />
+									</Column>
+									<core:ExtensionPoint name="extOrderColumn">
+									</core:ExtensionPoint>
+								</columns>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="{i18n>Returns}" count="0" key="Returns">
+						<content>
+							<Table id="idReturnsTable" growing="true" growingThreshold="5"
+								updateFinished="onGetCount">
+
+								<columns>
+									<Column width="8em">
+										<Text text="{i18n>s3ReturnsColumnSales}" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Right">
+										<Text text="{i18n>s3ReturnsColumnOrderDate}" />
+									</Column>
+									<Column hAlign="Right">
+										<Text text="{i18n>s3ReturnsColumnOrderAmount}" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Right">
+										<Text text="{i18n>s3ReturnsColumnOrderReason}" />
+									</Column>
+									<core:ExtensionPoint name="extReturnOrderColumn">
+									</core:ExtensionPoint>
+								</columns>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="idPastSales" text="{i18n>Pastsales}">
+
+						<content>
+							<con:ChartContainer id="idPSChartContainer"
+								showFullScreen="true" showPersonalization="false"
+								autoAdjustHeight="false" showLegend="true" contentChange="onPSContentChange">
+
+								<con:dimensionSelectors>
+
+									<Button id="idPSIcon" icon="sap-icon://filter" press="onPSFilterPress"
+										visible="false">
+									</Button>
+								</con:dimensionSelectors>
+								<con:content>
+									<con:ChartContainerContent icon="sap-icon://bar-chart"
+										title="{i18n>s3PSBarChart}">
+										<con:content>
+											<viz:VizFrame id="idPastSalesColumnChart"
+												uiConfig="{applicationSet:'fiori'}" vizType="column"
+												visible="true" width="100%">
+											</viz:VizFrame>
+										</con:content>
+									</con:ChartContainerContent>
+									<con:ChartContainerContent icon="sap-icon://table-chart"
+										title="{i18n>s3PSGridView}">
+										<con:content>
+											<Table id="idPastSalesTable" growing="true"
+												growingThreshold="6" updateFinished="" visible="true">
+
+												<columns>
+													<Column width="10em">
+														<Text text="{i18n>s3PSColumnMaterial}" />
+													</Column>
+													<Column minScreenWidth="Tablet" demandPopin="true">
+														<Text text="{i18n>s3PSColumnOrderQty}" />
+													</Column>
+													<Column minScreenWidth="Tablet" demandPopin="true"
+														hAlign="Right">
+														<Text text="{i18n>s3PSColumnBillingQty}" />
+													</Column>
+													<Column hAlign="Right">
+														<Text text="{i18n>s3PSColumnPendingQty}" />
+													</Column>
+													<Column minScreenWidth="Tablet" demandPopin="true"
+														hAlign="Right">
+														<Text text="{i18n>s3PSColumnReturns}" />
+													</Column>
+													<core:ExtensionPoint name="extPastSalesColumn">
+													</core:ExtensionPoint>
+												</columns>
+											</Table>
+										</con:content>
+									</con:ChartContainerContent>
+									<con:ChartContainerContent icon="sap-icon://table-view"
+										title="{i18n>s3PSTableView}">
+
+										<con:content>
+											<!-- Drill down Past Sales Table -->
+											<Table id="idPastSalesDrillDownTable" growing="true"
+												growingThreshold="6" visible="true">
+
+												<columns>
+													<Column width="9em">
+														<Text text="{i18n>s3PSDColumnMaterial}" />
+													</Column>
+													<Column width="7em" minScreenWidth="Large"
+														demandPopin="true" visible="{device>/isNoPhone}">
+														<Text text="{i18n>s3PSDColumnSales}" />
+													</Column>
+													<Column minScreenWidth="Large" demandPopin="true"
+														visible="{device>/isNoPhone}" hAlign="Right">
+														<Text text="{i18n>s3PSDColumnItem}" />
+													</Column>
+													<Column minScreenWidth="XXLarge" demandPopin="true"
+														visible="{device>/isNoPhone}" hAlign="Right">
+														<Text text="{i18n>s3PSDColumnCreationDate}" />
+													</Column>
+													<Column minScreenWidth="XXLarge" demandPopin="true"
+														visible="{device>/isNoPhone}" hAlign="Right">
+														<Text text="{i18n>s3PSDColumnRequestedDate}" />
+													</Column>
+													<Column minScreenWidth="XXLarge" demandPopin="true"
+														visible="{device>/isNoPhone}" hAlign="Right">
+														<Text text="{i18n>s3PSDColumnDeliveredDate}" />
+													</Column>
+													<Column width="7em" minScreenWidth="Large"
+														demandPopin="true" visible="{device>/isNoPhone}" hAlign="Right">
+														<Text text="{i18n>s3PSDColumnOrderQty}" />
+													</Column>
+													<Column width="8em" minScreenWidth="Small"
+														demandPopin="true" visible="{device>/isNoPhone}" hAlign="Right">
+														<Text text="{i18n>s3PSDColumnBillQty}" />
+													</Column>
+													<Column hAlign="Right" minScreenWidth="Small"
+														demandPopin="true" visible="{device>/isNoPhone}">
+														<Text text="{i18n>s3PSColumnPenQty}" />
+													</Column>
+													<Column minScreenWidth="XLarge" demandPopin="true"
+														visible="{device>/isNoPhone}" hAlign="Right">
+														<Text text="{i18n>s3PSColumnReturn}" />
+													</Column>
+													<core:ExtensionPoint name="extPastSalesDrillColumn">
+													</core:ExtensionPoint>
+												</columns>
+											</Table>
+										</con:content>
+									</con:ChartContainerContent>
+								</con:content>
+							</con:ChartContainer>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="idUCTabFilter" text="{i18n>UpcomingDeliveries}"
+						count="0" key="Upcoming Deliveries">
+						<content>
+							<con:ChartContainer id="idChartContainer"
+								showFullScreen="true" showPersonalization="false"
+								autoAdjustHeight="false" showLegend="true">
+
+
+								<con:content>
+									<con:ChartContainerContent icon="sap-icon://bar-chart"
+										title="{i18n>s3PSBarChart}">
+										<con:content>
+											<viz:VizFrame id="idUpcomingDeliveriesColumnChart"
+												uiConfig="{applicationSet:'fiori'}" width="100%" vizType="column"
+												visible="true">
+											</viz:VizFrame>
+
+										</con:content>
+									</con:ChartContainerContent>
+									<con:ChartContainerContent icon="sap-icon://table-chart"
+										title="{i18n>s3PSGridView}">
+										<con:content>
+											<Table id="idUpcomingDelTable" growing="true"
+												growingThreshold="10" updateFinished="onUCGetCount" visible="true">
+
+												<columns>
+													<Column width="5em">
+														<Text text="{i18n>s3UDColumnIndictr}" />
+													</Column>
+													<Column minScreenWidth="Tablet" demandPopin="true"
+														hAlign="Right">
+														<Text text="{i18n>s3UDColumnDate}" />
+													</Column>
+													<Column minScreenWidth="Tablet" demandPopin="true"
+														hAlign="Right">
+														<Text text="{i18n>s3UDColumnMaterial}" />
+													</Column>
+													<Column hAlign="Right">
+														<Text text="{i18n>s3UDColumnOpenQty}" />
+													</Column>
+													<Column minScreenWidth="Large" demandPopin="true"
+														hAlign="Right">
+														<Text text="{i18n>s3UDColumnOrderType}" />
+													</Column>
+													<Column minScreenWidth="Large" demandPopin="true"
+														hAlign="Right">
+														<Text text="{i18n>s3UDColumnSales}" />
+													</Column>
+													<Column minScreenWidth="Large" demandPopin="true"
+														hAlign="Right">
+														<Text text="{i18n>s3UDColumnItem}" />
+													</Column>
+													<core:ExtensionPoint name="extUDColumn">
+													</core:ExtensionPoint>
+												</columns>
+											</Table>
+										</con:content>
+									</con:ChartContainerContent>
+								</con:content>
+							</con:ChartContainer>
+
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="{i18n>CustomerLedger}" count="0"
+						key="Customer Ledger">
+						<content>
+							<Table id="idCustomerLedgerTable" growing="true"
+								growingThreshold="5" updateFinished="onGetCount">
+								<headerToolbar>
+									<OverflowToolbar>
+										<ToolbarSpacer />
+										<OverflowToolbarButton id="idCustomerLedgerFilter"
+											type="Transparent" text="{i18n>s3Filter}" icon="sap-icon://filter"
+											press="onCLFilterPress" />
+									</OverflowToolbar>
+								</headerToolbar>
+
+								<columns>
+									<Column width="5em" hAlign="Left">
+										<Text text="{i18n>s3CLColumnDate}" />
+									</Column>
+									<Column width="7em" minScreenWidth="Small" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Right">
+										<Text text="{i18n>s3CLColumnDocType}" />
+									</Column>
+									<Column width="10em" minScreenWidth="XLarge"
+										demandPopin="true" visible="{device>/isNoPhone}">
+										<Text text="{i18n>s3CLolumnDocDesc}" />
+									</Column>
+									<Column width="7em" minScreenWidth="Large" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Right">
+										<Text text="{i18n>s3CLColumnAllocNo}" />
+									</Column>
+									<Column width="7em" minScreenWidth="Large" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Right">
+										<Text text="{i18n>s3CLColumnBillDocNo}" />
+									</Column>
+									<Column width="7em" minScreenWidth="XLarge" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Right">
+										<Text text="{i18n>s3CLColumnDebAmount}" />
+									</Column>
+									<Column width="7em" minScreenWidth="XLarge" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Right">
+										<Text text="{i18n>s3CLColumnCredAmount}" />
+									</Column>
+									<Column width="7em" minScreenWidth="Small" demandPopin="true"
+										visible="{device>/isNoPhone}" hAlign="Right">
+										<Text text="{i18n>s3CLColumnBalance}" />
+									</Column>
+									<Column width="5em" minScreenWidth="XXLarge"
+										demandPopin="true" visible="{device>/isNoPhone}" hAlign="Right">
+										<Text text="{i18n>s3CLColumnText}" />
+									</Column>
+									<core:ExtensionPoint name="extCLColumn">
+									</core:ExtensionPoint>
+								</columns>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="{i18n>AgeingReport}">
+
+						<con:ChartContainer id="idAgeingChartContainer"
+							showFullScreen="true" showPersonalization="false"
+							autoAdjustHeight="false" showLegend="true">
+
+
+							<con:content>
+								<con:ChartContainerContent icon="sap-icon://pie-chart"
+									title="{i18n>s3AgePieChart}">
+									<con:content>
+										<l:VerticalLayout>
+											<Table id="idAgingReportTable" growing="true"
+												growingThreshold="5" updateFinished="">
+											</Table>
+											<viz:VizFrame id="idAgeingReportPieChart"
+												uiConfig="{applicationSet:'fiori'}" vizType="pie" visible="true"
+												width="100%">
+											</viz:VizFrame>
+										</l:VerticalLayout>
+									</con:content>
+								</con:ChartContainerContent>
+								<con:ChartContainerContent icon="sap-icon://line-chart"
+									title="{i18n>s3AgeLineChart}">
+									<con:content>
+										<viz:VizFrame id="idVizFrameLine" visible="true"
+											uiConfig="{applicationSet:'fiori'}" width="100%" vizType="line"></viz:VizFrame>
+									</con:content>
+								</con:ChartContainerContent>
+								<con:ChartContainerContent icon="sap-icon://table-chart"
+									title="{i18n>s3AgeTable}">
+									<con:content>
+										<Table id="idAgingTable" growing="true"
+											growingThreshold="5" updateFinished="" visible="true">
+											<columns>
+												<Column width="10em">
+													<Text text="{i18n>s3AgeingDay}" />
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true"
+													hAlign="Right">
+													<Text text="{i18n>s3AgeingOveDay}" />
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true"
+													hAlign="Right">
+													<Text text="{i18n>s3AgeingDoctype}" />
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true"
+													hAlign="Right">
+													<Text text="{i18n>s3AgeingDocNo}" />
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true"
+													hAlign="Right">
+													<Text text="{i18n>s3AgeingPosDate}" />
+												</Column>
+												<Column hAlign="Right">
+													<Text text="{i18n>s3AgeingAmount}" />
+												</Column>
+												<core:ExtensionPoint name="extAgeingColumn">
+												</core:ExtensionPoint>
+											</columns>
+										</Table>
+									</con:content>
+								</con:ChartContainerContent>
+							</con:content>
+						</con:ChartContainer>
+
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+
+		</content>
+	</Page>
+</core:View>

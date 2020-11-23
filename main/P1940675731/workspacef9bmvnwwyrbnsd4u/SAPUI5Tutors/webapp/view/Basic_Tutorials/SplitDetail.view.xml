@@ -1,0 +1,87 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5tutors.controller.Basic_Tutorials.SplitDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:con="com.sapui5tutors.control">
+	<App>
+		<pages>
+			<Page title="Split Application">
+				<customHeader>
+					<Bar class="BarColor">
+						<contentRight>
+							<Image src="css/Image/ui6.png" height="50px" width="80px"></Image>
+							
+						</contentRight>
+						<contentMiddle>
+							<Text text="Split Application"/>
+						</contentMiddle>
+						<contentLeft>
+							<Button id="menuButton5" icon="sap-icon://menu" press="onNavBack" visible="true"></Button>
+						</contentLeft>
+					</Bar>
+	        
+	    </customHeader>
+				<content>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here, I will show you how to create a simple split app. Split app basically is a an app divided into two segments (pages), one is the Master Page and the other is the Detail Page. "/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Watch my video for better understanding:"/>
+				<html:iframe class="labelsize" id="video1"  width="90%" height="90%"
+    src="https://www.youtube.com/embed/FNrWd8_meEg" frameborder="0" allowfullscreen="true"></html:iframe>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here we will create a New Project "/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic26.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Select Application Project from SAPUI5 Application Development. Now Name the Project ,here I named it as SplitApp."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic27.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Click on Next, but unselect the Initial view.
+Now we will create two more views,  i.e. Master view and page view"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic28.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText=" Name it as MasterPage, similarly create another view and name it as DetailPage.
+Now in the Index.html file, in the style tag, we will start coding."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic29.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Here sap.ui.localResources(“”) make the location of a component's resources known to SAPUI5. Here this is empty, since we haven’t  created any  folder within the WebContent."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We have created a variable named app, which is a splitapp, we have mentioned the initial page’s id."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Mpage is a masterPage view, in which the id, viewname and type of the view is mentioned, similarly the detail page is also created."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We have added both Master and Detail Page to the app, which is a splitapp. At the end we have added the app to the content."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="Now name the tilte in masterPage.view.js as Master Page, similarly replace the title in DetailPage.view.js as Detail Page."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="Output will be somewhat like this:" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic30.png" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="
+Now we will show some content in the Master and the Detail Page. For that, we will create a list in the master page, and a simple form in the detail page.  Here we will make use of JSON for binding data in the list.
+We are trying to bind data on the form in the DetailPage on the click of list item in MasterPage. For that, we will write code in the press function of the list. "/>
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Creating a list" width="100%"/>
+				<Label class="sapUiSmallMargin" design="Bold" text="MasterPage.view.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic31.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="For binding the json onto the list, we will define json model  in the init method of MasterPage’s controller."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="MasterPage.controller.js" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic32.PNG" />
+					<Label class="sapUiSmallMargin" design="Bold" text="Expense.json" width="100%"/>
+					<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic33.PNG" />
+				<FormattedText class="labelsize" width="90%"
+				htmlText="You may use any image for your own purpose."/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We will create a simple form,  and as the list item is pressed, the data on the list item should be populated onto the form."/>
+				<Label class="sapUiSmallMargin" design="Bold" text="DetailPage.view.js" width="100%"/>
+				<FormattedText class="labelsize" width="90%"
+				htmlText="We will create a simple form,  and as the list item is pressed, the data on the list item should be populated onto the form."/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic33.PNG" />
+				
+				<Label class="sapUiSmallMargin" design="Bold" text="Final Output" width="100%"/>
+				<con:Image class="sapUiSmallMargin" src="css/Image/Basic/pic35.png" />
+				</content>
+				<footer>
+		<Toolbar/>
+		</footer>
+				
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
